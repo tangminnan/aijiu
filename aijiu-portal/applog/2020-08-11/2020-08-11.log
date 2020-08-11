@@ -1,0 +1,169 @@
+2020-08-11 10:54:15 -Starting BootdoApplication on DESKTOP-Q2BGQHJ with PID 25528 (E:\AIJIU\aijiu-portal\target\classes started by EDZ in E:\AIJIU\aijiu-portal)
+2020-08-11 10:54:15 -The following profiles are active: dev
+2020-08-11 10:54:15 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27462a88: startup date [Tue Aug 11 10:54:15 CST 2020]; root of context hierarchy
+2020-08-11 10:54:15 -HV000001: Hibernate Validator 5.3.6.Final
+2020-08-11 10:54:16 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-11 10:54:17 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eddb3723] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:17 -Bean 'shiroConfig' of type [com.aijiu.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$8d0b6621] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:19 -Bean 'userRealm' of type [com.aijiu.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:19 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:19 -Cache with name 'com.aijiu.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2020-08-11 10:54:19 -Added EhCache named [com.aijiu.system.shiro.UserRealm.authorizationCache]
+2020-08-11 10:54:19 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:19 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:19 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:19 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:54:20 -Tomcat initialized with port(s): 8087 (http)
+2020-08-11 10:54:20 -Starting service [Tomcat]
+2020-08-11 10:54:20 -Starting Servlet Engine: Apache Tomcat/8.5.23
+2020-08-11 10:54:20 -Initializing Spring embedded WebApplicationContext
+2020-08-11 10:54:20 -Root WebApplicationContext: initialization completed in 4826 ms
+2020-08-11 10:54:20 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-11 10:54:20 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-11 10:54:20 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-11 10:54:20 -Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-11 10:54:20 -Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-08-11 10:54:20 -Filter xssFilter was not registered (disabled)
+2020-08-11 10:54:20 -Mapping filter: 'webStatFilter' to urls: [/*]
+2020-08-11 10:54:20 -Mapping filter: 'com.aijiu.system.filter.CorsFilter' to: [/*]
+2020-08-11 10:54:20 -Mapping filter: 'remoteIpFilter' to: [/*]
+2020-08-11 10:54:20 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2020-08-11 10:54:20 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2020-08-11 10:54:20 -Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-11 10:54:21 -{dataSource-1} inited
+2020-08-11 10:54:22 -Using default implementation for ThreadExecutor
+2020-08-11 10:54:22 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-08-11 10:54:22 -Quartz Scheduler v.2.2.1 created.
+2020-08-11 10:54:22 -RAMJobStore initialized.
+2020-08-11 10:54:22 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-08-11 10:54:22 -Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-08-11 10:54:22 -Quartz scheduler version: 2.2.1
+2020-08-11 10:54:22 -JobFactory set to: com.aijiu.common.quartz.factory.JobFactory@4dd2ef54
+2020-08-11 10:54:23 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.add()
+2020-08-11 10:54:23 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long)
+2020-08-11 10:54:23 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long[])
+2020-08-11 10:54:23 -Mapped "{[/common/dict/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.update(com.aijiu.common.domain.DictDO)
+2020-08-11 10:54:23 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:54:23 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.save(com.aijiu.common.domain.DictDO)
+2020-08-11 10:54:23 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listType()
+2020-08-11 10:54:23 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2020-08-11 10:54:23 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.dict()
+2020-08-11 10:54:23 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:54:23 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listByType(java.lang.String)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.add()
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long[])
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.update(com.aijiu.common.domain.FileDO)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.save(com.aijiu.common.domain.FileDO)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.info(java.lang.Long)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:54:23 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:54:23 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:54:23 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.aijiu.common.controller.GeneratorController.list()
+2020-08-11 10:54:23 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.aijiu.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2020-08-11 10:54:23 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.GeneratorController.generator()
+2020-08-11 10:54:23 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.aijiu.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2020-08-11 10:54:23 -Mapped "{[/common/generator/batchCode]}" onto public void com.aijiu.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2020-08-11 10:54:23 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.add()
+2020-08-11 10:54:23 -Mapped "{[/common/job/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long)
+2020-08-11 10:54:23 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long[])
+2020-08-11 10:54:23 -Mapped "{[/common/job/update],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.update(com.aijiu.common.domain.TaskDO)
+2020-08-11 10:54:23 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:54:23 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.save(com.aijiu.common.domain.TaskDO)
+2020-08-11 10:54:23 -Mapped "{[/common/job/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.info(java.lang.Long)
+2020-08-11 10:54:23 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:54:23 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.taskScheduleJob()
+2020-08-11 10:54:23 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2020-08-11 10:54:23 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.remove(java.lang.Long)
+2020-08-11 10:54:23 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.LogController.log()
+2020-08-11 10:54:23 -Mapped "{[/common/log/list],methods=[GET]}" onto com.aijiu.common.domain.PageDO<com.aijiu.common.domain.LogDO> com.aijiu.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:54:23 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.batchRemove(java.lang.Long[])
+2020-08-11 10:54:23 -Mapped "{[/error]}" onto public com.aijiu.common.utils.R com.aijiu.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-11 10:54:23 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.aijiu.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-11 10:54:23 -Mapped "{[/register],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.register(java.lang.String,java.lang.String)
+2020-08-11 10:54:23 -Mapped "{[/login],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.login(java.lang.String,java.lang.String,java.lang.String)
+2020-08-11 10:54:23 -Mapped "{[/getSms],methods=[GET]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.getSms(java.lang.String,java.lang.String)
+2020-08-11 10:54:23 -Mapped "{[/logout],methods=[GET]}" onto java.util.Map<java.lang.String, java.lang.String> com.aijiu.owneruser.controller.LoginController.logout()
+2020-08-11 10:54:23 -Mapped "{[/weyOpenid],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.weyOpenid(java.lang.String)
+2020-08-11 10:54:23 -Mapped "{[/owner/userInfo],methods=[GET]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.OwnerUserController.user()
+2020-08-11 10:54:23 -Mapped "{[/owner/editHeadUrl],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.OwnerUserController.editHeadUrl(com.aijiu.owneruser.domain.OwnerUserDO)
+2020-08-11 10:54:23 -Mapped "{[/owner/editInfo],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.OwnerUserController.editInfo(com.aijiu.owneruser.domain.OwnerUserDO)
+2020-08-11 10:54:23 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.aijiu.system.domain.UserOnline> com.aijiu.system.controller.SessionController.list()
+2020-08-11 10:54:23 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-08-11 10:54:23 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.aijiu.system.controller.SessionController.sessionList()
+2020-08-11 10:54:23 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.aijiu.system.controller.SessionController.online()
+2020-08-11 10:54:23 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:54:23 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2020-08-11 10:54:23 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2020-08-11 10:54:23 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2020-08-11 10:54:23 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27462a88: startup date [Tue Aug 11 10:54:15 CST 2020]; root of context hierarchy
+2020-08-11 10:54:23 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:54:23 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:54:23 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:54:23 -Detected @ExceptionHandler methods in BDExceptionHandler
+2020-08-11 10:54:23 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:54:24 -
+
+Using default security password: 2d4b58ef-849a-4e54-b67c-677109bd8622
+
+2020-08-11 10:54:24 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2020-08-11 10:54:24 -Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@1e194966, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@160546b1, org.springframework.security.web.context.SecurityContextPersistenceFilter@2375a976, org.springframework.security.web.header.HeaderWriterFilter@1d9bd1d6, org.springframework.security.web.csrf.CsrfFilter@7fb82f73, org.springframework.security.web.authentication.logout.LogoutFilter@2c154508, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a6dbb7c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d5ef1c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@103e7c7c, org.springframework.security.web.session.SessionManagementFilter@2739ecc0, org.springframework.security.web.access.ExceptionTranslationFilter@3e2772a9]
+2020-08-11 10:54:25 -Registering beans for JMX exposure on startup
+2020-08-11 10:54:25 -Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-08-11 10:54:25 -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2020-08-11 10:54:25 -Starting beans in phase 2147483647
+2020-08-11 10:54:25 -Context refreshed
+2020-08-11 10:54:25 -Found 1 custom documentation plugin(s)
+2020-08-11 10:54:25 -Scanning for api listing references
+2020-08-11 10:54:25 -Generating unique operation named: removeUsingPOST_1
+2020-08-11 10:54:25 -Generating unique operation named: addUsingGET_1
+2020-08-11 10:54:26 -Generating unique operation named: editUsingGET_1
+2020-08-11 10:54:26 -Generating unique operation named: listUsingGET_1
+2020-08-11 10:54:26 -Generating unique operation named: removeUsingPOST_2
+2020-08-11 10:54:26 -Generating unique operation named: removeUsingPOST_3
+2020-08-11 10:54:26 -Generating unique operation named: saveUsingPOST_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingGET_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingHEAD_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingPOST_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingPUT_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingPATCH_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingDELETE_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingOPTIONS_1
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingTRACE_1
+2020-08-11 10:54:26 -Generating unique operation named: editUsingGET_2
+2020-08-11 10:54:26 -Generating unique operation named: listUsingGET_2
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingPOST_2
+2020-08-11 10:54:26 -Generating unique operation named: addUsingGET_2
+2020-08-11 10:54:26 -Generating unique operation named: editUsingGET_3
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingGET_1
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingHEAD_1
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingPOST_1
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingPUT_1
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingPATCH_1
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingDELETE_1
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingOPTIONS_1
+2020-08-11 10:54:26 -Generating unique operation named: infoUsingTRACE_1
+2020-08-11 10:54:26 -Generating unique operation named: listUsingGET_3
+2020-08-11 10:54:26 -Generating unique operation named: removeUsingPOST_4
+2020-08-11 10:54:26 -Generating unique operation named: removeUsingPOST_5
+2020-08-11 10:54:26 -Generating unique operation named: saveUsingPOST_2
+2020-08-11 10:54:26 -Generating unique operation named: updateUsingPOST_3
+2020-08-11 10:54:26 -Generating unique operation named: listUsingGET_4
+2020-08-11 10:54:26 -Generating unique operation named: removeUsingPOST_6
+2020-08-11 10:54:26 -Generating unique operation named: listUsingGET_5
+2020-08-11 10:54:26 -Starting Quartz Scheduler now
+2020-08-11 10:54:26 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-08-11 10:54:26 -Initializing ProtocolHandler ["http-nio-8087"]
+2020-08-11 10:54:26 -Starting ProtocolHandler ["http-nio-8087"]
+2020-08-11 10:54:26 -Using a shared selector for servlet write/read
+2020-08-11 10:54:26 -Tomcat started on port(s): 8087 (http)
+2020-08-11 10:54:26 -Started BootdoApplication in 12.062 seconds (JVM running for 12.477)

@@ -1,0 +1,1467 @@
+2020-08-11 10:10:29 -Starting BootdoApplication on DESKTOP-Q2BGQHJ with PID 9392 (E:\AIJIU\aijiu-manager\target\classes started by EDZ in E:\AIJIU\aijiu-manager)
+2020-08-11 10:10:29 -The following profiles are active: dev
+2020-08-11 10:10:29 -HV000001: Hibernate Validator 5.3.6.Final
+2020-08-11 10:10:30 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1de5f259: startup date [Tue Aug 11 10:10:30 CST 2020]; root of context hierarchy
+2020-08-11 10:10:32 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-11 10:10:34 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$61bb6df0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:34 -Bean 'shiroConfig' of type [com.aijiu.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$eb9cee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:37 -Bean 'userRealm' of type [com.aijiu.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:37 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:37 -Cache with name 'com.aijiu.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2020-08-11 10:10:37 -Added EhCache named [com.aijiu.system.shiro.UserRealm.authorizationCache]
+2020-08-11 10:10:37 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:37 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:37 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:37 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:10:37 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+2020-08-11 10:10:37 -
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2020-08-11 10:10:37 -Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.aijiu.BootdoApplication.main(BootdoApplication.java:21)
+Caused by: org.springframework.context.ApplicationContextException: Unable to start EmbeddedWebApplicationContext due to missing EmbeddedServletContainerFactory bean.
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.getEmbeddedServletContainerFactory(EmbeddedWebApplicationContext.java:189)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:162)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 8 common frames omitted
+2020-08-11 10:23:01 -Starting BootdoApplication on DESKTOP-Q2BGQHJ with PID 9736 (E:\AIJIU\aijiu-manager\target\classes started by EDZ in E:\AIJIU\aijiu-manager)
+2020-08-11 10:23:01 -The following profiles are active: dev
+2020-08-11 10:23:01 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12aba8be: startup date [Tue Aug 11 10:23:01 CST 2020]; root of context hierarchy
+2020-08-11 10:23:01 -HV000001: Hibernate Validator 5.3.6.Final
+2020-08-11 10:23:03 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-11 10:23:05 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65598d9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:06 -Bean 'shiroConfig' of type [com.aijiu.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$489bc98] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:08 -Bean 'userRealm' of type [com.aijiu.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:08 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:08 -Cache with name 'com.aijiu.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2020-08-11 10:23:08 -Added EhCache named [com.aijiu.system.shiro.UserRealm.authorizationCache]
+2020-08-11 10:23:08 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:08 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:08 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:08 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:23:09 -Tomcat initialized with port(s): 8066 (http)
+2020-08-11 10:23:09 -Starting service [Tomcat]
+2020-08-11 10:23:09 -Starting Servlet Engine: Apache Tomcat/8.5.23
+2020-08-11 10:23:09 -Initializing Spring embedded WebApplicationContext
+2020-08-11 10:23:09 -Root WebApplicationContext: initialization completed in 7752 ms
+2020-08-11 10:23:09 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-11 10:23:09 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-11 10:23:09 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-11 10:23:09 -Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-11 10:23:10 -Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-08-11 10:23:10 -Filter xssFilter was not registered (disabled)
+2020-08-11 10:23:10 -Mapping filter: 'webStatFilter' to urls: [/*]
+2020-08-11 10:23:10 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2020-08-11 10:23:10 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2020-08-11 10:23:10 -Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-11 10:23:11 -{dataSource-1} inited
+2020-08-11 10:23:12 -Using default implementation for ThreadExecutor
+2020-08-11 10:23:12 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-08-11 10:23:12 -Quartz Scheduler v.2.2.1 created.
+2020-08-11 10:23:12 -RAMJobStore initialized.
+2020-08-11 10:23:12 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-08-11 10:23:12 -Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-08-11 10:23:12 -Quartz scheduler version: 2.2.1
+2020-08-11 10:23:12 -JobFactory set to: com.aijiu.common.quartz.factory.JobFactory@3855d9b2
+2020-08-11 10:23:13 -Initializing ExecutorService  'clientInboundChannelExecutor'
+2020-08-11 10:23:13 -Initializing ExecutorService  'clientOutboundChannelExecutor'
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/add],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.add()
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.remove(java.lang.Long[])
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/update]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.update(com.aijiu.carousel.domain.BannerDO)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.carousel.controller.BannerController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.save(com.aijiu.carousel.domain.BannerDO)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.info(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.sysFile(org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/rocket/{id}],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.rocket(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/updateEnable]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.updateEnable(java.lang.Long,java.lang.Integer)
+2020-08-11 10:23:14 -Mapped "{[/carousel/banner/upload],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.upload(org.springframework.web.multipart.MultipartFile,com.aijiu.carousel.domain.BannerDO,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:23:14 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.add()
+2020-08-11 10:23:14 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long[])
+2020-08-11 10:23:14 -Mapped "{[/common/dict/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.update(com.aijiu.common.domain.DictDO)
+2020-08-11 10:23:14 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.save(com.aijiu.common.domain.DictDO)
+2020-08-11 10:23:14 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listType()
+2020-08-11 10:23:14 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listByType(java.lang.String)
+2020-08-11 10:23:14 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2020-08-11 10:23:14 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.dict()
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.add()
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long[])
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.update(com.aijiu.common.domain.FileDO)
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.save(com.aijiu.common.domain.FileDO)
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.info(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:23:14 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.aijiu.common.controller.GeneratorController.list()
+2020-08-11 10:23:14 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.aijiu.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2020-08-11 10:23:14 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.GeneratorController.generator()
+2020-08-11 10:23:14 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.aijiu.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/common/generator/batchCode]}" onto public void com.aijiu.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2020-08-11 10:23:14 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.add()
+2020-08-11 10:23:14 -Mapped "{[/common/job/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long[])
+2020-08-11 10:23:14 -Mapped "{[/common/job/update],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.update(com.aijiu.common.domain.TaskDO)
+2020-08-11 10:23:14 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.save(com.aijiu.common.domain.TaskDO)
+2020-08-11 10:23:14 -Mapped "{[/common/job/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.info(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.taskScheduleJob()
+2020-08-11 10:23:14 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2020-08-11 10:23:14 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.remove(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.LogController.log()
+2020-08-11 10:23:14 -Mapped "{[/common/log/list],methods=[GET]}" onto com.aijiu.common.domain.PageDO<com.aijiu.common.domain.LogDO> com.aijiu.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.batchRemove(java.lang.Long[])
+2020-08-11 10:23:14 -Mapped "{[/error]}" onto public com.aijiu.common.utils.R com.aijiu.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-11 10:23:14 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.aijiu.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/add],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.add()
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.remove(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.remove(java.lang.Long[])
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/update]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.update(com.aijiu.oa.domain.NotifyDO)
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/read/{id}],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.read(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.oa.controller.NotifyController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.save(com.aijiu.oa.domain.NotifyDO)
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/message],methods=[GET]}" onto com.aijiu.common.utils.PageUtils com.aijiu.oa.controller.NotifyController.message()
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/selfList],methods=[GET]}" onto com.aijiu.common.utils.PageUtils com.aijiu.oa.controller.NotifyController.selfList(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:14 -Mapped "{[/oa/notify],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.oaNotify()
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/selfNotify],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.selefNotify()
+2020-08-11 10:23:14 -Mapped "{[/oa/notify/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:14 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.remove(java.lang.Long)
+2020-08-11 10:23:14 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.remove(java.lang.Long[])
+2020-08-11 10:23:15 -Mapped "{[/system/sysDept/update]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.update(com.aijiu.system.domain.DeptDO)
+2020-08-11 10:23:15 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.aijiu.system.domain.DeptDO> com.aijiu.system.controller.DeptController.list()
+2020-08-11 10:23:15 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.save(com.aijiu.system.domain.DeptDO)
+2020-08-11 10:23:15 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.aijiu.common.domain.Tree<com.aijiu.system.domain.DeptDO> com.aijiu.system.controller.DeptController.tree()
+2020-08-11 10:23:15 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.treeView()
+2020-08-11 10:23:15 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.dept()
+2020-08-11 10:23:15 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.index(org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.main()
+2020-08-11 10:23:15 -Mapped "{[/ || ],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.welcome(org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/login],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2020-08-11 10:23:15 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.logout()
+2020-08-11 10:23:15 -Mapped "{[/login],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.login()
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.MenuController.remove(java.lang.Long)
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.MenuController.update(com.aijiu.system.domain.MenuDO)
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.aijiu.system.domain.MenuDO> com.aijiu.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.MenuController.save(com.aijiu.system.domain.MenuDO)
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.aijiu.common.domain.Tree<com.aijiu.system.domain.MenuDO> com.aijiu.system.controller.MenuController.tree(java.lang.Long)
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.aijiu.common.domain.Tree<com.aijiu.system.domain.MenuDO> com.aijiu.system.controller.MenuController.tree()
+2020-08-11 10:23:15 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.MenuController.menu(org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2020-08-11 10:23:15 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.RoleController.add()
+2020-08-11 10:23:15 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.update(com.aijiu.system.domain.RoleDO)
+2020-08-11 10:23:15 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.aijiu.system.domain.RoleDO> com.aijiu.system.controller.RoleController.list()
+2020-08-11 10:23:15 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.save(java.lang.Long)
+2020-08-11 10:23:15 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.save(com.aijiu.system.domain.RoleDO)
+2020-08-11 10:23:15 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.batchRemove(java.lang.Long[])
+2020-08-11 10:23:15 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.RoleController.role()
+2020-08-11 10:23:15 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/sys/role/updateEnable]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.updateEnable(java.lang.Long,java.lang.Integer)
+2020-08-11 10:23:15 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.aijiu.system.domain.UserOnline> com.aijiu.system.controller.SessionController.list()
+2020-08-11 10:23:15 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.aijiu.system.controller.SessionController.sessionList()
+2020-08-11 10:23:15 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-08-11 10:23:15 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.aijiu.system.controller.SessionController.online()
+2020-08-11 10:23:15 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.aijiu.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.add(org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.remove(java.lang.Long)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.update(com.aijiu.system.domain.UserDO)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/list],methods=[GET]}" onto com.aijiu.common.utils.PageUtils com.aijiu.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/save],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.save(com.aijiu.system.domain.UserDO)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.batchRemove(java.lang.Long[])
+2020-08-11 10:23:15 -Mapped "{[/sys/user/tree],methods=[GET]}" onto public com.aijiu.common.domain.Tree<com.aijiu.system.domain.DeptDO> com.aijiu.system.controller.UserController.tree()
+2020-08-11 10:23:15 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.user(org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/treeView],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.treeView()
+2020-08-11 10:23:15 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.updatePeronal(com.aijiu.system.domain.UserDO)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/resetPwd],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.resetPwd(com.aijiu.system.vo.UserVO)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.personal(org.springframework.ui.Model)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/uploadImg],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.adminResetPwd(com.aijiu.system.vo.UserVO)
+2020-08-11 10:23:15 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2020-08-11 10:23:15 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:23:15 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2020-08-11 10:23:15 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2020-08-11 10:23:15 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2020-08-11 10:23:15 -Initializing ExecutorService  'messageBrokerTaskScheduler'
+2020-08-11 10:23:15 -Mapped URL path [/endpointChat/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2020-08-11 10:23:15 -Initializing ExecutorService  'brokerChannelExecutor'
+2020-08-11 10:23:16 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12aba8be: startup date [Tue Aug 11 10:23:01 CST 2020]; root of context hierarchy
+2020-08-11 10:23:16 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:23:16 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:23:16 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:23:16 -Detected @ExceptionHandler methods in BDExceptionHandler
+2020-08-11 10:23:16 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:23:17 -
+
+Using default security password: 731667bc-698b-45f0-8e64-f5ae16f8caca
+
+2020-08-11 10:23:18 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2020-08-11 10:23:18 -Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@5018b56b, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@360a3106, org.springframework.security.web.context.SecurityContextPersistenceFilter@48da64f2, org.springframework.security.web.header.HeaderWriterFilter@12532e37, org.springframework.security.web.csrf.CsrfFilter@4df13dd0, org.springframework.security.web.authentication.logout.LogoutFilter@5a63fa71, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c2a3f0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3cb49121, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@737ff5c4, org.springframework.security.web.session.SessionManagementFilter@6b64bf61, org.springframework.security.web.access.ExceptionTranslationFilter@4552f905]
+2020-08-11 10:23:18 -Registering beans for JMX exposure on startup
+2020-08-11 10:23:18 -Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-08-11 10:23:18 -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2020-08-11 10:23:18 -Starting beans in phase 2147483647
+2020-08-11 10:23:18 -Context refreshed
+2020-08-11 10:23:18 -Found 1 custom documentation plugin(s)
+2020-08-11 10:23:18 -Scanning for api listing references
+2020-08-11 10:23:18 -Generating unique operation named: removeUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_2
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_3
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingHEAD_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPUT_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPATCH_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingDELETE_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingOPTIONS_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingTRACE_1
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_2
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_2
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_2
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_4
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_5
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingGET_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingHEAD_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPUT_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPATCH_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingDELETE_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingOPTIONS_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingTRACE_2
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_3
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_3
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingHEAD_1
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingPUT_1
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingPATCH_1
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingDELETE_1
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingOPTIONS_1
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingTRACE_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_3
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_6
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_7
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_3
+2020-08-11 10:23:19 -Generating unique operation named: sysFileUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingGET_3
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingHEAD_3
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_3
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPUT_3
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPATCH_3
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingDELETE_3
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingOPTIONS_3
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingTRACE_3
+2020-08-11 10:23:19 -Generating unique operation named: uploadUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_4
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_4
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_4
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_5
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingGET_2
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingHEAD_2
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingPOST_2
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingPUT_2
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingPATCH_2
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingDELETE_2
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingOPTIONS_2
+2020-08-11 10:23:19 -Generating unique operation named: infoUsingTRACE_2
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_5
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_8
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_9
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_5
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_6
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_10
+2020-08-11 10:23:19 -Generating unique operation named: welcomeUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_5
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_6
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_7
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_11
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_5
+2020-08-11 10:23:19 -Generating unique operation named: treeUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: treeUsingGET_2
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_6
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_6
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_7
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_8
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_12
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_13
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_6
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingGET_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingHEAD_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_7
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPUT_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPATCH_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingDELETE_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingOPTIONS_4
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingTRACE_4
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_7
+2020-08-11 10:23:19 -Generating unique operation named: batchRemoveUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_8
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_9
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_7
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_8
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_8
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingHEAD_1
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingPUT_1
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingPATCH_1
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingDELETE_1
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingOPTIONS_1
+2020-08-11 10:23:19 -Generating unique operation named: updateEnableUsingTRACE_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_10
+2020-08-11 10:23:19 -Generating unique operation named: listUsingHEAD_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingPOST_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingPUT_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingPATCH_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingDELETE_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingOPTIONS_1
+2020-08-11 10:23:19 -Generating unique operation named: listUsingTRACE_1
+2020-08-11 10:23:19 -Generating unique operation named: addUsingGET_8
+2020-08-11 10:23:19 -Generating unique operation named: batchRemoveUsingPOST_2
+2020-08-11 10:23:19 -Generating unique operation named: editUsingGET_9
+2020-08-11 10:23:19 -Generating unique operation named: listUsingGET_11
+2020-08-11 10:23:19 -Generating unique operation named: removeUsingPOST_14
+2020-08-11 10:23:19 -Generating unique operation named: saveUsingPOST_9
+2020-08-11 10:23:19 -Generating unique operation named: treeUsingGET_3
+2020-08-11 10:23:19 -Generating unique operation named: treeViewUsingGET_1
+2020-08-11 10:23:19 -Generating unique operation named: updateUsingPOST_9
+2020-08-11 10:23:19 -Starting Quartz Scheduler now
+2020-08-11 10:23:19 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-08-11 10:23:19 -Starting...
+2020-08-11 10:23:19 -BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-08-11 10:23:19 -Started.
+2020-08-11 10:23:20 -Initializing ProtocolHandler ["http-nio-8066"]
+2020-08-11 10:23:20 -Starting ProtocolHandler ["http-nio-8066"]
+2020-08-11 10:23:20 -Using a shared selector for servlet write/read
+2020-08-11 10:23:20 -Tomcat started on port(s): 8066 (http)
+2020-08-11 10:23:20 -Started BootdoApplication in 19.616 seconds (JVM running for 20.102)
+2020-08-11 10:24:15 -WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2020-08-11 10:25:24 -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-08-11 10:25:24 -FrameworkServlet 'dispatcherServlet': initialization started
+2020-08-11 10:25:24 -FrameworkServlet 'dispatcherServlet': initialization completed in 123 ms
+2020-08-11 10:25:24 -Enabling session validation scheduler...
+2020-08-11 10:25:24 -请求地址 : http://localhost:8066/
+2020-08-11 10:25:24 -HTTP METHOD : GET
+2020-08-11 10:25:24 -CLASS_METHOD : com.aijiu.system.controller.LoginController.welcome
+2020-08-11 10:25:24 -参数 : [{}]
+2020-08-11 10:25:24 -耗时 : 4
+2020-08-11 10:25:24 -请求地址 : http://localhost:8066/login
+2020-08-11 10:25:24 -HTTP METHOD : GET
+2020-08-11 10:25:24 -CLASS_METHOD : com.aijiu.system.controller.LoginController.login
+2020-08-11 10:25:24 -参数 : []
+2020-08-11 10:25:24 -耗时 : 1
+2020-08-11 10:25:24 -[THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2020-08-11 10:25:24 -[THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2020-08-11 10:25:24 -[THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2020-08-11 10:25:24 -[THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2020-08-11 10:25:24 -[THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2020-08-11 10:25:24 -[THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 3]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 3]: at.pollux.thymeleaf.shiro.dialect.ShiroDialect
+[THYMELEAF]     * Prefix: "shiro"
+[THYMELEAF] * Dialect [3 of 3]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2020-08-11 10:25:24 -[THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2020-08-11 10:25:26 -请求地址 : http://localhost:8066/login;JSESSIONID=413b9265-1ea1-407b-89bd-4be1772a38c7
+2020-08-11 10:25:26 -HTTP METHOD : GET
+2020-08-11 10:25:26 -CLASS_METHOD : com.aijiu.system.controller.LoginController.login
+2020-08-11 10:25:26 -参数 : []
+2020-08-11 10:25:26 -耗时 : 0
+2020-08-11 10:25:33 -请求地址 : http://localhost:8066/login
+2020-08-11 10:25:33 -HTTP METHOD : POST
+2020-08-11 10:25:33 -CLASS_METHOD : com.aijiu.system.controller.LoginController.ajaxLogin
+2020-08-11 10:25:33 -参数 : [admin, 111111]
+2020-08-11 10:25:33 -耗时 : 57
+2020-08-11 10:25:33 -More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [clientInboundChannelExecutor, clientOutboundChannelExecutor, brokerChannelExecutor, messageBrokerTaskScheduler]
+2020-08-11 10:25:33 -请求地址 : http://localhost:8066/index
+2020-08-11 10:25:33 -HTTP METHOD : GET
+2020-08-11 10:25:33 -CLASS_METHOD : com.aijiu.system.controller.LoginController.index
+2020-08-11 10:25:33 -参数 : [{}]
+2020-08-11 10:25:33 -耗时 : 286
+2020-08-11 10:25:34 -请求地址 : http://localhost:8066/main
+2020-08-11 10:25:34 -HTTP METHOD : GET
+2020-08-11 10:25:34 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:25:34 -参数 : []
+2020-08-11 10:25:34 -耗时 : 0
+2020-08-11 10:25:34 -请求地址 : http://localhost:8066/oa/notify/message
+2020-08-11 10:25:34 -HTTP METHOD : GET
+2020-08-11 10:25:34 -CLASS_METHOD : com.aijiu.oa.controller.NotifyController.message
+2020-08-11 10:25:34 -参数 : []
+2020-08-11 10:25:34 -请求地址 : http://localhost:8066/main
+2020-08-11 10:25:34 -HTTP METHOD : GET
+2020-08-11 10:25:34 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:25:34 -参数 : []
+2020-08-11 10:25:34 -耗时 : 0
+2020-08-11 10:25:34 -耗时 : 55
+2020-08-11 10:26:12 -Starting BootdoApplication on DESKTOP-Q2BGQHJ with PID 19620 (E:\AIJIU\aijiu-manager\target\classes started by EDZ in E:\AIJIU\aijiu-manager)
+2020-08-11 10:26:12 -The following profiles are active: dev
+2020-08-11 10:26:12 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12aba8be: startup date [Tue Aug 11 10:26:12 CST 2020]; root of context hierarchy
+2020-08-11 10:26:12 -HV000001: Hibernate Validator 5.3.6.Final
+2020-08-11 10:26:13 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-11 10:26:14 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8cc9a1a0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:14 -Bean 'shiroConfig' of type [com.aijiu.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$2bf9d09e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:16 -Bean 'userRealm' of type [com.aijiu.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:16 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:16 -Cache with name 'com.aijiu.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2020-08-11 10:26:16 -Added EhCache named [com.aijiu.system.shiro.UserRealm.authorizationCache]
+2020-08-11 10:26:16 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:16 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:16 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:16 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-11 10:26:16 -Tomcat initialized with port(s): 8066 (http)
+2020-08-11 10:26:16 -Starting service [Tomcat]
+2020-08-11 10:26:16 -Starting Servlet Engine: Apache Tomcat/8.5.23
+2020-08-11 10:26:17 -Initializing Spring embedded WebApplicationContext
+2020-08-11 10:26:17 -Root WebApplicationContext: initialization completed in 4438 ms
+2020-08-11 10:26:17 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-08-11 10:26:17 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-08-11 10:26:17 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-08-11 10:26:17 -Mapping filter: 'requestContextFilter' to: [/*]
+2020-08-11 10:26:17 -Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-08-11 10:26:17 -Filter xssFilter was not registered (disabled)
+2020-08-11 10:26:17 -Mapping filter: 'webStatFilter' to urls: [/*]
+2020-08-11 10:26:17 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2020-08-11 10:26:17 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2020-08-11 10:26:17 -Mapping servlet: 'dispatcherServlet' to [/]
+2020-08-11 10:26:18 -{dataSource-1} inited
+2020-08-11 10:26:18 -Using default implementation for ThreadExecutor
+2020-08-11 10:26:18 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-08-11 10:26:18 -Quartz Scheduler v.2.2.1 created.
+2020-08-11 10:26:18 -RAMJobStore initialized.
+2020-08-11 10:26:18 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-08-11 10:26:18 -Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2020-08-11 10:26:18 -Quartz scheduler version: 2.2.1
+2020-08-11 10:26:18 -JobFactory set to: com.aijiu.common.quartz.factory.JobFactory@987a0bb
+2020-08-11 10:26:19 -Initializing ExecutorService  'clientInboundChannelExecutor'
+2020-08-11 10:26:19 -Initializing ExecutorService  'clientOutboundChannelExecutor'
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/add],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.add()
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.remove(java.lang.Long[])
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/update]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.update(com.aijiu.carousel.domain.BannerDO)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.carousel.controller.BannerController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.save(com.aijiu.carousel.domain.BannerDO)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.info(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/updateEnable]}" onto public com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.updateEnable(java.lang.Long,java.lang.Integer)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/rocket/{id}],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.rocket(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/upload],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.carousel.controller.BannerController.upload(org.springframework.web.multipart.MultipartFile,com.aijiu.carousel.domain.BannerDO,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/carousel/banner],methods=[GET]}" onto java.lang.String com.aijiu.carousel.controller.BannerController.sysFile(org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.add()
+2020-08-11 10:26:19 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long[])
+2020-08-11 10:26:19 -Mapped "{[/common/dict/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.update(com.aijiu.common.domain.DictDO)
+2020-08-11 10:26:19 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.save(com.aijiu.common.domain.DictDO)
+2020-08-11 10:26:19 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.dict()
+2020-08-11 10:26:19 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2020-08-11 10:26:19 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listByType(java.lang.String)
+2020-08-11 10:26:19 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listType()
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.add()
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long[])
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.update(com.aijiu.common.domain.FileDO)
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.save(com.aijiu.common.domain.FileDO)
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.info(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.aijiu.common.controller.GeneratorController.list()
+2020-08-11 10:26:19 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.GeneratorController.generator()
+2020-08-11 10:26:19 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.aijiu.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/common/generator/batchCode]}" onto public void com.aijiu.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2020-08-11 10:26:19 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.aijiu.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2020-08-11 10:26:19 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.add()
+2020-08-11 10:26:19 -Mapped "{[/common/job/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long[])
+2020-08-11 10:26:19 -Mapped "{[/common/job/update],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.update(com.aijiu.common.domain.TaskDO)
+2020-08-11 10:26:19 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.save(com.aijiu.common.domain.TaskDO)
+2020-08-11 10:26:19 -Mapped "{[/common/job/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.info(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2020-08-11 10:26:19 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.taskScheduleJob()
+2020-08-11 10:26:19 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.remove(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.LogController.log()
+2020-08-11 10:26:19 -Mapped "{[/common/log/list],methods=[GET]}" onto com.aijiu.common.domain.PageDO<com.aijiu.common.domain.LogDO> com.aijiu.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.batchRemove(java.lang.Long[])
+2020-08-11 10:26:19 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.aijiu.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-11 10:26:19 -Mapped "{[/error]}" onto public com.aijiu.common.utils.R com.aijiu.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/add],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.add()
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.remove(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.remove(java.lang.Long[])
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/update]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.update(com.aijiu.oa.domain.NotifyDO)
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/read/{id}],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.read(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.oa.controller.NotifyController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.oa.controller.NotifyController.save(com.aijiu.oa.domain.NotifyDO)
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/message],methods=[GET]}" onto com.aijiu.common.utils.PageUtils com.aijiu.oa.controller.NotifyController.message()
+2020-08-11 10:26:19 -Mapped "{[/oa/notify],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.oaNotify()
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/selfNotify],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.selefNotify()
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.oa.controller.NotifyController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/oa/notify/selfList],methods=[GET]}" onto com.aijiu.common.utils.PageUtils com.aijiu.oa.controller.NotifyController.selfList(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/add/{pId}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.add(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.remove(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.remove(java.lang.Long[])
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/update]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.update(com.aijiu.system.domain.DeptDO)
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/list],methods=[GET]}" onto public java.util.List<com.aijiu.system.domain.DeptDO> com.aijiu.system.controller.DeptController.list()
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.DeptController.save(com.aijiu.system.domain.DeptDO)
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/tree],methods=[GET]}" onto public com.aijiu.common.domain.Tree<com.aijiu.system.domain.DeptDO> com.aijiu.system.controller.DeptController.tree()
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/edit/{deptId}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.dept()
+2020-08-11 10:26:19 -Mapped "{[/system/sysDept/treeView],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.DeptController.treeView()
+2020-08-11 10:26:19 -Mapped "{[/index],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.index(org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/main],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.main()
+2020-08-11 10:26:19 -Mapped "{[/login],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.login()
+2020-08-11 10:26:19 -Mapped "{[/logout],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.logout()
+2020-08-11 10:26:19 -Mapped "{[/ || ],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.LoginController.welcome(org.springframework.ui.Model)
+2020-08-11 10:26:19 -Mapped "{[/login],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.LoginController.ajaxLogin(java.lang.String,java.lang.String)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/add/{pId}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.MenuController.add(org.springframework.ui.Model,java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.MenuController.remove(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.MenuController.update(com.aijiu.system.domain.MenuDO)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/list]}" onto java.util.List<com.aijiu.system.domain.MenuDO> com.aijiu.system.controller.MenuController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/save],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.MenuController.save(com.aijiu.system.domain.MenuDO)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/tree/{roleId}],methods=[GET]}" onto com.aijiu.common.domain.Tree<com.aijiu.system.domain.MenuDO> com.aijiu.system.controller.MenuController.tree(java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/tree],methods=[GET]}" onto com.aijiu.common.domain.Tree<com.aijiu.system.domain.MenuDO> com.aijiu.system.controller.MenuController.tree()
+2020-08-11 10:26:19 -Mapped "{[/sys/menu/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.MenuController.edit(org.springframework.ui.Model,java.lang.Long)
+2020-08-11 10:26:19 -Mapped "{[/sys/menu],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.MenuController.menu(org.springframework.ui.Model)
+2020-08-11 10:26:20 -Mapped "{[/sys/role/add],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.RoleController.add()
+2020-08-11 10:26:20 -Mapped "{[/sys/role/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.update(com.aijiu.system.domain.RoleDO)
+2020-08-11 10:26:20 -Mapped "{[/sys/role/list],methods=[GET]}" onto java.util.List<com.aijiu.system.domain.RoleDO> com.aijiu.system.controller.RoleController.list()
+2020-08-11 10:26:20 -Mapped "{[/sys/role/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.save(java.lang.Long)
+2020-08-11 10:26:20 -Mapped "{[/sys/role/save],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.save(com.aijiu.system.domain.RoleDO)
+2020-08-11 10:26:20 -Mapped "{[/sys/role/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.batchRemove(java.lang.Long[])
+2020-08-11 10:26:20 -Mapped "{[/sys/role],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.RoleController.role()
+2020-08-11 10:26:20 -Mapped "{[/sys/role/updateEnable]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.RoleController.updateEnable(java.lang.Long,java.lang.Integer)
+2020-08-11 10:26:20 -Mapped "{[/sys/role/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.RoleController.edit(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:20 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.aijiu.system.domain.UserOnline> com.aijiu.system.controller.SessionController.list()
+2020-08-11 10:26:20 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.aijiu.system.controller.SessionController.online()
+2020-08-11 10:26:20 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2020-08-11 10:26:20 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.aijiu.system.controller.SessionController.sessionList()
+2020-08-11 10:26:20 -Mapped "{[/sys/user/exit],methods=[POST]}" onto boolean com.aijiu.system.controller.UserController.exit(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/add],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.add(org.springframework.ui.Model)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.remove(java.lang.Long)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.update(com.aijiu.system.domain.UserDO)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/list],methods=[GET]}" onto com.aijiu.common.utils.PageUtils com.aijiu.system.controller.UserController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/save],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.save(com.aijiu.system.domain.UserDO)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.batchRemove(java.lang.Long[])
+2020-08-11 10:26:20 -Mapped "{[/sys/user/tree],methods=[GET]}" onto public com.aijiu.common.domain.Tree<com.aijiu.system.domain.DeptDO> com.aijiu.system.controller.UserController.tree()
+2020-08-11 10:26:20 -Mapped "{[/sys/user/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.edit(org.springframework.ui.Model,java.lang.Long)
+2020-08-11 10:26:20 -Mapped "{[/sys/user],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.user(org.springframework.ui.Model)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/treeView],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.treeView()
+2020-08-11 10:26:20 -Mapped "{[/sys/user/resetPwd],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.resetPwd(com.aijiu.system.vo.UserVO)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/resetPwd/{id}],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.resetPwd(java.lang.Long,org.springframework.ui.Model)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/uploadImg],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/adminResetPwd],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.adminResetPwd(com.aijiu.system.vo.UserVO)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/updatePeronal],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.system.controller.UserController.updatePeronal(com.aijiu.system.domain.UserDO)
+2020-08-11 10:26:20 -Mapped "{[/sys/user/personal],methods=[GET]}" onto java.lang.String com.aijiu.system.controller.UserController.personal(org.springframework.ui.Model)
+2020-08-11 10:26:20 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2020-08-11 10:26:20 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2020-08-11 10:26:20 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2020-08-11 10:26:20 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2020-08-11 10:26:20 -Initializing ExecutorService  'messageBrokerTaskScheduler'
+2020-08-11 10:26:20 -Mapped URL path [/endpointChat/**] onto handler of type [class org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler]
+2020-08-11 10:26:20 -Initializing ExecutorService  'brokerChannelExecutor'
+2020-08-11 10:26:20 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12aba8be: startup date [Tue Aug 11 10:26:12 CST 2020]; root of context hierarchy
+2020-08-11 10:26:20 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:26:20 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:26:20 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:26:20 -Detected @ExceptionHandler methods in BDExceptionHandler
+2020-08-11 10:26:20 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-08-11 10:26:21 -
+
+Using default security password: 7c341118-dbb5-43e0-a2ed-21e7ed39b898
+
+2020-08-11 10:26:22 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2020-08-11 10:26:22 -Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@cfb94fd, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ebd8d2, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d2a8819, org.springframework.security.web.header.HeaderWriterFilter@558127d2, org.springframework.security.web.csrf.CsrfFilter@b8142f4, org.springframework.security.web.authentication.logout.LogoutFilter@6de5ad56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d4da729, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ca4c88a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44a44a04, org.springframework.security.web.session.SessionManagementFilter@41b66d1, org.springframework.security.web.access.ExceptionTranslationFilter@44106e25]
+2020-08-11 10:26:22 -Registering beans for JMX exposure on startup
+2020-08-11 10:26:22 -Bean with name 'dataSource' has been autodetected for JMX exposure
+2020-08-11 10:26:22 -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2020-08-11 10:26:22 -Starting beans in phase 2147483647
+2020-08-11 10:26:22 -Context refreshed
+2020-08-11 10:26:22 -Found 1 custom documentation plugin(s)
+2020-08-11 10:26:22 -Scanning for api listing references
+2020-08-11 10:26:22 -Generating unique operation named: removeUsingPOST_1
+2020-08-11 10:26:22 -Generating unique operation named: addUsingGET_1
+2020-08-11 10:26:22 -Generating unique operation named: editUsingGET_1
+2020-08-11 10:26:22 -Generating unique operation named: listUsingGET_1
+2020-08-11 10:26:22 -Generating unique operation named: removeUsingPOST_2
+2020-08-11 10:26:22 -Generating unique operation named: removeUsingPOST_3
+2020-08-11 10:26:22 -Generating unique operation named: saveUsingPOST_1
+2020-08-11 10:26:22 -Generating unique operation named: updateUsingGET_1
+2020-08-11 10:26:22 -Generating unique operation named: updateUsingHEAD_1
+2020-08-11 10:26:22 -Generating unique operation named: updateUsingPOST_1
+2020-08-11 10:26:22 -Generating unique operation named: updateUsingPUT_1
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPATCH_1
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingDELETE_1
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingOPTIONS_1
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingTRACE_1
+2020-08-11 10:26:23 -Generating unique operation named: addUsingGET_2
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_2
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_2
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_4
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_5
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingGET_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingHEAD_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPUT_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPATCH_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingDELETE_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingOPTIONS_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingTRACE_2
+2020-08-11 10:26:23 -Generating unique operation named: addUsingGET_3
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_3
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingGET_1
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingHEAD_1
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingPOST_1
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingPUT_1
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingPATCH_1
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingDELETE_1
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingOPTIONS_1
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingTRACE_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_3
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_6
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_7
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_3
+2020-08-11 10:26:23 -Generating unique operation named: sysFileUsingGET_1
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingGET_3
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingHEAD_3
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_3
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPUT_3
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPATCH_3
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingDELETE_3
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingOPTIONS_3
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingTRACE_3
+2020-08-11 10:26:23 -Generating unique operation named: uploadUsingPOST_1
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_4
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_4
+2020-08-11 10:26:23 -Generating unique operation named: addUsingGET_4
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_5
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingGET_2
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingHEAD_2
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingPOST_2
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingPUT_2
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingPATCH_2
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingDELETE_2
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingOPTIONS_2
+2020-08-11 10:26:23 -Generating unique operation named: infoUsingTRACE_2
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_5
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_8
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_9
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_5
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_6
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_10
+2020-08-11 10:26:23 -Generating unique operation named: welcomeUsingGET_1
+2020-08-11 10:26:23 -Generating unique operation named: addUsingGET_5
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_6
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_7
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_11
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_5
+2020-08-11 10:26:23 -Generating unique operation named: treeUsingGET_1
+2020-08-11 10:26:23 -Generating unique operation named: treeUsingGET_2
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_6
+2020-08-11 10:26:23 -Generating unique operation named: addUsingGET_6
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_7
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_8
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_12
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_13
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_6
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingGET_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingHEAD_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_7
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPUT_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPATCH_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingDELETE_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingOPTIONS_4
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingTRACE_4
+2020-08-11 10:26:23 -Generating unique operation named: addUsingGET_7
+2020-08-11 10:26:23 -Generating unique operation named: batchRemoveUsingPOST_1
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_8
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_9
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_7
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_8
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_8
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingGET_1
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingHEAD_1
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingPOST_1
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingPUT_1
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingPATCH_1
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingDELETE_1
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingOPTIONS_1
+2020-08-11 10:26:23 -Generating unique operation named: updateEnableUsingTRACE_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_10
+2020-08-11 10:26:23 -Generating unique operation named: listUsingHEAD_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingPOST_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingPUT_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingPATCH_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingDELETE_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingOPTIONS_1
+2020-08-11 10:26:23 -Generating unique operation named: listUsingTRACE_1
+2020-08-11 10:26:23 -Generating unique operation named: addUsingGET_8
+2020-08-11 10:26:23 -Generating unique operation named: batchRemoveUsingPOST_2
+2020-08-11 10:26:23 -Generating unique operation named: editUsingGET_9
+2020-08-11 10:26:23 -Generating unique operation named: listUsingGET_11
+2020-08-11 10:26:23 -Generating unique operation named: removeUsingPOST_14
+2020-08-11 10:26:23 -Generating unique operation named: saveUsingPOST_9
+2020-08-11 10:26:23 -Generating unique operation named: treeUsingGET_3
+2020-08-11 10:26:23 -Generating unique operation named: treeViewUsingGET_1
+2020-08-11 10:26:23 -Generating unique operation named: updateUsingPOST_9
+2020-08-11 10:26:23 -Starting Quartz Scheduler now
+2020-08-11 10:26:23 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2020-08-11 10:26:23 -Starting...
+2020-08-11 10:26:23 -BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-08-11 10:26:23 -Started.
+2020-08-11 10:26:23 -Initializing ProtocolHandler ["http-nio-8066"]
+2020-08-11 10:26:23 -Starting ProtocolHandler ["http-nio-8066"]
+2020-08-11 10:26:23 -Using a shared selector for servlet write/read
+2020-08-11 10:26:23 -Tomcat started on port(s): 8066 (http)
+2020-08-11 10:26:23 -Started BootdoApplication in 12.056 seconds (JVM running for 12.436)
+2020-08-11 10:26:35 -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-08-11 10:26:35 -FrameworkServlet 'dispatcherServlet': initialization started
+2020-08-11 10:26:35 -FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2020-08-11 10:26:35 -Enabling session validation scheduler...
+2020-08-11 10:26:35 -请求地址 : http://localhost:8066/login;JSESSIONID=04c9b8c8-0cbf-4cce-b44a-dba3b46a981b
+2020-08-11 10:26:35 -HTTP METHOD : GET
+2020-08-11 10:26:35 -CLASS_METHOD : com.aijiu.system.controller.LoginController.login
+2020-08-11 10:26:35 -参数 : []
+2020-08-11 10:26:35 -耗时 : 3
+2020-08-11 10:26:35 -[THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2020-08-11 10:26:35 -[THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2020-08-11 10:26:35 -[THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2020-08-11 10:26:35 -[THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2020-08-11 10:26:35 -[THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2020-08-11 10:26:35 -[THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 3]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 3]: at.pollux.thymeleaf.shiro.dialect.ShiroDialect
+[THYMELEAF]     * Prefix: "shiro"
+[THYMELEAF] * Dialect [3 of 3]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2020-08-11 10:26:35 -[THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2020-08-11 10:26:36 -请求地址 : http://localhost:8066/login;JSESSIONID=413b9265-1ea1-407b-89bd-4be1772a38c7
+2020-08-11 10:26:36 -HTTP METHOD : GET
+2020-08-11 10:26:36 -CLASS_METHOD : com.aijiu.system.controller.LoginController.login
+2020-08-11 10:26:36 -参数 : []
+2020-08-11 10:26:36 -耗时 : 1
+2020-08-11 10:26:44 -请求地址 : http://localhost:8066/login
+2020-08-11 10:26:44 -HTTP METHOD : POST
+2020-08-11 10:26:44 -CLASS_METHOD : com.aijiu.system.controller.LoginController.ajaxLogin
+2020-08-11 10:26:44 -参数 : [admin, 111111]
+2020-08-11 10:26:44 -耗时 : 33
+2020-08-11 10:26:44 -More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [clientInboundChannelExecutor, clientOutboundChannelExecutor, brokerChannelExecutor, messageBrokerTaskScheduler]
+2020-08-11 10:26:45 -请求地址 : http://localhost:8066/index
+2020-08-11 10:26:45 -HTTP METHOD : GET
+2020-08-11 10:26:45 -CLASS_METHOD : com.aijiu.system.controller.LoginController.index
+2020-08-11 10:26:45 -参数 : [{}]
+2020-08-11 10:26:45 -耗时 : 240
+2020-08-11 10:26:45 -请求地址 : http://localhost:8066/main
+2020-08-11 10:26:45 -HTTP METHOD : GET
+2020-08-11 10:26:45 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:26:45 -参数 : []
+2020-08-11 10:26:45 -耗时 : 0
+2020-08-11 10:26:45 -请求地址 : http://localhost:8066/oa/notify/message
+2020-08-11 10:26:45 -HTTP METHOD : GET
+2020-08-11 10:26:45 -CLASS_METHOD : com.aijiu.oa.controller.NotifyController.message
+2020-08-11 10:26:45 -参数 : []
+2020-08-11 10:26:45 -请求地址 : http://localhost:8066/main
+2020-08-11 10:26:45 -HTTP METHOD : GET
+2020-08-11 10:26:45 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:26:45 -参数 : []
+2020-08-11 10:26:45 -耗时 : 0
+2020-08-11 10:26:45 -耗时 : 54
+2020-08-11 10:26:53 -请求地址 : http://localhost:8066/sys/menu/
+2020-08-11 10:26:53 -HTTP METHOD : GET
+2020-08-11 10:26:53 -CLASS_METHOD : com.aijiu.system.controller.MenuController.menu
+2020-08-11 10:26:53 -参数 : [{}]
+2020-08-11 10:26:53 -耗时 : 0
+2020-08-11 10:26:54 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:26:54 -HTTP METHOD : GET
+2020-08-11 10:26:54 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:26:54 -参数 : [{sort=order_num}]
+2020-08-11 10:26:54 -耗时 : 184
+2020-08-11 10:27:04 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:04 -HTTP METHOD : POST
+2020-08-11 10:27:04 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:04 -参数 : [252]
+2020-08-11 10:27:05 -耗时 : 173
+2020-08-11 10:27:05 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:05 -HTTP METHOD : GET
+2020-08-11 10:27:05 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:05 -参数 : [{sort=order_num}]
+2020-08-11 10:27:05 -耗时 : 169
+2020-08-11 10:27:11 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:11 -HTTP METHOD : POST
+2020-08-11 10:27:11 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:11 -参数 : [253]
+2020-08-11 10:27:11 -耗时 : 142
+2020-08-11 10:27:11 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:11 -HTTP METHOD : GET
+2020-08-11 10:27:11 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:11 -参数 : [{sort=order_num}]
+2020-08-11 10:27:11 -耗时 : 152
+2020-08-11 10:27:18 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:18 -HTTP METHOD : POST
+2020-08-11 10:27:18 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:18 -参数 : [254]
+2020-08-11 10:27:18 -耗时 : 132
+2020-08-11 10:27:18 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:18 -HTTP METHOD : GET
+2020-08-11 10:27:18 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:18 -参数 : [{sort=order_num}]
+2020-08-11 10:27:18 -耗时 : 177
+2020-08-11 10:27:20 -WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 8, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannelpool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 2, completed tasks = 8]
+2020-08-11 10:27:24 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:24 -HTTP METHOD : POST
+2020-08-11 10:27:24 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:24 -参数 : [251]
+2020-08-11 10:27:24 -耗时 : 143
+2020-08-11 10:27:24 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:24 -HTTP METHOD : GET
+2020-08-11 10:27:24 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:24 -参数 : [{sort=order_num}]
+2020-08-11 10:27:25 -耗时 : 156
+2020-08-11 10:27:27 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:27 -HTTP METHOD : POST
+2020-08-11 10:27:27 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:27 -参数 : [250]
+2020-08-11 10:27:28 -耗时 : 137
+2020-08-11 10:27:28 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:28 -HTTP METHOD : GET
+2020-08-11 10:27:28 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:28 -参数 : [{sort=order_num}]
+2020-08-11 10:27:28 -耗时 : 164
+2020-08-11 10:27:34 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:34 -HTTP METHOD : POST
+2020-08-11 10:27:34 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:34 -参数 : [262]
+2020-08-11 10:27:35 -耗时 : 198
+2020-08-11 10:27:35 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:35 -HTTP METHOD : GET
+2020-08-11 10:27:35 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:35 -参数 : [{sort=order_num}]
+2020-08-11 10:27:35 -耗时 : 150
+2020-08-11 10:27:41 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:41 -HTTP METHOD : POST
+2020-08-11 10:27:41 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:41 -参数 : [263]
+2020-08-11 10:27:41 -耗时 : 127
+2020-08-11 10:27:41 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:41 -HTTP METHOD : GET
+2020-08-11 10:27:41 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:41 -参数 : [{sort=order_num}]
+2020-08-11 10:27:41 -耗时 : 168
+2020-08-11 10:27:46 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:46 -HTTP METHOD : POST
+2020-08-11 10:27:46 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:46 -参数 : [264]
+2020-08-11 10:27:47 -耗时 : 297
+2020-08-11 10:27:47 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:47 -HTTP METHOD : GET
+2020-08-11 10:27:47 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:47 -参数 : [{sort=order_num}]
+2020-08-11 10:27:47 -耗时 : 169
+2020-08-11 10:27:51 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:51 -HTTP METHOD : POST
+2020-08-11 10:27:51 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:51 -参数 : [261]
+2020-08-11 10:27:51 -耗时 : 164
+2020-08-11 10:27:51 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:51 -HTTP METHOD : GET
+2020-08-11 10:27:51 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:51 -参数 : [{sort=order_num}]
+2020-08-11 10:27:51 -耗时 : 162
+2020-08-11 10:27:55 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:27:55 -HTTP METHOD : POST
+2020-08-11 10:27:55 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:27:55 -参数 : [260]
+2020-08-11 10:27:55 -耗时 : 225
+2020-08-11 10:27:55 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:27:55 -HTTP METHOD : GET
+2020-08-11 10:27:55 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:27:55 -参数 : [{sort=order_num}]
+2020-08-11 10:27:55 -耗时 : 246
+2020-08-11 10:28:38 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:28:38 -HTTP METHOD : POST
+2020-08-11 10:28:38 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:28:38 -参数 : [267]
+2020-08-11 10:28:38 -耗时 : 129
+2020-08-11 10:28:38 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:28:38 -HTTP METHOD : GET
+2020-08-11 10:28:38 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:28:38 -参数 : [{sort=order_num}]
+2020-08-11 10:28:39 -耗时 : 173
+2020-08-11 10:28:45 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:28:45 -HTTP METHOD : POST
+2020-08-11 10:28:45 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:28:45 -参数 : [268]
+2020-08-11 10:28:46 -耗时 : 816
+2020-08-11 10:28:46 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:28:46 -HTTP METHOD : GET
+2020-08-11 10:28:46 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:28:46 -参数 : [{sort=order_num}]
+2020-08-11 10:28:46 -耗时 : 425
+2020-08-11 10:28:52 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:28:52 -HTTP METHOD : POST
+2020-08-11 10:28:52 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:28:52 -参数 : [269]
+2020-08-11 10:28:52 -耗时 : 133
+2020-08-11 10:28:52 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:28:52 -HTTP METHOD : GET
+2020-08-11 10:28:52 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:28:52 -参数 : [{sort=order_num}]
+2020-08-11 10:28:52 -耗时 : 163
+2020-08-11 10:28:57 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:28:57 -HTTP METHOD : POST
+2020-08-11 10:28:57 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:28:57 -参数 : [266]
+2020-08-11 10:28:57 -耗时 : 769
+2020-08-11 10:28:57 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:28:57 -HTTP METHOD : GET
+2020-08-11 10:28:57 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:28:57 -参数 : [{sort=order_num}]
+2020-08-11 10:28:58 -耗时 : 780
+2020-08-11 10:29:04 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:04 -HTTP METHOD : POST
+2020-08-11 10:29:04 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:04 -参数 : [271]
+2020-08-11 10:29:05 -耗时 : 781
+2020-08-11 10:29:05 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:05 -HTTP METHOD : GET
+2020-08-11 10:29:05 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:05 -参数 : [{sort=order_num}]
+2020-08-11 10:29:08 -耗时 : 2571
+2020-08-11 10:29:14 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:14 -HTTP METHOD : POST
+2020-08-11 10:29:14 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:14 -参数 : [272]
+2020-08-11 10:29:15 -耗时 : 757
+2020-08-11 10:29:15 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:15 -HTTP METHOD : GET
+2020-08-11 10:29:15 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:15 -参数 : [{sort=order_num}]
+2020-08-11 10:29:16 -耗时 : 1038
+2020-08-11 10:29:21 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:21 -HTTP METHOD : POST
+2020-08-11 10:29:21 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:21 -参数 : [273]
+2020-08-11 10:29:21 -耗时 : 133
+2020-08-11 10:29:21 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:21 -HTTP METHOD : GET
+2020-08-11 10:29:21 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:21 -参数 : [{sort=order_num}]
+2020-08-11 10:29:22 -耗时 : 162
+2020-08-11 10:29:26 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:26 -HTTP METHOD : POST
+2020-08-11 10:29:26 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:26 -参数 : [270]
+2020-08-11 10:29:26 -耗时 : 147
+2020-08-11 10:29:26 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:26 -HTTP METHOD : GET
+2020-08-11 10:29:26 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:26 -参数 : [{sort=order_num}]
+2020-08-11 10:29:26 -耗时 : 147
+2020-08-11 10:29:32 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:32 -HTTP METHOD : POST
+2020-08-11 10:29:32 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:32 -参数 : [275]
+2020-08-11 10:29:32 -耗时 : 379
+2020-08-11 10:29:32 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:32 -HTTP METHOD : GET
+2020-08-11 10:29:32 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:32 -参数 : [{sort=order_num}]
+2020-08-11 10:29:32 -耗时 : 274
+2020-08-11 10:29:38 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:38 -HTTP METHOD : POST
+2020-08-11 10:29:38 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:38 -参数 : [276]
+2020-08-11 10:29:38 -耗时 : 558
+2020-08-11 10:29:38 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:38 -HTTP METHOD : GET
+2020-08-11 10:29:38 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:38 -参数 : [{sort=order_num}]
+2020-08-11 10:29:39 -耗时 : 739
+2020-08-11 10:29:45 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:45 -HTTP METHOD : POST
+2020-08-11 10:29:45 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:45 -参数 : [277]
+2020-08-11 10:29:45 -耗时 : 412
+2020-08-11 10:29:45 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:45 -HTTP METHOD : GET
+2020-08-11 10:29:45 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:45 -参数 : [{sort=order_num}]
+2020-08-11 10:29:46 -耗时 : 219
+2020-08-11 10:29:50 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:50 -HTTP METHOD : POST
+2020-08-11 10:29:50 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:50 -参数 : [274]
+2020-08-11 10:29:50 -耗时 : 150
+2020-08-11 10:29:50 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:50 -HTTP METHOD : GET
+2020-08-11 10:29:50 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:50 -参数 : [{sort=order_num}]
+2020-08-11 10:29:50 -耗时 : 145
+2020-08-11 10:29:54 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:29:54 -HTTP METHOD : POST
+2020-08-11 10:29:54 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:29:54 -参数 : [265]
+2020-08-11 10:29:54 -耗时 : 126
+2020-08-11 10:29:54 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:29:54 -HTTP METHOD : GET
+2020-08-11 10:29:54 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:29:54 -参数 : [{sort=order_num}]
+2020-08-11 10:29:54 -耗时 : 166
+2020-08-11 10:30:06 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:06 -HTTP METHOD : POST
+2020-08-11 10:30:06 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:06 -参数 : [280]
+2020-08-11 10:30:06 -耗时 : 143
+2020-08-11 10:30:06 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:06 -HTTP METHOD : GET
+2020-08-11 10:30:06 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:06 -参数 : [{sort=order_num}]
+2020-08-11 10:30:06 -耗时 : 150
+2020-08-11 10:30:17 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:17 -HTTP METHOD : POST
+2020-08-11 10:30:17 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:17 -参数 : [281]
+2020-08-11 10:30:17 -耗时 : 144
+2020-08-11 10:30:17 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:17 -HTTP METHOD : GET
+2020-08-11 10:30:17 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:17 -参数 : [{sort=order_num}]
+2020-08-11 10:30:17 -耗时 : 188
+2020-08-11 10:30:25 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:25 -HTTP METHOD : POST
+2020-08-11 10:30:25 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:25 -参数 : [282]
+2020-08-11 10:30:26 -耗时 : 220
+2020-08-11 10:30:26 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:26 -HTTP METHOD : GET
+2020-08-11 10:30:26 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:26 -参数 : [{sort=order_num}]
+2020-08-11 10:30:26 -耗时 : 728
+2020-08-11 10:30:33 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:33 -HTTP METHOD : POST
+2020-08-11 10:30:33 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:33 -参数 : [279]
+2020-08-11 10:30:33 -耗时 : 139
+2020-08-11 10:30:33 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:33 -HTTP METHOD : GET
+2020-08-11 10:30:33 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:33 -参数 : [{sort=order_num}]
+2020-08-11 10:30:33 -耗时 : 162
+2020-08-11 10:30:37 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:37 -HTTP METHOD : POST
+2020-08-11 10:30:37 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:37 -参数 : [278]
+2020-08-11 10:30:38 -耗时 : 143
+2020-08-11 10:30:38 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:38 -HTTP METHOD : GET
+2020-08-11 10:30:38 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:38 -参数 : [{sort=order_num}]
+2020-08-11 10:30:38 -耗时 : 150
+2020-08-11 10:30:44 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:44 -HTTP METHOD : POST
+2020-08-11 10:30:44 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:44 -参数 : [285]
+2020-08-11 10:30:44 -耗时 : 130
+2020-08-11 10:30:44 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:44 -HTTP METHOD : GET
+2020-08-11 10:30:44 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:44 -参数 : [{sort=order_num}]
+2020-08-11 10:30:44 -耗时 : 160
+2020-08-11 10:30:48 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:48 -HTTP METHOD : POST
+2020-08-11 10:30:48 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:48 -参数 : [284]
+2020-08-11 10:30:48 -耗时 : 148
+2020-08-11 10:30:48 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:48 -HTTP METHOD : GET
+2020-08-11 10:30:48 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:48 -参数 : [{sort=order_num}]
+2020-08-11 10:30:48 -耗时 : 157
+2020-08-11 10:30:52 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:52 -HTTP METHOD : POST
+2020-08-11 10:30:52 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:52 -参数 : [283]
+2020-08-11 10:30:52 -耗时 : 207
+2020-08-11 10:30:52 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:52 -HTTP METHOD : GET
+2020-08-11 10:30:52 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:52 -参数 : [{sort=order_num}]
+2020-08-11 10:30:52 -耗时 : 252
+2020-08-11 10:30:57 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:30:57 -HTTP METHOD : POST
+2020-08-11 10:30:57 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:30:57 -参数 : [287]
+2020-08-11 10:30:57 -耗时 : 175
+2020-08-11 10:30:57 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:30:57 -HTTP METHOD : GET
+2020-08-11 10:30:57 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:30:57 -参数 : [{sort=order_num}]
+2020-08-11 10:30:57 -耗时 : 228
+2020-08-11 10:31:00 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:00 -HTTP METHOD : POST
+2020-08-11 10:31:00 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:00 -参数 : [286]
+2020-08-11 10:31:01 -耗时 : 127
+2020-08-11 10:31:01 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:01 -HTTP METHOD : GET
+2020-08-11 10:31:01 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:01 -参数 : [{sort=order_num}]
+2020-08-11 10:31:01 -耗时 : 177
+2020-08-11 10:31:07 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:07 -HTTP METHOD : POST
+2020-08-11 10:31:07 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:07 -参数 : [292]
+2020-08-11 10:31:07 -耗时 : 199
+2020-08-11 10:31:07 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:07 -HTTP METHOD : GET
+2020-08-11 10:31:07 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:07 -参数 : [{sort=order_num}]
+2020-08-11 10:31:07 -耗时 : 195
+2020-08-11 10:31:13 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:13 -HTTP METHOD : POST
+2020-08-11 10:31:13 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:13 -参数 : [293]
+2020-08-11 10:31:13 -耗时 : 129
+2020-08-11 10:31:13 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:13 -HTTP METHOD : GET
+2020-08-11 10:31:13 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:13 -参数 : [{sort=order_num}]
+2020-08-11 10:31:13 -耗时 : 178
+2020-08-11 10:31:18 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:18 -HTTP METHOD : POST
+2020-08-11 10:31:18 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:18 -参数 : [294]
+2020-08-11 10:31:18 -耗时 : 145
+2020-08-11 10:31:18 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:18 -HTTP METHOD : GET
+2020-08-11 10:31:18 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:18 -参数 : [{sort=order_num}]
+2020-08-11 10:31:18 -耗时 : 150
+2020-08-11 10:31:22 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:22 -HTTP METHOD : POST
+2020-08-11 10:31:22 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:22 -参数 : [291]
+2020-08-11 10:31:22 -耗时 : 133
+2020-08-11 10:31:22 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:22 -HTTP METHOD : GET
+2020-08-11 10:31:22 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:22 -参数 : [{sort=order_num}]
+2020-08-11 10:31:22 -耗时 : 166
+2020-08-11 10:31:25 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:25 -HTTP METHOD : POST
+2020-08-11 10:31:25 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:25 -参数 : [290]
+2020-08-11 10:31:25 -耗时 : 145
+2020-08-11 10:31:25 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:25 -HTTP METHOD : GET
+2020-08-11 10:31:25 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:25 -参数 : [{sort=order_num}]
+2020-08-11 10:31:26 -耗时 : 151
+2020-08-11 10:31:30 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:30 -HTTP METHOD : POST
+2020-08-11 10:31:30 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:30 -参数 : [289]
+2020-08-11 10:31:31 -耗时 : 132
+2020-08-11 10:31:31 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:31 -HTTP METHOD : GET
+2020-08-11 10:31:31 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:31 -参数 : [{sort=order_num}]
+2020-08-11 10:31:31 -耗时 : 212
+2020-08-11 10:31:34 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:31:34 -HTTP METHOD : POST
+2020-08-11 10:31:34 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:31:34 -参数 : [288]
+2020-08-11 10:31:34 -耗时 : 146
+2020-08-11 10:31:34 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:34 -HTTP METHOD : GET
+2020-08-11 10:31:34 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:34 -参数 : [{sort=order_num}]
+2020-08-11 10:31:34 -耗时 : 144
+2020-08-11 10:31:41 -请求地址 : http://localhost:8066/index
+2020-08-11 10:31:41 -HTTP METHOD : GET
+2020-08-11 10:31:41 -CLASS_METHOD : com.aijiu.system.controller.LoginController.index
+2020-08-11 10:31:41 -参数 : [{}]
+2020-08-11 10:31:41 -耗时 : 171
+2020-08-11 10:31:42 -请求地址 : http://localhost:8066/main
+2020-08-11 10:31:42 -HTTP METHOD : GET
+2020-08-11 10:31:42 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:31:42 -参数 : []
+2020-08-11 10:31:42 -耗时 : 0
+2020-08-11 10:31:42 -请求地址 : http://localhost:8066/oa/notify/message
+2020-08-11 10:31:42 -HTTP METHOD : GET
+2020-08-11 10:31:42 -CLASS_METHOD : com.aijiu.oa.controller.NotifyController.message
+2020-08-11 10:31:42 -参数 : []
+2020-08-11 10:31:42 -请求地址 : http://localhost:8066/main
+2020-08-11 10:31:42 -HTTP METHOD : GET
+2020-08-11 10:31:42 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:31:42 -参数 : []
+2020-08-11 10:31:42 -耗时 : 0
+2020-08-11 10:31:42 -耗时 : 45
+2020-08-11 10:31:55 -请求地址 : http://localhost:8066/sys/menu/
+2020-08-11 10:31:55 -HTTP METHOD : GET
+2020-08-11 10:31:55 -CLASS_METHOD : com.aijiu.system.controller.MenuController.menu
+2020-08-11 10:31:55 -参数 : [{}]
+2020-08-11 10:31:55 -耗时 : 0
+2020-08-11 10:31:56 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:31:56 -HTTP METHOD : GET
+2020-08-11 10:31:56 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:31:56 -参数 : [{sort=order_num}]
+2020-08-11 10:31:56 -耗时 : 162
+2020-08-11 10:32:04 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:32:04 -HTTP METHOD : POST
+2020-08-11 10:32:04 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:32:04 -参数 : [257]
+2020-08-11 10:32:04 -耗时 : 135
+2020-08-11 10:32:04 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:32:04 -HTTP METHOD : GET
+2020-08-11 10:32:04 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:32:04 -参数 : [{sort=order_num}]
+2020-08-11 10:32:04 -耗时 : 186
+2020-08-11 10:32:10 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:32:10 -HTTP METHOD : POST
+2020-08-11 10:32:10 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:32:10 -参数 : [258]
+2020-08-11 10:32:10 -耗时 : 148
+2020-08-11 10:32:10 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:32:10 -HTTP METHOD : GET
+2020-08-11 10:32:10 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:32:10 -参数 : [{sort=order_num}]
+2020-08-11 10:32:10 -耗时 : 152
+2020-08-11 10:32:15 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:32:15 -HTTP METHOD : POST
+2020-08-11 10:32:15 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:32:15 -参数 : [259]
+2020-08-11 10:32:15 -耗时 : 135
+2020-08-11 10:32:16 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:32:16 -HTTP METHOD : GET
+2020-08-11 10:32:16 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:32:16 -参数 : [{sort=order_num}]
+2020-08-11 10:32:16 -耗时 : 191
+2020-08-11 10:32:21 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:32:21 -HTTP METHOD : POST
+2020-08-11 10:32:21 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:32:21 -参数 : [256]
+2020-08-11 10:32:21 -耗时 : 144
+2020-08-11 10:32:21 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:32:21 -HTTP METHOD : GET
+2020-08-11 10:32:21 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:32:21 -参数 : [{sort=order_num}]
+2020-08-11 10:32:21 -耗时 : 158
+2020-08-11 10:32:24 -请求地址 : http://localhost:8066/sys/menu/remove
+2020-08-11 10:32:24 -HTTP METHOD : POST
+2020-08-11 10:32:24 -CLASS_METHOD : com.aijiu.system.controller.MenuController.remove
+2020-08-11 10:32:24 -参数 : [255]
+2020-08-11 10:32:25 -耗时 : 135
+2020-08-11 10:32:25 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:32:25 -HTTP METHOD : GET
+2020-08-11 10:32:25 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:32:25 -参数 : [{sort=order_num}]
+2020-08-11 10:32:25 -耗时 : 159
+2020-08-11 10:32:34 -请求地址 : http://localhost:8066/carousel/banner
+2020-08-11 10:32:34 -HTTP METHOD : GET
+2020-08-11 10:32:34 -CLASS_METHOD : com.aijiu.carousel.controller.BannerController.sysFile
+2020-08-11 10:32:34 -参数 : [{}]
+2020-08-11 10:32:34 -耗时 : 0
+2020-08-11 10:32:34 -请求地址 : http://localhost:8066/carousel/banner/list
+2020-08-11 10:32:34 -HTTP METHOD : GET
+2020-08-11 10:32:34 -CLASS_METHOD : com.aijiu.carousel.controller.BannerController.list
+2020-08-11 10:32:34 -参数 : [{limit=10, offset=0, place=, isEnable=, name=}]
+2020-08-11 10:32:34 -耗时 : 60
+2020-08-11 10:32:40 -请求地址 : http://localhost:8066/index
+2020-08-11 10:32:40 -HTTP METHOD : GET
+2020-08-11 10:32:40 -CLASS_METHOD : com.aijiu.system.controller.LoginController.index
+2020-08-11 10:32:40 -参数 : [{}]
+2020-08-11 10:32:40 -耗时 : 186
+2020-08-11 10:32:40 -请求地址 : http://localhost:8066/main
+2020-08-11 10:32:40 -HTTP METHOD : GET
+2020-08-11 10:32:40 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:32:40 -参数 : []
+2020-08-11 10:32:40 -耗时 : 0
+2020-08-11 10:32:40 -请求地址 : http://localhost:8066/oa/notify/message
+2020-08-11 10:32:40 -HTTP METHOD : GET
+2020-08-11 10:32:40 -CLASS_METHOD : com.aijiu.oa.controller.NotifyController.message
+2020-08-11 10:32:40 -参数 : []
+2020-08-11 10:32:40 -请求地址 : http://localhost:8066/main
+2020-08-11 10:32:40 -HTTP METHOD : GET
+2020-08-11 10:32:40 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:32:40 -参数 : []
+2020-08-11 10:32:40 -耗时 : 0
+2020-08-11 10:32:40 -耗时 : 51
+2020-08-11 10:32:44 -请求地址 : http://localhost:8066/carousel/banner
+2020-08-11 10:32:44 -HTTP METHOD : GET
+2020-08-11 10:32:44 -CLASS_METHOD : com.aijiu.carousel.controller.BannerController.sysFile
+2020-08-11 10:32:44 -参数 : [{}]
+2020-08-11 10:32:44 -耗时 : 0
+2020-08-11 10:32:44 -请求地址 : http://localhost:8066/carousel/banner/list
+2020-08-11 10:32:44 -HTTP METHOD : GET
+2020-08-11 10:32:44 -CLASS_METHOD : com.aijiu.carousel.controller.BannerController.list
+2020-08-11 10:32:44 -参数 : [{limit=10, offset=0, place=, isEnable=, name=}]
+2020-08-11 10:32:44 -耗时 : 52
+2020-08-11 10:32:45 -请求地址 : http://localhost:8066/carousel/banner/add
+2020-08-11 10:32:45 -HTTP METHOD : GET
+2020-08-11 10:32:45 -CLASS_METHOD : com.aijiu.carousel.controller.BannerController.add
+2020-08-11 10:32:45 -参数 : []
+2020-08-11 10:32:45 -耗时 : 0
+2020-08-11 10:32:49 -请求地址 : http://localhost:8066/sys/menu/
+2020-08-11 10:32:49 -HTTP METHOD : GET
+2020-08-11 10:32:49 -CLASS_METHOD : com.aijiu.system.controller.MenuController.menu
+2020-08-11 10:32:49 -参数 : [{}]
+2020-08-11 10:32:49 -耗时 : 0
+2020-08-11 10:32:49 -请求地址 : http://localhost:8066/sys/menu/list
+2020-08-11 10:32:49 -HTTP METHOD : GET
+2020-08-11 10:32:49 -CLASS_METHOD : com.aijiu.system.controller.MenuController.list
+2020-08-11 10:32:49 -参数 : [{sort=order_num}]
+2020-08-11 10:32:49 -耗时 : 177
+2020-08-11 10:32:51 -请求地址 : http://localhost:8066/sys/role/
+2020-08-11 10:32:51 -HTTP METHOD : GET
+2020-08-11 10:32:51 -CLASS_METHOD : com.aijiu.system.controller.RoleController.role
+2020-08-11 10:32:51 -参数 : []
+2020-08-11 10:32:51 -耗时 : 0
+2020-08-11 10:32:51 -请求地址 : http://localhost:8066/sys/role/list
+2020-08-11 10:32:51 -HTTP METHOD : GET
+2020-08-11 10:32:51 -CLASS_METHOD : com.aijiu.system.controller.RoleController.list
+2020-08-11 10:32:51 -参数 : []
+2020-08-11 10:32:51 -耗时 : 27
+2020-08-11 10:32:52 -请求地址 : http://localhost:8066/sys/user/
+2020-08-11 10:32:52 -HTTP METHOD : GET
+2020-08-11 10:32:52 -CLASS_METHOD : com.aijiu.system.controller.UserController.user
+2020-08-11 10:32:52 -参数 : [{}]
+2020-08-11 10:32:52 -耗时 : 0
+2020-08-11 10:32:52 -请求地址 : http://localhost:8066/sys/user/list
+2020-08-11 10:32:52 -HTTP METHOD : GET
+2020-08-11 10:32:52 -CLASS_METHOD : com.aijiu.system.controller.UserController.list
+2020-08-11 10:32:52 -参数 : [{limit=10, offset=0, name=, deptId=}]
+2020-08-11 10:32:53 -耗时 : 343
+2020-08-11 10:36:58 -请求地址 : http://localhost:8066/index
+2020-08-11 10:36:58 -HTTP METHOD : GET
+2020-08-11 10:36:58 -CLASS_METHOD : com.aijiu.system.controller.LoginController.index
+2020-08-11 10:36:58 -参数 : [{}]
+2020-08-11 10:36:58 -耗时 : 205
+2020-08-11 10:36:58 -请求地址 : http://localhost:8066/main
+2020-08-11 10:36:58 -HTTP METHOD : GET
+2020-08-11 10:36:58 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:36:58 -参数 : []
+2020-08-11 10:36:58 -耗时 : 0
+2020-08-11 10:36:58 -请求地址 : http://localhost:8066/oa/notify/message
+2020-08-11 10:36:58 -HTTP METHOD : GET
+2020-08-11 10:36:58 -CLASS_METHOD : com.aijiu.oa.controller.NotifyController.message
+2020-08-11 10:36:58 -参数 : []
+2020-08-11 10:36:58 -请求地址 : http://localhost:8066/main
+2020-08-11 10:36:58 -HTTP METHOD : GET
+2020-08-11 10:36:58 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:36:58 -参数 : []
+2020-08-11 10:36:58 -耗时 : 0
+2020-08-11 10:36:58 -耗时 : 50
+2020-08-11 10:37:38 -请求地址 : http://localhost:8066/login;JSESSIONID=04c9b8c8-0cbf-4cce-b44a-dba3b46a981b
+2020-08-11 10:37:38 -HTTP METHOD : GET
+2020-08-11 10:37:38 -CLASS_METHOD : com.aijiu.system.controller.LoginController.login
+2020-08-11 10:37:38 -参数 : []
+2020-08-11 10:37:38 -耗时 : 1
+2020-08-11 10:37:38 -请求地址 : http://localhost:8066/login;JSESSIONID=3dae838d-3ae5-4a82-9ad9-7a2469a00257
+2020-08-11 10:37:38 -HTTP METHOD : GET
+2020-08-11 10:37:38 -CLASS_METHOD : com.aijiu.system.controller.LoginController.login
+2020-08-11 10:37:38 -参数 : []
+2020-08-11 10:37:38 -耗时 : 0
+2020-08-11 10:38:08 -请求地址 : http://localhost:8066/login;JSESSIONID=04c9b8c8-0cbf-4cce-b44a-dba3b46a981b
+2020-08-11 10:38:08 -HTTP METHOD : GET
+2020-08-11 10:38:08 -CLASS_METHOD : com.aijiu.system.controller.LoginController.login
+2020-08-11 10:38:08 -参数 : []
+2020-08-11 10:38:08 -耗时 : 1
+2020-08-11 10:38:40 -请求地址 : http://localhost:8066/login
+2020-08-11 10:38:40 -HTTP METHOD : POST
+2020-08-11 10:38:40 -CLASS_METHOD : com.aijiu.system.controller.LoginController.ajaxLogin
+2020-08-11 10:38:40 -参数 : [admin, 111111]
+2020-08-11 10:38:40 -耗时 : 28
+2020-08-11 10:38:40 -请求地址 : http://localhost:8066/index
+2020-08-11 10:38:40 -HTTP METHOD : GET
+2020-08-11 10:38:40 -CLASS_METHOD : com.aijiu.system.controller.LoginController.index
+2020-08-11 10:38:40 -参数 : [{}]
+2020-08-11 10:38:41 -耗时 : 186
+2020-08-11 10:38:41 -请求地址 : http://localhost:8066/main
+2020-08-11 10:38:41 -HTTP METHOD : GET
+2020-08-11 10:38:41 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:38:41 -参数 : []
+2020-08-11 10:38:41 -耗时 : 0
+2020-08-11 10:38:41 -请求地址 : http://localhost:8066/oa/notify/message
+2020-08-11 10:38:41 -HTTP METHOD : GET
+2020-08-11 10:38:41 -CLASS_METHOD : com.aijiu.oa.controller.NotifyController.message
+2020-08-11 10:38:41 -参数 : []
+2020-08-11 10:38:41 -请求地址 : http://localhost:8066/main
+2020-08-11 10:38:41 -HTTP METHOD : GET
+2020-08-11 10:38:41 -CLASS_METHOD : com.aijiu.system.controller.LoginController.main
+2020-08-11 10:38:41 -参数 : []
+2020-08-11 10:38:41 -耗时 : 1
+2020-08-11 10:38:41 -耗时 : 44
