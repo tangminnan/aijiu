@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="id" name="id" th:value="${xuewei.id}"  type="hidden">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">穴位名称：</label>
+								<div class="col-sm-8">
+									<input id="xueweiName" name="xueweiName" th:value="${xuewei.xueweiName}" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">穴位部位：</label>
+								<div class="col-sm-8">
+									<select name="xueweiBuwei" data-placeholder="选择名称" class="form-control chosen-select" tabindex="2" style="width: 100%">
+										<option value="TOU_BU" th:selected="${xuewei.xueweiBuwei}=='TOU_BU'">头部穴位</option>
+										<option value="XIONG_FU" th:selected="${xuewei.xueweiBuwei}=='XIONG_FU'">胸腹穴位</option>
+										<option value="FU_BEI" th:selected="${xuewei.xueweiBuwei}=='FU_BEI'">腹背穴位</option>
+										<option value="SHANG_ZHI" th:selected="${xuewei.xueweiBuwei}=='SHANG_ZHI'">上肢穴位</option>
+										<option value="XIA_ZHI" th:selected="${xuewei.xueweiBuwei}=='XIA_ZHI'">下肢穴位</option>
+									</select>
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">名称拼音：</label>
+								<div class="col-sm-8">
+									<input id="xueweiPy" name="xueweiPy" th:value="${xuewei.xueweiPy}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">国际编码：</label>
+								<div class="col-sm-8">
+									<input id="ggCode" name="ggCode" th:value="${xuewei.ggCode}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">定位：</label>
+								<div class="col-sm-8">
+									<textarea id="xueweiDingwei" name="xueweiDingwei" th:text="${xuewei.xueweiDingwei}" style="width: 100%;height: 100px;border:1px solid #d0d5d8"></textarea>
+
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">取穴：</label>
+								<div class="col-sm-8">
+									<textarea id="xueweiQuxue" name="xueweiQuxue" th:text="${xuewei.xueweiQuxue}" style="width: 100%;height: 100px;border:1px solid #d0d5d8"></textarea>
+
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">功效与作用：</label>
+								<div class="col-sm-8">
+									<textarea id="xueweiGx" name="xueweiGx" th:text="${xuewei.xueweiGx}" style="width: 100%;height: 100px;border:1px solid #d0d5d8"></textarea>
+
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">穴位图像：</label>
+								<div class="col-sm-8">
+									<input class="form-control" id="imgFile" style="display: none;" type="file" name="imgFile" onchange="udpateFileUrl(this)" />
+									<label for="imgFile"><img width="100" height="100" id="fileImgimgFile" alt="点击上传图片" th:src="${xuewei.xueweiUrl}"></label>
+									<span style="color: red;">(750*718)</span>
+								</div>
+							</div>
+
+																					<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/information/xuewei/edit.js"></script>
+	<script type="text/javascript">
+        function udpateFileUrl(obj){
+            var fileURL = getObjectURL(obj.files[0]);
+            if(fileURL) {
+                $("#fileImgimgFile").attr("src", fileURL) ;
+            }
+        }
+
+        //建立一個可存取到該file的url
+        function getObjectURL(file) {
+            var url = null ;
+            if (window.createObjectURL!=undefined) { // basic
+                url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url;
+        }
+	</script>
+</body>
+</html>

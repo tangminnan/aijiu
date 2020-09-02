@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aijiu.information.dao.DeviceDao">
+
+	<select id="get" resultType="com.aijiu.information.domain.DeviceDO">
+		select `id`,`icon`,`name`,`link`,`ecode`,`deleted`,`price`,`add_time` from t_device where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.aijiu.information.domain.DeviceDO">
+		select `id`,`icon`,`name`,`link`,`ecode`,`deleted`,`price`,`add_time` from t_device
+        where deleted=0
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="icon != null and icon != ''"> and icon = #{icon} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="link != null and link != ''"> and link = #{link} </if>
+		  		  <if test="ecode != null and ecode != ''"> and ecode = #{ecode} </if>
+		  		  <if test="deleted != null and deleted != ''"> and deleted = #{deleted} </if>
+		  		  <if test="price != null and price != ''"> and price = #{price} </if>
+		  		  <if test="addTime != null and addTime != ''"> and add_time = #{addTime} </if>
+
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from t_device
+		where deleted=0
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="icon != null and icon != ''"> and icon = #{icon} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="link != null and link != ''"> and link = #{link} </if>
+		  		  <if test="ecode != null and ecode != ''"> and ecode = #{ecode} </if>
+		  		  <if test="deleted != null and deleted != ''"> and deleted = #{deleted} </if>
+		  		  <if test="price != null and price != ''"> and price = #{price} </if>
+		  		  <if test="addTime != null and addTime != ''"> and add_time = #{addTime} </if>
+
+	</select>
+	 
+	<insert id="save" parameterType="com.aijiu.information.domain.DeviceDO" useGeneratedKeys="true" keyProperty="id">
+		insert into t_device
+		(
+			`icon`, 
+			`name`, 
+			`link`, 
+			`ecode`, 
+			`deleted`, 
+			`price`, 
+			`add_time`
+		)
+		values
+		(
+			#{icon}, 
+			#{name}, 
+			#{link}, 
+			#{ecode}, 
+			#{deleted}, 
+			#{price}, 
+			#{addTime}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.aijiu.information.domain.DeviceDO">
+		update t_device 
+		<set>
+			<if test="icon != null">`icon` = #{icon}, </if>
+			<if test="name != null">`name` = #{name}, </if>
+			<if test="link != null">`link` = #{link}, </if>
+			<if test="ecode != null">`ecode` = #{ecode}, </if>
+			<if test="deleted != null">`deleted` = #{deleted}, </if>
+			<if test="price != null">`price` = #{price}, </if>
+			<if test="addTime != null">`add_time` = #{addTime}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from t_device where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from t_device where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

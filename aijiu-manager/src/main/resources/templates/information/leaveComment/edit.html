@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="id" name="id" th:value="${leaveComment.id}"  type="hidden">
+							<!--<div class="form-group">
+								<label class="col-sm-3 control-label">帖子id：</label>
+								<div class="col-sm-8">
+									<input id="leaveId" name="leaveId" th:value="${leaveComment.leaveId}" class="form-control" type="text">
+								</div>
+							</div>-->
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">评价时间：</label>
+								<div class="col-sm-8">
+									<input id="addTime" name="addTime" th:value="${#dates.format(leaveComment.addTime, 'yyyy-MM-dd hh:MM:ss')}" class="form-control" type="text">
+								</div>
+							</div>
+														<!--<div class="form-group">
+								<label class="col-sm-3 control-label">删除标志  0 未删除   1已删除：</label>
+								<div class="col-sm-8">
+									<input id="deleteFlag" name="deleteFlag" th:value="${leaveComment.deleteFlag}" class="form-control" type="text">
+								</div>
+							</div>-->
+														<!--<div class="form-group">
+								<label class="col-sm-3 control-label">评价人：</label>
+								<div class="col-sm-8">
+									<input id="userId" name="userId" th:value="${leaveComment.userId}" class="form-control" type="text">
+								</div>
+							</div>-->
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">评价人：</label>
+								<div class="col-sm-8">
+									<input id="userName" name="userName" th:value="${leaveComment.userName}" class="form-control" type="text">
+								</div>
+							</div>
+														<!--<div class="form-group">
+								<label class="col-sm-3 control-label">评价人头像：</label>
+								<div class="col-sm-8">
+									<input id="headerUrl" name="headerUrl" th:value="${leaveComment.headerUrl}" class="form-control" type="text">
+								</div>
+							</div>-->
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">评价内容：</label>
+								<div class="col-sm-8">
+									<div class="ibox-content no-padding">
+										<div id="content_sn"></div>
+									</div>
+									<input id="pingjia" name="pingjia" class="form-control" th:value="${leaveComment.pingjia}" type="hidden">
+								</div>
+							</div>
+														<!--<div class="form-group">
+								<label class="col-sm-3 control-label">评价图片：</label>
+								<div class="col-sm-8">
+									<input id="images" name="images" th:value="${leaveComment.images}" class="form-control" type="text">
+								</div>
+							</div>-->
+														<!--<div class="form-group">
+								<label class="col-sm-3 control-label">0=可见  1=不可见：</label>
+								<div class="col-sm-8">
+									<input id="isEnable" name="isEnable" th:value="${leaveComment.isEnable}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">类型 0=好评  1=中评 2=差评 3=有图：</label>
+								<div class="col-sm-8">
+									<input id="type" name="type" th:value="${leaveComment.type}" class="form-control" type="text">
+								</div>
+							</div>-->
+														<!--<div class="form-group">
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="product" name="product" th:value="${leaveComment.product}" class="form-control" type="text">
+								</div>
+							</div>-->
+																					<!--<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>-->
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/information/leaveComment/edit.js">
+	</script>
+</body>
+</html>

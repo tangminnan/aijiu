@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aijiu.information.dao.LeaveMessageDao">
+
+	<select id="get" resultType="com.aijiu.information.domain.LeaveMessageDO">
+		select `id`,`user_id`,`name`,`publish_time`,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.aijiu.information.domain.LeaveMessageDO">
+		select `id`,`user_id`,`name`,`publish_time`,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message
+        where delete_flag=0
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="publishTime != null and publishTime != ''"> and publish_time = #{publishTime} </if>
+		  		  <if test="leaveText != null and leaveText != ''"> and leave_text = #{leaveText} </if>
+		  		  <if test="auditStatus != null and auditStatus != ''"> and audit_status = #{auditStatus} </if>
+		  		  <if test="img != null and img != ''"> and img = #{img} </if>
+				<if test="addStaTime != null and addStaTime!=''">and `publish_time` &gt; #{addStaTime} </if>
+				<if test="addEndTime != null and addEndTime!=''">and `publish_time` &lt; #{addEndTime} </if>
+		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
+		  		  <if test="tuijianFlag != null and tuijianFlag != ''"> and tuijian_flag = #{tuijianFlag} </if>
+		  		  <if test="showhide != null and showhide != ''"> and showhide = #{showhide} </if>
+		  		  <if test="addDigest != null and addDigest != ''"> and add_digest = #{addDigest} </if>
+		  		  <if test="topTheme != null and topTheme != ''"> and top_theme = #{topTheme} </if>
+
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from leave_message
+		 where delete_flag=0
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="publishTime != null and publishTime != ''"> and publish_time = #{publishTime} </if>
+		  		  <if test="leaveText != null and leaveText != ''"> and leave_text = #{leaveText} </if>
+		  		  <if test="auditStatus != null and auditStatus != ''"> and audit_status = #{auditStatus} </if>
+		  		  <if test="img != null and img != ''"> and img = #{img} </if>
+		<if test="addStaTime != null and addStaTime!=''">and `publish_time` &gt; #{addStaTime} </if>
+		<if test="addEndTime != null and addEndTime!=''">and `publish_time` &lt; #{addEndTime} </if>
+		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
+		  		  <if test="tuijianFlag != null and tuijianFlag != ''"> and tuijian_flag = #{tuijianFlag} </if>
+		  		  <if test="showhide != null and showhide != ''"> and showhide = #{showhide} </if>
+		  		  <if test="addDigest != null and addDigest != ''"> and add_digest = #{addDigest} </if>
+		  		  <if test="topTheme != null and topTheme != ''"> and top_theme = #{topTheme} </if>
+
+	</select>
+	 
+	<insert id="save" parameterType="com.aijiu.information.domain.LeaveMessageDO" useGeneratedKeys="true" keyProperty="id">
+		insert into leave_message
+		(
+			`user_id`, 
+			`name`, 
+			`publish_time`, 
+			`leave_text`, 
+			`audit_status`, 
+			`img`, 
+			`shoucangcount`,
+			heard_url,
+			pingluncount,
+			`delete_flag`, 
+			`tuijian_flag`, 
+			`showhide`, 
+			`add_digest`, 
+			`top_theme`
+		)
+		values
+		(
+			#{userId}, 
+			#{name}, 
+			#{publishTime}, 
+			#{leaveText}, 
+			#{auditStatus}, 
+			#{img}, 
+			#{shoucangcount},
+			#{heardUrl},
+			#{pingluncount},
+			#{deleteFlag}, 
+			#{tuijianFlag}, 
+			#{showhide}, 
+			#{addDigest}, 
+			#{topTheme}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.aijiu.information.domain.LeaveMessageDO">
+		update leave_message 
+		<set>
+			<if test="userId != null">`user_id` = #{userId}, </if>
+			<if test="name != null">`name` = #{name}, </if>
+			<if test="publishTime != null">`publish_time` = #{publishTime}, </if>
+			<if test="leaveText != null">`leave_text` = #{leaveText}, </if>
+			<if test="auditStatus != null">`audit_status` = #{auditStatus}, </if>
+			<if test="img != null">`img` = #{img}, </if>
+			<if test="shoucangcount != null">`shoucangcount` = #{shoucangcount}, </if>
+			<if test="pingluncount != null">`pingluncount` = #{pingluncount}, </if>
+			<if test="deleteFlag != null">`delete_flag` = #{deleteFlag}, </if>
+			<if test="tuijianFlag != null">`tuijian_flag` = #{tuijianFlag}, </if>
+			<if test="showhide != null">`showhide` = #{showhide}, </if>
+			<if test="addDigest != null">`add_digest` = #{addDigest}, </if>
+			<if test="heardUrl != null">`heard_url` = #{heardUrl}, </if>
+			<if test="shenheResult != null">`shenhe_result` = #{shenheResult}, </if>
+			<if test="topTheme != null">`top_theme` = #{topTheme}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from leave_message where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from leave_message where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
