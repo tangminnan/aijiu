@@ -75,7 +75,7 @@ function load() {
 									field : 'ggCode', 
 									title : '国际编码' 
 								},
-																{
+																/*{
 									field : 'xueweiDingwei', 
 									title : '定位' 
 								},
@@ -86,7 +86,7 @@ function load() {
 																{
 									field : 'xueweiGx', 
 									title : '功效与作用' 
-								},
+								},*/
 																{
 									field : 'xueweiUrl', 
 									title : '穴位图像' ,

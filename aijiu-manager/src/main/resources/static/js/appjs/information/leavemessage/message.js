@@ -180,7 +180,8 @@ function load() {
 										var a='<button type="button" class="btn btn-xs btn-danger " onclick="remove(\''+row.id+'\')">删除</button>  ';
 										var e='<button type="button" class="btn  btn-xs btn-info" onclick="edit(\''+row.id+'\')">查看内容</button>  ';
 										var d= '<button type="button" class="btn btn-xs btn-success" onclick="shenhe(\''+row.id+'\')">审核</button>  ';
-                                        var f= '<button type="button" class="btn btn-xs btn-success" onclick="pinglun(\''+row.id+'\')">评论</button>  ';
+                                        var f= '<button type="button" class="btn btn-xs btn-success" onclick="pinglun(\''+row.id+'\')">评论人</button>  ';
+                                        var g= '<button type="button" class="btn btn-xs btn-success" onclick="shoucang(\''+row.shoucangids+'\')">收藏人</button>  ';
 										if(row.auditStatus == 1){//未审核
 											return a+e+d;
 										}
@@ -188,7 +189,7 @@ function load() {
 											return a+e;
 										}
 										else{//审核通过
-											return a+e+f;
+											return a+e+f+g;
 										}
 									}
 								} ]
@@ -345,4 +346,10 @@ function xiazai(id){
 
 function pinglun(id){
 	window.location.href="/information/leaveComment/"+id;
+}
+
+function shoucang(shoucangids){
+	if(shoucangids=="null")
+		shoucangids="00";
+    window.location.href="/information/leaveMessage/shoucang/"+shoucangids;
 }

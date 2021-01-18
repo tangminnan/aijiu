@@ -89,6 +89,18 @@ public class XueweiController {
 		} catch (Exception e) {
 			return R.error();
 		}
+
+		try {
+			if(xuewei.getVideoFile()!=null && xuewei.getVideoFile().getSize()>0) {
+				String fileName = xuewei.getVideoFile().getOriginalFilename();
+				fileName = FileUtil.renameToUUID(fileName);
+				FileUtil.uploadFile(xuewei.getVideoFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+				xuewei.setVideo("/files/" + fileName);
+			}
+		} catch (Exception e) {
+			return R.error();
+		}
+
 		xuewei.setDeleteFlag(0);
 		xuewei.setAddTime(new Date());
 		if(xueweiService.save(xuewei)>0){
@@ -109,6 +121,17 @@ public class XueweiController {
 				fileName = FileUtil.renameToUUID(fileName);
 				FileUtil.uploadFile(xuewei.getImgFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
 				xuewei.setXueweiUrl("/files/" + fileName);
+			}
+		} catch (Exception e) {
+			return R.error();
+		}
+
+		try {
+			if(xuewei.getVideoFile()!=null && xuewei.getVideoFile().getSize()>0) {
+				String fileName = xuewei.getVideoFile().getOriginalFilename();
+				fileName = FileUtil.renameToUUID(fileName);
+				FileUtil.uploadFile(xuewei.getVideoFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+				xuewei.setVideo("/files/" + fileName);
 			}
 		} catch (Exception e) {
 			return R.error();

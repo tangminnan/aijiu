@@ -47,6 +47,8 @@ public class LeaveMessageDO implements Serializable {
 	private String heardUrl;
 	//帖子审核不通过原因
 	private String shenheResult;
+	//收藏人ids id之间以::拼接
+	private String shoucangids;
 	/**
 	 * 设置：id
 	 */
@@ -240,5 +242,13 @@ public class LeaveMessageDO implements Serializable {
 
 	public void setShenheResult(String shenheResult) {
 		this.shenheResult = shenheResult;
+	}
+
+	public String getShoucangids() {
+		return shoucangids;
+	}
+
+	public void setShoucangids(String shoucangids) {
+		this.shoucangids = shoucangids;
 	}
 }

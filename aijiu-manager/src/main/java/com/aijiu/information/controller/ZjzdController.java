@@ -89,6 +89,18 @@ public class ZjzdController {
 		} catch (Exception e) {
 			return R.error();
 		}
+
+		try {
+			if(zjzd.getVideoFile()!=null && zjzd.getVideoFile().getSize()>0) {
+				String fileName = zjzd.getVideoFile().getOriginalFilename();
+				fileName = FileUtil.renameToUUID(fileName);
+				FileUtil.uploadFile(zjzd.getVideoFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+				zjzd.setVideo("/files/" + fileName);
+			}
+		} catch (Exception e) {
+			return R.error();
+		}
+
 		zjzd.setDeleteFlag(0);
 		zjzd.setAddTime(new Date());
 		if(zjzdService.save(zjzd)>0){
@@ -113,6 +125,18 @@ public class ZjzdController {
 		} catch (Exception e) {
 			return R.error();
 		}
+
+		try {
+			if(zjzd.getVideoFile()!=null && zjzd.getVideoFile().getSize()>0) {
+				String fileName = zjzd.getVideoFile().getOriginalFilename();
+				fileName = FileUtil.renameToUUID(fileName);
+				FileUtil.uploadFile(zjzd.getVideoFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+				zjzd.setVideo("/files/" + fileName);
+			}
+		} catch (Exception e) {
+			return R.error();
+		}
+
 		zjzdService.update(zjzd);
 		return R.ok();
 	}

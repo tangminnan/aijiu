@@ -23,15 +23,29 @@ public class ZjzdDO implements Serializable {
 	private String zjBuwei;
 	//症状名称
 	private String zjName;
+	//详情简述
+	private String xqTitle;
+
 	//详情
 	private String zjGx;
-	//图像
+	//列表图
 	private String xueweiUrl;
+	//列表图文件
+	private MultipartFile imgFile;
+	private String video;
+	// 详情图 、视频
+	private MultipartFile videoFile;
 	//添加时间
 	private Date addTime;
 	//删除标志  0 未删除   1已删除
 	private Integer deleteFlag;
-	private MultipartFile imgFile;
+	public String getXqTitle() {
+		return xqTitle;
+	}
+
+	public void setXqTitle(String xqTitle) {
+		this.xqTitle = xqTitle;
+	}
 
 	/**
 	 * 设置：id
@@ -124,5 +138,21 @@ public class ZjzdDO implements Serializable {
 
 	public void setImgFile(MultipartFile imgFile) {
 		this.imgFile = imgFile;
+	}
+
+	public String getVideo() {
+		return video;
+	}
+
+	public void setVideo(String video) {
+		this.video = video;
+	}
+
+	public MultipartFile getVideoFile() {
+		return videoFile;
+	}
+
+	public void setVideoFile(MultipartFile videoFile) {
+		this.videoFile = videoFile;
 	}
 }

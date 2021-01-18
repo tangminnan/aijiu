@@ -64,10 +64,17 @@ function load() {
 									field : 'scores', 
 									title : '所获积分' 
 								},
-																/*{
+																{
 									field : 'type', 
-									title : '获取方式 FATIE_HUOQU=发帖获取   GOUMAI=购买   QIANDAO_YUYUE=签到   FABIAO_PINGJIA=发表评价' 
-								},*/
+									title : '获取方式' ,
+
+                                                                    formatter : function(value, row, index) {
+                                                                        if(value=="FATIE_HUOQU") return "发帖获取";
+                                                                        if(value=="GOUMAI") return "购买获取";
+                                                                        if(value=="QIANDAO_YUYUE") return "签到获取";
+                                                                        if(value=="发表评价") return "发表评价";
+                                                                    }
+								}
 																/*{
 									title : '操作',
 									field : 'id',

@@ -4,11 +4,11 @@
 <mapper namespace="com.aijiu.information.dao.LeaveMessageDao">
 
 	<select id="get" resultType="com.aijiu.information.domain.LeaveMessageDO">
-		select `id`,`user_id`,`name`,`publish_time`,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message where id = #{value}
+		select `id`,`user_id`,`name`,shoucangids,`publish_time`,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message where id = #{value}
 	</select>
 
 	<select id="list" resultType="com.aijiu.information.domain.LeaveMessageDO">
-		select `id`,`user_id`,`name`,`publish_time`,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message
+		select `id`,`user_id`,`name`,`publish_time`,shoucangids,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message
         where delete_flag=0
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>

@@ -121,14 +121,8 @@ function load() {
                                    var d= ' <a class="btn btn-danger btn-xs" href="#" mce_href="#" onclick="remove(\''
                                        + row.id
                                        + '\')" style="text-decoration: none;">删除</a>';
-										
-                                   var a= ' <a class="btn btn-primary btn-xs" href="#" mce_href="#" onclick="remove(\''
-                                            + row.id
-                                            + '\')" style="text-decoration: none;">收藏</a>';
-                                        var h= ' <a class="btn btn-primary btn-xs" href="#" mce_href="#" onclick="remove(\''
-                                            + row.id
-                                            + '\')" style="text-decoration: none;">关注</a>';
-                                         return  e+d+a+h ;
+
+                                         return  e+d ;
 
 									}
 								} ]
@@ -248,4 +242,8 @@ function shenshen(id){
 
 function daochu(){
 	window.location.href=prefix+"/exportExercise"
+}
+
+function guanzhu(id){
+	window.location.href="/information/attention/"+id
 }

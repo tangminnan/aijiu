@@ -40,6 +40,9 @@ public class XueweiDO implements Serializable {
 	private MultipartFile imgFile;
 	//穴位部位
 	private String xueweiBuwei;
+	private String video;
+	// 详情图 、视频
+	private MultipartFile videoFile;
 
 	/**
 	 * 设置：id
@@ -176,5 +179,21 @@ public class XueweiDO implements Serializable {
 
 	public void setXueweiBuwei(String xueweiBuwei) {
 		this.xueweiBuwei = xueweiBuwei;
+	}
+
+	public String getVideo() {
+		return video;
+	}
+
+	public void setVideo(String video) {
+		this.video = video;
+	}
+
+	public MultipartFile getVideoFile() {
+		return videoFile;
+	}
+
+	public void setVideoFile(MultipartFile videoFile) {
+		this.videoFile = videoFile;
 	}
 }

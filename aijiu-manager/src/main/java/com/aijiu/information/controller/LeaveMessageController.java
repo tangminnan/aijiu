@@ -1,11 +1,16 @@
 package com.aijiu.information.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 import com.aijiu.common.utils.PageUtils;
 import com.aijiu.common.utils.Query;
 import com.aijiu.common.utils.R;
+import com.aijiu.common.utils.StringUtils;
+import com.aijiu.information.domain.UserDO;
+import com.aijiu.information.service.UserDOService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -13,7 +18,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,6 +38,8 @@ import com.aijiu.information.service.LeaveMessageService;
 public class LeaveMessageController {
 	@Autowired
 	private LeaveMessageService leaveMessageService;
+	@Autowired
+	private UserDOService userService;
 	
 	@GetMapping()
 	@RequiresPermissions("information:leaveMessage:leaveMessage")
@@ -143,6 +149,31 @@ public class LeaveMessageController {
 		leaveMessageDO.setTuijianFlag(enable);
 		leaveMessageService.update(leaveMessageDO);
 		return R.ok();
+	}
+
+	@GetMapping("/shoucang/{shoucangids}")
+	public String shoucang(@PathVariable("shoucangids") String shoucangids,Model model){
+		model.addAttribute("shoucangids",shoucangids);
+		return "information/leavemessage/shoucang";
+	}
+
+
+	@ResponseBody
+	@GetMapping("/listShoucang")
+	public PageUtils listShoucang(@RequestParam Map<String, Object> params){
+		//查询列表数据
+		List<UserDO> list = new ArrayList<>();
+		String shoucangids = (String) params.get("shoucangids");
+		if(StringUtils.isBlank(shoucangids) && !shoucangids.contains("::")){
+			return  new PageUtils(list, 0);
+		}
+		String[] ids = shoucangids.split("::");
+		Stream.of(ids).forEach(id ->{
+			UserDO userDO = userService.get(Long.parseLong(id));
+			list.add(userDO);
+		});
+		PageUtils pageUtils = new PageUtils(list, list.size());
+		return pageUtils;
 	}
 	
 }

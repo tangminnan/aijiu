@@ -4,11 +4,11 @@
 <mapper namespace="com.aijiu.information.dao.DeviceDao">
 
 	<select id="get" resultType="com.aijiu.information.domain.DeviceDO">
-		select `id`,`icon`,`name`,`link`,`ecode`,`deleted`,`price`,`add_time` from t_device where id = #{value}
+		select `id`,`icon`,type,detail_img,instruction,`name`,`link`,`ecode`,`deleted`,`price`,`add_time` from t_device where id = #{value}
 	</select>
 
 	<select id="list" resultType="com.aijiu.information.domain.DeviceDO">
-		select `id`,`icon`,`name`,`link`,`ecode`,`deleted`,`price`,`add_time` from t_device
+		select `id`,`icon`,type,detail_img,instruction,`name`,`link`,`ecode`,`deleted`,`price`,`add_time` from t_device
         where deleted=0
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="icon != null and icon != ''"> and icon = #{icon} </if>
@@ -55,7 +55,10 @@
 			`ecode`, 
 			`deleted`, 
 			`price`, 
-			`add_time`
+			`add_time`,
+			 type,
+			 detail_img,
+			 instruction
 		)
 		values
 		(
@@ -65,7 +68,10 @@
 			#{ecode}, 
 			#{deleted}, 
 			#{price}, 
-			#{addTime}
+			#{addTime},
+			#{type},
+			#{detailImg},
+			#{instruction}
 		)
 	</insert>
 	 
@@ -78,7 +84,11 @@
 			<if test="ecode != null">`ecode` = #{ecode}, </if>
 			<if test="deleted != null">`deleted` = #{deleted}, </if>
 			<if test="price != null">`price` = #{price}, </if>
-			<if test="addTime != null">`add_time` = #{addTime}</if>
+			<if test="addTime != null">`add_time` = #{addTime},</if>
+
+			<if test="type != null">`type` = #{type}, </if>
+			<if test="detailImg != null">`detail_img` = #{detailImg}, </if>
+			<if test="instruction != null">`instruction` = #{instruction}</if>
 		</set>
 		where id = #{id}
 	</update>

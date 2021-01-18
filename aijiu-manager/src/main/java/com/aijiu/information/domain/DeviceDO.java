@@ -35,6 +35,13 @@ public class DeviceDO implements Serializable {
 	//添加时间
 	private Date addTime;
 	private MultipartFile imgFile;
+	//产品型号
+	private String type;
+	//设备详情页图片展示
+	private String detailImg;
+	private MultipartFile detailFile;
+	// 产品介绍
+	private String instruction;
 
 	public MultipartFile getImgFile() {
 		return imgFile;
@@ -139,5 +146,37 @@ public class DeviceDO implements Serializable {
 	 */
 	public Date getAddTime() {
 		return addTime;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getDetailImg() {
+		return detailImg;
+	}
+
+	public void setDetailImg(String detailImg) {
+		this.detailImg = detailImg;
+	}
+
+	public MultipartFile getDetailFile() {
+		return detailFile;
+	}
+
+	public void setDetailFile(MultipartFile detailFile) {
+		this.detailFile = detailFile;
+	}
+
+	public String getInstruction() {
+		return instruction;
+	}
+
+	public void setInstruction(String instruction) {
+		this.instruction = instruction;
 	}
 }

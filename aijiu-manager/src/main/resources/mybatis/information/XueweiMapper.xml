@@ -4,11 +4,11 @@
 <mapper namespace="com.aijiu.information.dao.XueweiDao">
 
 	<select id="get" resultType="com.aijiu.information.domain.XueweiDO">
-		select `id`,`xuewei_name`,`xuewei_py`,xuewei_buwei,`gg_code`,`xuewei_dingwei`,`xuewei_quxue`,`xuewei_gx`,`xuewei_url`,`add_time`,`delete_flag` from t_xuewei where id = #{value}
+		select `id`,`xuewei_name`,video,`xuewei_py`,xuewei_buwei,`gg_code`,`xuewei_dingwei`,`xuewei_quxue`,`xuewei_gx`,`xuewei_url`,`add_time`,`delete_flag` from t_xuewei where id = #{value}
 	</select>
 
 	<select id="list" resultType="com.aijiu.information.domain.XueweiDO">
-		select `id`,`xuewei_name`,`xuewei_py`,xuewei_buwei,`gg_code`,`xuewei_dingwei`,`xuewei_quxue`,`xuewei_gx`,`xuewei_url`,`add_time`,`delete_flag` from t_xuewei
+		select `id`,`xuewei_name`,video,`xuewei_py`,xuewei_buwei,`gg_code`,`xuewei_dingwei`,`xuewei_quxue`,`xuewei_gx`,`xuewei_url`,`add_time`,`delete_flag` from t_xuewei
         where delete_flag=0
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="xueweiName != null and xueweiName != ''"> and xuewei_name = #{xueweiName} </if>
@@ -62,7 +62,8 @@
 			`xuewei_url`, 
 			`add_time`, 
 			`delete_flag`,
-			xuewei_buwei
+			xuewei_buwei,
+			video
 		)
 		values
 		(
@@ -75,7 +76,8 @@
 			#{xueweiUrl}, 
 			#{addTime}, 
 			#{deleteFlag},
-			#{xueweiBuwei}
+			#{xueweiBuwei},
+			#{video}
 		)
 	</insert>
 	 
@@ -91,6 +93,7 @@
 			<if test="xueweiUrl != null">`xuewei_url` = #{xueweiUrl}, </if>
 			<if test="addTime != null">`add_time` = #{addTime}, </if>
 			<if test="deleteFlag != null">`delete_flag` = #{deleteFlag},</if>
+			<if test="video != null">`video` = #{video},</if>
 			<if test="xueweiBuwei != null">`xuewei_buwei` = #{xueweiBuwei}</if>
 		</set>
 		where id = #{id}

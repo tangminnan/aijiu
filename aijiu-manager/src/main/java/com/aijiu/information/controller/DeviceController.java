@@ -90,6 +90,18 @@ public class DeviceController {
 		} catch (Exception e) {
 			return R.error();
 		}
+
+		try {
+			if(device.getDetailFile()!=null && !device.getDetailFile().isEmpty()) {
+				String fileName = device.getDetailFile().getOriginalFilename();
+				fileName = FileUtil.renameToUUID(fileName);
+				FileUtil.uploadFile(device.getDetailFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+				device.setDetailImg("/files/" + fileName);
+			}
+		} catch (Exception e) {
+			return R.error();
+		}
+
 		device.setAddTime(new Date());
 		device.setDeleted(0);
 		if(deviceService.save(device)>0){
@@ -110,6 +122,17 @@ public class DeviceController {
 				fileName = FileUtil.renameToUUID(fileName);
 				FileUtil.uploadFile(device.getImgFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
 				device.setIcon("/files/" + fileName);
+			}
+		} catch (Exception e) {
+			return R.error();
+		}
+
+		try {
+			if(device.getDetailFile()!=null && !device.getDetailFile().isEmpty()) {
+				String fileName = device.getDetailFile().getOriginalFilename();
+				fileName = FileUtil.renameToUUID(fileName);
+				FileUtil.uploadFile(device.getDetailFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+				device.setDetailImg("/files/" + fileName);
 			}
 		} catch (Exception e) {
 			return R.error();

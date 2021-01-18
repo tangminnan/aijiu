@@ -32,6 +32,13 @@
 									<input id="zjName" name="zjName" th:value="${zjzd.zjName}" class="form-control" type="text">
 								</div>
 							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">详情简述：</label>
+								<div class="col-sm-8">
+									<input id="xqTitle" name="xqTitle" th:value="${zjzd.xqTitle}" class="form-control"  type="text">
+								</div>
+							</div>
 														<div class="form-group">	
 								<label class="col-sm-3 control-label">详情：</label>
 								<div class="col-sm-8">
@@ -39,11 +46,23 @@
 								</div>
 							</div>
 														<div class="form-group">	
-								<label class="col-sm-3 control-label">图像：</label>
+								<label class="col-sm-3 control-label">列表图像：</label>
 								<div class="col-sm-8">
 									<input class="form-control" id="imgFile" style="display: none;" type="file" name="imgFile" onchange="udpateFileUrl(this)" />
 									<label for="imgFile"><img width="100" height="100" id="fileImgimgFile" alt="点击上传图片" th:src="${zjzd.xueweiUrl}"></label>
 									<span style="color: red;">(750*718)</span>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-3 control-label">详情图像、视频：</label>
+								<div class="col-sm-8">
+									<label>
+										<video height="150" width="150" id="video0" controls="controls"></video>
+										<img width="100" height="100"  id="img0" style="display: none">
+									</label>
+									<input class="form-control" type="file"
+										   id="videoFile" name="videoFile"/>
 								</div>
 							</div>
 
@@ -81,6 +100,57 @@
             }
             return url;
         }
+
+
+        $("#videoFile").change(function(){
+            var k = $("#videoFile").val();
+            var fileType  = k.substring(k.lastIndexOf(".")+1).toLocaleLowerCase();
+            var objUrl = getObjectURL(this.files[0]) ;
+
+            if (objUrl) {
+                if(fileType=="avi" || fileType=="mov" || fileType=="rmvb" || fileType=="rm" || fileType=="flv" || fileType=="mp4" || fileType=="3gp") {
+                    $("#img0").hide();
+                    $("#video0").show();
+                    $("#video0").attr("src", objUrl);
+                }
+
+                if(fileType=="jpg" || fileType=="jpeg" || fileType=="gif" || fileType=="ai" || fileType=="png"){
+                    $("#img0").show();
+                    $("#video0").hide();
+                    $("#img0").attr("src", objUrl);
+                }
+            }
+        }) ;
+        //建立一个可存取到该file的url
+        function getObjectURL(file) {
+            var url = null ;
+            if (window.createObjectURL!=undefined) { // basic
+                url = window.createObjectURL(file) ;
+            } else if (window.URL!=undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file) ;
+            } else if (window.webkitURL!=undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file) ;
+            }
+            return url ;
+        }
 	</script>
+<script th:inline="javascript">
+	var file= [[${zjzd.video}]];
+	if(file!=null && file!="") {
+        var fileType  = file.substring(file.lastIndexOf(".")+1).toLocaleLowerCase();
+        if (fileType == "avi" || fileType == "mov" || fileType == "rmvb" || fileType == "rm" || fileType == "flv" || fileType == "mp4" || fileType == "3gp") {
+            $("#img0").hide();
+            $("#video0").show();
+            $("#video0").attr("src", file);
+        }
+
+        if (fileType == "jpg" || fileType == "jpeg" || fileType == "gif" || fileType == "ai" || fileType == "png") {
+            $("#img0").show();
+            $("#video0").hide();
+            $("#img0").attr("src", file);
+        }
+    }
+</script>
+
 </body>
 </html>

@@ -1,4 +1,14 @@
 $().ready(function() {
+    $('#content_sn').summernote({
+        height : '220px',
+        lang : 'zh-CN',
+        callbacks: {
+            onImageUpload: function(files, editor, $editable) {
+                sendFile(files);
+            }
+        }
+    });
+    $('#content_sn').summernote('code', $("#instruction").val());
 	validateRule();
 });
 
@@ -8,6 +18,8 @@ $.validator.setDefaults({
 	}
 });
 function update() {
+    var content_sn = $("#content_sn").summernote('code');
+    $("#instruction").val(content_sn);
     var formData = new FormData(document.getElementById("signupForm"));
 	$.ajax({
 		cache : true,
