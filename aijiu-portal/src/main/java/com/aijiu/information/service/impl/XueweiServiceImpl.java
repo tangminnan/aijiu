@@ -1,5 +1,6 @@
 package com.aijiu.information.service.impl;
 
+import com.aijiu.information.controller.AijiuController;
 import com.aijiu.information.dao.XueweiDao;
 import com.aijiu.information.domain.XueweiDO;
 import com.aijiu.information.service.XueweiService;
@@ -49,5 +50,15 @@ public class XueweiServiceImpl implements XueweiService {
 	public int batchRemove(Long[] ids){
 		return xueweiDao.batchRemove(ids);
 	}
-	
+
+	@Override
+	public List<XueweiDO> getXueweiByBuWei(String xueweiBuwei) {
+		return xueweiDao.getXueweiByBuWei(xueweiBuwei);
+	}
+
+	@Override
+	public List<AijiuController.KeySearch> getXueweiByKey(String key) {
+		return xueweiDao.getXueweiByKey(key);
+	}
+
 }

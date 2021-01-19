@@ -31,6 +31,14 @@
 			limit #{offset}, #{limit}
 		</if>
 	</select>
+
+	<select id="getZjzdDOByBuWei" resultType="com.aijiu.information.domain.ZjzdDO">
+		select id, zj_name,xuewei_url from t_zjzd where zj_buwei=#{zjBuwei}
+	</select>
+
+	<select id="getZjzdByKey" resultType="com.aijiu.information.controller.AijiuController$KeySearch">
+		select id id, zj_name name,xuewei_url picture,"ZJZD" type from t_zjzd where zj_name like concat('%',#{zjBuwei},'%');
+	</select>
 	
  	<select id="count" resultType="int">
 		select count(*) from t_zjzd

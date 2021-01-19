@@ -22,6 +22,8 @@ public class LeaveMessageDO implements Serializable {
 	private Long userId;
 	//发帖人姓名
 	private String name;
+	//标题
+	private String title;
 	//发帖时间
 	private Date publishTime;
 	//发帖内容
@@ -50,6 +52,15 @@ public class LeaveMessageDO implements Serializable {
 	private String shenheResult;
 	//收藏人ids id之间以::拼接
 	private String shoucangids;
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	private List<String> imgList = new ArrayList<>();
 	private List<String> shoucnagHeaders = new ArrayList<>();
 	private List<LeaveCommentDO> leaveCommentDOS  = new ArrayList<>();

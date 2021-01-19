@@ -3,8 +3,10 @@ package com.aijiu.information.controller;
 import com.aijiu.common.utils.StringUtils;
 import com.aijiu.information.domain.*;
 import com.aijiu.information.service.*;
+import com.oracle.webservices.internal.api.message.PropertySet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,6 +33,16 @@ public class AijiuController {
     private LeaveCommentService leaveCommentService;
     @Autowired
     private ScoresService scoresService;
+    @Autowired
+    private  MyHelpService myHelpService;
+    @Autowired
+    private MyBingzhengService myBingzhengService;
+    @Autowired
+    private XueweiService xueweiService;
+    @Autowired
+    private ZjzdService zjzdService;
+    @Autowired
+    private GoumaiReasonService goumaiReasonService;
 
     /**
      *  获取所有的设备
@@ -209,13 +221,10 @@ public class AijiuController {
     }
 
     /**
-     * 养生贴吧
+     * 养生贴吧/关注
      */
-    @GetMapping("/getLeaveMessages")
-    public Map<String,Object> getLeaveMessages(Long id){
-        /**
-         *  关注
-         */
+    @GetMapping("/getLeaveMessagesGuanzhu")
+    public Map<String,Object> getLeaveMessagesGuanzhu(Long id){
         Map<String,Object> resultMap = new HashMap<String,Object>();
         Map<String,Object> paramsMap = new HashMap<>();
         paramsMap.put("deleteFlag",0);
@@ -235,6 +244,15 @@ public class AijiuController {
             guanzhu.addAll(leaveMessageDOS);
         }
         resultMap.put("guanzhu",guanzhu);
+        return resultMap;
+    }
+
+    /**
+     * 养生贴吧/推荐
+     */
+    @GetMapping("/getLeaveMessagesTuijian")
+    public Map<String,Object> getLeaveMessagesTuijian(Long id){
+        Map<String,Object> resultMap = new HashMap<String,Object>();
         List<LeaveMessageDO> allLe = leaveMessageService.list(new HashMap<String,Object>());
         for(LeaveMessageDO leaveMessageDO :allLe){
             if(StringUtils.isNotBlank(leaveMessageDO.getImg())){
@@ -245,9 +263,27 @@ public class AijiuController {
         }
         List<LeaveMessageDO> tuijian = allLe.stream().filter(a ->a.getTuijianFlag()==1).collect(Collectors.toList());
         resultMap.put("tuijian",tuijian);
+        return resultMap;
+    }
+
+    /**
+     * 养生贴吧/最新
+     */
+    @GetMapping("/getLeaveMessagesZuiXin")
+    public Map<String,Object> getLeaveMessagesZuiXin(Long id){
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        List<LeaveMessageDO> allLe = leaveMessageService.list(new HashMap<String,Object>());
+        for(LeaveMessageDO leaveMessageDO :allLe){
+            if(StringUtils.isNotBlank(leaveMessageDO.getImg())){
+                String[] imgs = leaveMessageDO.getImg().split("::");
+                leaveMessageDO.setImgList(Arrays.asList(imgs));
+            }
+            leaveMessageDO.setLeaveText(getStr(leaveMessageDO.getLeaveText()));
+        }
         resultMap.put("zuixin",allLe);
         return resultMap;
     }
+
 
     /**
      *  我的收藏
@@ -282,6 +318,166 @@ public class AijiuController {
         return resultMap;
     }
 
+    /**
+     * 我的基本信息
+     */
+    @PostMapping("/updateUser")
+    public Map<String,Object> updateUser(UserDO user){
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        int result = userDOService.update(user);
+        if(result>0){
+            resultMap.put("code",0);
+        }else{
+            resultMap.put("code",-1);
+        }
+         return resultMap;
+    }
+
+    /**
+     * 我的反馈
+     */
+
+    @PostMapping("/saveMyHelp")
+    public Map<String,Object> saveMyHelp(MyHelpDO myHelpDO){
+        myHelpDO.setPublishTime(new Date());
+        int result = myHelpService.save(myHelpDO);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(result>0){
+            resultMap.put("code",0);
+        }else{
+            resultMap.put("code",-1);
+        }
+        return resultMap;
+    }
+
+    /**
+     * 购买原因
+     */
+
+    @PostMapping("/saveGoumaiReasonDO")
+    public Map<String,Object> saveGoumaiReasonDO(GoumaiReasonDO goumaiReasonDO){
+        goumaiReasonDO.setPublishTime(new Date());
+        int result = goumaiReasonService.save(goumaiReasonDO);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(result>0){
+            resultMap.put("code",0);
+        }else{
+            resultMap.put("code",-1);
+        }
+        return resultMap;
+    }
+
+    /**
+     * 发表评论
+     */
+    @PostMapping("/saveLeaveCommentDO")
+    public Map<String,Object> saveLeaveCommentDO(LeaveCommentDO leaveCommentDO){
+        leaveCommentDO.setAddTime(new Date());
+        int result = leaveCommentService.save(leaveCommentDO);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(result>0){
+            resultMap.put("code",0);
+        }else{
+            resultMap.put("code",-1);
+        }
+        return resultMap;
+    }
+
+    /**
+     * 我的病症
+     */
+
+    @PostMapping("/saveMyBingzhengDO")
+    public Map<String,Object> saveMyBingzhengDO(MyBingzhengDO myBingzhengDO){
+        myBingzhengDO.setPublishTime(new Date());
+        int result = myBingzhengService.save(myBingzhengDO);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(result>0){
+            resultMap.put("code",0);
+        }else{
+            resultMap.put("code",-1);
+        }
+        return resultMap;
+    }
+
+    /**
+     *  获取我的病症记录
+     */
+
+    public Map<String,Object> getMyBingZhengHistory(Long userId){
+        Map<String,Object> paramsMap = new HashMap<String,Object>();
+        paramsMap.put("userId",userId);
+        List<MyBingzhengDO> list = myBingzhengService.list(paramsMap);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        resultMap.put("code",0);
+        resultMap.put("data",list);
+        return resultMap;
+    }
+
+
+    /**
+     * 穴位详情
+     */
+    @GetMapping("/getXuewei")
+    public Map<String,Object>  getXuewei(Long id){
+        XueweiDO xueweiDO = xueweiService.get(id);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(xueweiDO!=null) resultMap.put("code",0);
+        else resultMap.put("code",-1);
+        resultMap.put("data",xueweiDO);
+        return resultMap;
+    }
+
+    /**
+     * 适应症详情
+     */
+    @GetMapping("/getZjzdDO")
+    public Map<String,Object>  getZjzdDO(Long id){
+        ZjzdDO zjzdDO = zjzdService.get(id);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(zjzdDO!=null) resultMap.put("code",0);
+        else resultMap.put("code",-1);
+        resultMap.put("data",zjzdDO);
+        return resultMap;
+    }
+
+    /**
+     * 获取某一部位的所有穴位
+     */
+    @GetMapping("/getAllXuewei")
+    public Map<String,Object> getAllXuewei(String xueweiBuwei){
+        List<XueweiDO> list = xueweiService.getXueweiByBuWei(xueweiBuwei);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        resultMap.put("code",0);
+        resultMap.put("data",list);
+        return resultMap;
+    }
+
+    /**
+     * 获取某一部位的症状
+     */
+    @GetMapping("/getAllXuewei")
+    public Map<String,Object> getAllZjzdDO(String zjBuwei){
+        List<ZjzdDO> list = zjzdService.getZjzdDOByBuWei(zjBuwei);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        resultMap.put("code",0);
+        resultMap.put("data",list);
+        return resultMap;
+    }
+
+    /**
+     * 关键字搜索穴位和病症
+     */
+    @GetMapping("/searchXB")
+    public Map<String,Object> searchXB(String key){
+        List<KeySearch> keySearches = xueweiService.getXueweiByKey(key);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        resultMap.put("code",0);
+        resultMap.put("data",keySearches);
+        return  resultMap;
+    }
+
+
 
     public String getStr(String str){
         if(StringUtils.isBlank(str))
@@ -290,6 +486,20 @@ public class AijiuController {
             return str;
         }else{
             return str.substring(0,200)+"...";
+        }
+    }
+
+    public static class KeySearch{
+        private String type;
+        private Integer id;
+        private String name;
+        private String picture;
+
+        public KeySearch(String type, Integer id, String name, String picture) {
+            this.type = type;
+            this.id = id;
+            this.name = name;
+            this.picture = picture;
         }
     }
 

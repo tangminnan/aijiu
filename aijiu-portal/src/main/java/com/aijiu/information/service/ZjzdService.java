@@ -27,4 +27,8 @@ public interface ZjzdService {
 	int remove(Long id);
 	
 	int batchRemove(Long[] ids);
+
+    List<ZjzdDO> getZjzdDOByBuWei(String zjBuwei);
+
+	List<ZjzdDO> getZjzdByKey(String key);
 }

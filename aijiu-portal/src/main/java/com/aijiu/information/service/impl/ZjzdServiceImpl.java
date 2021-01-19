@@ -49,5 +49,15 @@ public class ZjzdServiceImpl implements ZjzdService {
 	public int batchRemove(Long[] ids){
 		return zjzdDao.batchRemove(ids);
 	}
-	
+
+	@Override
+	public List<ZjzdDO> getZjzdDOByBuWei(String zjBuwei) {
+		return zjzdDao.getZjzdDOByBuWei(zjBuwei);
+	}
+
+	@Override
+	public List<ZjzdDO> getZjzdByKey(String key) {
+		return zjzdDao.getZjzdByKey(key);
+	}
+
 }

@@ -1,5 +1,6 @@
 package com.aijiu.information.service;
 
+import com.aijiu.information.controller.AijiuController;
 import com.aijiu.information.domain.XueweiDO;
 
 import java.util.List;
@@ -27,4 +28,8 @@ public interface XueweiService {
 	int remove(Long id);
 	
 	int batchRemove(Long[] ids);
+
+    List<XueweiDO> getXueweiByBuWei(String xueweiBuwei);
+
+	List<AijiuController.KeySearch> getXueweiByKey(String key);
 }

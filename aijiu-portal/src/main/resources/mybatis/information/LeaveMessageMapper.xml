@@ -54,7 +54,8 @@
 	<insert id="save" parameterType="com.aijiu.information.domain.LeaveMessageDO" useGeneratedKeys="true" keyProperty="id">
 		insert into leave_message
 		(
-			`user_id`, 
+			`user_id`,
+			title,
 			`name`, 
 			`publish_time`, 
 			`leave_text`, 
@@ -71,7 +72,8 @@
 		)
 		values
 		(
-			#{userId}, 
+			#{userId},
+			#{title},
 			#{name}, 
 			#{publishTime}, 
 			#{leaveText}, 

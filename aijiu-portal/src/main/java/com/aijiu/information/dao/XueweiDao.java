@@ -1,5 +1,6 @@
 package com.aijiu.information.dao;
 
+import com.aijiu.information.controller.AijiuController;
 import com.aijiu.information.domain.XueweiDO;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -28,4 +29,8 @@ public interface XueweiDao {
 	int remove(Long id);
 	
 	int batchRemove(Long[] ids);
+
+    List<XueweiDO> getXueweiByBuWei(String xueweiBuwei);
+
+	List<AijiuController.KeySearch> getXueweiByKey(String key);
 }
