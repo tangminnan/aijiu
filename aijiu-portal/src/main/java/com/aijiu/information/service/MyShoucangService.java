@@ -17,6 +17,7 @@ public interface MyShoucangService {
 
 	
 	List<MyShoucangDO> list(Map<String, Object> map);
+
 	
 	int count(Map<String, Object> map);
 	

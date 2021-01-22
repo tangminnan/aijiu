@@ -74,6 +74,6 @@
 	</delete>
 
 	<select id="countHeaders" resultType="string">
-		select * from t_my_shoucang where id = #{id} limit 3
+		select header_url from t_my_shoucang where leave_id = #{id} limit 3
 	</select>
 </mapper>

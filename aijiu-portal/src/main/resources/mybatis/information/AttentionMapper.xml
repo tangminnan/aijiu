@@ -15,6 +15,8 @@
 		  		  <if test="name != null and name != ''"> and name = #{name} </if>
 				  <if test="userName != null and userName != ''"> and user_name = #{userName} </if>
 		  		  <if test="attentionTime != null and attentionTime != ''"> and attention_time = #{attentionTime} </if>
+					<if test="attentionId != null and attentionId != ''"> and attention_id = #{attentionId} </if>
+					<if test="userId != null and userId != ''"> and user_id = #{userId} </if>
 		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
 		  		</where>
 
@@ -39,14 +41,20 @@
 			`heard_url`, 
 			`name`, 
 			`attention_time`, 
-			`delete_flag`
+			`delete_flag`,
+			attention_id,
+			user_id,
+			user_name
 		)
 		values
 		(
 			#{heardUrl}, 
 			#{name}, 
 			#{attentionTime}, 
-			#{deleteFlag}
+			#{deleteFlag},
+			#{attentionId},
+			#{userId},
+			#{userName}
 		)
 	</insert>
 	 

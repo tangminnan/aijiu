@@ -9,7 +9,7 @@
 
 	<select id="list" resultType="com.aijiu.information.domain.LeaveMessageDO">
 		select `id`,`user_id`,`name`,`publish_time`,shoucangids,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message
-        where delete_flag=0
+        where delete_flag=0 and showhide=0
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
 		  		  <if test="name != null and name != ''"> and name = #{name} </if>

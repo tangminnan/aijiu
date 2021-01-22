@@ -45,13 +45,14 @@ public class LeaveMessageDO implements Serializable {
 	//帖子是否置顶 0：否1：是
 	private Integer topTheme;
 	//评论数
-	private Integer pingluncount;
+	private Long pingluncount;
 	//头像
 	private String heardUrl;
 	//帖子审核不通过原因
 	private String shenheResult;
 	//收藏人ids id之间以::拼接
 	private String shoucangids;
+
 
 	public String getTitle() {
 		return title;
@@ -240,7 +241,7 @@ public class LeaveMessageDO implements Serializable {
 	 * 获取评论数
 	 * @return
 	 */
-	public Integer getPingluncount() {
+	public Long getPingluncount() {
 		return pingluncount;
 	}
 
@@ -248,7 +249,7 @@ public class LeaveMessageDO implements Serializable {
 	 * 设置评论数
 	 * @param pingluncount
 	 */
-	public void setPingluncount(Integer pingluncount) {
+	public void setPingluncount(Long pingluncount) {
 		this.pingluncount = pingluncount;
 	}
 
@@ -291,4 +292,5 @@ public class LeaveMessageDO implements Serializable {
 	public void setLeaveCommentDOS(List<LeaveCommentDO> leaveCommentDOS) {
 		this.leaveCommentDOS = leaveCommentDOS;
 	}
+
 }
