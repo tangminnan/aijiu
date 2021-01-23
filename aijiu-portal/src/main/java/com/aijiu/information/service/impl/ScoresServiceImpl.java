@@ -49,5 +49,10 @@ public class ScoresServiceImpl implements ScoresService {
 	public int batchRemove(Long[] ids){
 		return scoresDao.batchRemove(ids);
 	}
-	
+
+	@Override
+	public int total(Long userId) {
+		return scoresDao.total(userId);
+	}
+
 }

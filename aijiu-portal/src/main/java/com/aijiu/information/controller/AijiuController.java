@@ -2,6 +2,7 @@ package com.aijiu.information.controller;
 
 import com.aijiu.common.config.BootdoConfig;
 import com.aijiu.common.utils.FileUtil;
+import com.aijiu.common.utils.HttpUtils;
 import com.aijiu.common.utils.R;
 import com.aijiu.common.utils.StringUtils;
 import com.aijiu.information.domain.*;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.Multipart;
+import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -53,6 +55,41 @@ public class AijiuController {
     private GoumaiReasonService goumaiReasonService;
     @Autowired
     private BootdoConfig bootdoConfig;
+
+    private static final String APP_ID="";
+    private static final String APP_SECRET="";
+
+    /**
+     * 微信小程序获取openid
+     */
+    @PostMapping("/getOpenId")
+    public Map<String,Object> getOpenId(String code){
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(StringUtils.isBlank(code)){
+            resultMap.put("code",-1);
+            resultMap.put("data","code不能为空");
+            return resultMap;
+        }
+        //获取openid
+        String url= "https://api.weixin.qq.com/sns/jscode2session?appid="+APP_ID+"&secret="+APP_SECRET+"&js_code="+code+"&grant_type=authorization_code";
+        Map<String, Object> map = HttpUtils.doGet(url);
+        if((int)map.get("errcode ")==0){
+            String openId=(String) map.get("openid");
+            UserDO userDO = userDOService.getUserDO(openId);
+            if(userDO==null){
+                userDO = new UserDO();
+                userDO.setOpenId(openId);
+                userDOService.save(userDO);
+            }
+            resultMap.put("code",0);
+            resultMap.put("data",userDO);
+            return resultMap;
+        }else{
+            resultMap.put("code",-1);
+            resultMap.put("data","openid获取失败");
+            return resultMap;
+        }
+    }
 
     /**
      *  获取所有的设备
@@ -145,6 +182,35 @@ public class AijiuController {
             resultMap.put("data",null);
        }
        return resultMap;
+    }
+
+    /**
+     *  根据帖子的id获取收藏的用户
+     * @return
+     */
+    @GetMapping("/my/getUsersByLeaveId")
+    public Map<String,Object> getUsersByLeaveId(Integer userId,Integer leaveId){
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        List<UserDO> list = userDOService.listByShouCangLeaveId(leaveId);
+        if(list.size()>0){
+            Map<String,Object> paramsMap = new HashMap<String,Object>();
+            paramsMap.put("userId",userId);
+            List<AttentionDO> attentionDOS = attentionService.list(paramsMap);
+            attentionDOS.forEach(a ->{
+                Long attentionId = a.getAttentionId();
+                list.forEach(l ->{
+                    if(l.getId().longValue() ==attentionId.longValue()){
+                        l.setFlag(0);//已关注
+                    }
+                });
+            });
+            resultMap.put("code",0);
+            resultMap.put("data",list);
+        }else{
+            resultMap.put("code",-1);
+            resultMap.put("data",null);
+        }
+        return resultMap;
     }
 
     /**
@@ -291,17 +357,67 @@ public class AijiuController {
      *  我的收藏
      */
     @GetMapping("/my/getMyShoucangLeaveMessage")
-    public Map<String,Object> getMyShoucangLeaveMessage(Long id){
-        List<MyShoucangDO> l = myShoucangService.getShouCangLeaveMessage(id);
-        for(MyShoucangDO myShoucangDO:l){
-            if(StringUtils.isNotBlank(myShoucangDO.getImg())){
-                String s = myShoucangDO.getImg().split("::")[0];
-                myShoucangDO.setImg(s);
-            }
+    public Map<String,Object> getMyShoucangLeaveMessage(Long userId){
+        Map<String,Object> paramsMap = new HashMap<>();
+        paramsMap.put("userId",userId);
+        List<MyShoucangDO> list = myShoucangService.list(paramsMap);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        resultMap.put("code",0);
+        resultMap.put("data",list);
+        return resultMap;
+    }
+
+    /**
+     * 收藏、取消收藏接口
+     */
+    @PostMapping("/my/saveShouCang")
+    public Map<String,Object> saveShouCang(MyShoucangDO myShoucangDO){
+        String leaveId = myShoucangDO.getLeaveId();
+        String userId = myShoucangDO.getUserId();
+        Map<String,Object> paramsMap = new HashMap<>();
+        paramsMap.put("leaveId",leaveId);
+        paramsMap.put("userId",userId);
+        List<MyShoucangDO> list = myShoucangService.list(paramsMap);
+        if(list.size()>0){//取消收藏
+            Long id = list.get(0).getId();
+            myShoucangService.remove(id);
+        }else{//收藏
+            myShoucangDO.setCreateTime(new Date());
+            myShoucangService.save(myShoucangDO);
         }
         Map<String,Object> resultMap = new HashMap<String,Object>();
         resultMap.put("code",0);
-        resultMap.put("data",l);
+        resultMap.put("data","操作成功");
+        return resultMap;
+    }
+
+    /**
+     * 关注人主页接口
+     */
+    @GetMapping("/my/getGuanzhu")
+    public Map<String,Object> getGuanzhu(Long attentionId){
+        //关注   粉丝   动态
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        UserDO userDO = userDOService.get(attentionId);
+        if(userDO!=null) {
+            Map<String, Object> paramsMap = new HashMap<String, Object>();
+            paramsMap.put("userId", attentionId);
+            int dongtai = leaveMessageService.count(paramsMap);//动态数量(这一步可以不要，先留着)
+            List<LeaveMessageDO> list = leaveMessageService.list(paramsMap);
+            operateLeaveMessage(list);
+            int guanzhu = attentionService.count(paramsMap);//关注数量
+            paramsMap.remove("userId");
+            paramsMap.put("attentionId", attentionId);
+            int fans = attentionService.count(paramsMap);//粉丝数量
+            resultMap.put("id", userDO.getId());
+            resultMap.put("heardUrl", userDO.getHeardUrl());
+            resultMap.put("guanzhu", guanzhu);
+            resultMap.put("fans", fans);
+            resultMap.put("dongtai", dongtai);
+            resultMap.put("list", list);
+        }else{
+            resultMap.put("code",-1);
+        }
         return resultMap;
     }
 
@@ -350,6 +466,38 @@ public class AijiuController {
             resultMap.put("code",-1);
         }
          return resultMap;
+    }
+
+    /**
+     * 获取我的接口
+     * @return
+     */
+    @GetMapping("/my/getMy")
+    public Map<String,Object> getMy(Long userId){
+        UserDO userDO  = userDOService.get(userId);
+        Map<String,Object> resultMap = new HashMap<>();
+        if(userDO!=null){
+            resultMap.put("code",0);
+            //关注   粉丝   动态
+            Map<String, Object> paramsMap = new HashMap<String, Object>();
+            paramsMap.put("userId", userId);
+            int dongtai = leaveMessageService.count(paramsMap);//动态数量(这一步可以不要，先留着)
+            int guanzhu = attentionService.count(paramsMap);//关注数量
+            paramsMap.remove("userId");
+            paramsMap.put("attentionId", userId);
+            int fans = attentionService.count(paramsMap);//粉丝数量
+            int total = scoresService.total(userId);//积分
+            resultMap.put("id", userDO.getId());
+            resultMap.put("heardUrl", userDO.getHeardUrl());
+            resultMap.put("guanzhu", guanzhu);
+            resultMap.put("fans", fans);
+            resultMap.put("dongtai", dongtai);
+            resultMap.put("total",total);
+           resultMap.put("age",getAge(userDO.getBirthday()));
+        }else{
+            resultMap.put("code",-1);
+        }
+        return resultMap;
     }
 
     /**
@@ -563,17 +711,52 @@ public class AijiuController {
         }
     }
 
-    public static class KeySearch{
+    public static class KeySearch {
         private String type;
         private Integer id;
         private String name;
         private String picture;
+
+        public String getType() {
+            return type;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getPicture() {
+            return picture;
+        }
+
+        public void setPicture(String picture) {
+            this.picture = picture;
+        }
 
         public KeySearch(String type, Integer id, String name, String picture) {
             this.type = type;
             this.id = id;
             this.name = name;
             this.picture = picture;
+        }
+
+        public KeySearch() {
         }
     }
 
@@ -594,5 +777,14 @@ public class AijiuController {
             leaveMessageDO.setPingluncount(pinglun);
             leaveMessageDO.setLeaveText(getStr(leaveMessageDO.getLeaveText()));
         }
+    }
+
+    public long getAge(Date date){
+        long age=18L;
+       if(date!=null){
+            Date currentDate = new Date();
+            age  = (currentDate.getTime()-date.getTime())/1000/60/60/24/365;
+        }
+        return age;
     }
 }

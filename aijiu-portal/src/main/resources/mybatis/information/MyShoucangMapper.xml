@@ -8,6 +8,7 @@
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="leaveId != null and leaveId != ''"> and leave_id = #{leaveId} </if>
+					<if test="userId != null and userId != ''"> and user_id = #{userId} </if>
 			      <if test="userName != null and userName != ''"> and user_name = #{userName} </if>
 		  		  <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
 		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
@@ -42,14 +43,22 @@
 			`leave_id`, 
 			`user_id`, 
 			`create_time`, 
-			`delete_flag`
+			`delete_flag`,
+			user_name,
+			text,
+			header_url,
+			img
 		)
 		values
 		(
 			#{leaveId}, 
 			#{userId}, 
 			#{createTime}, 
-			#{deleteFlag}
+			#{deleteFlag},
+			#{userName},
+			#{text},
+			#{headerUrl},
+			#{img}
 		)
 	</insert>
 

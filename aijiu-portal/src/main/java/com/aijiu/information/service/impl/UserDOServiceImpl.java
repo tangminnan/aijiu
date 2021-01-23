@@ -49,5 +49,15 @@ public class UserDOServiceImpl implements UserDOService {
 	public int batchRemove(Long[] ids){
 		return userDao.batchRemove(ids);
 	}
-	
+
+	@Override
+	public List<UserDO> listByShouCangLeaveId(Integer leaveId) {
+		return userDao.listByShouCangLeaveId(leaveId);
+	}
+
+	@Override
+	public UserDO getUserDO(String openId) {
+		return userDao.getUserDO(openId);
+	}
+
 }

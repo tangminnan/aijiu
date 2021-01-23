@@ -28,4 +28,8 @@ public interface UserDODao {
 	int remove(Long id);
 	
 	int batchRemove(Long[] ids);
+
+    List<UserDO> listByShouCangLeaveId(Integer leaveId);
+
+	UserDO getUserDO(String openId);
 }

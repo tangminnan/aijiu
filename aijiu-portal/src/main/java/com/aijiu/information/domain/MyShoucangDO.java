@@ -30,6 +30,8 @@ public class MyShoucangDO implements Serializable {
 	private String text;
 	//图片
 	private String img;
+	//收藏人头像
+	private String headerUrl;
 
 	/**
 	 * 设置：id
@@ -114,5 +116,13 @@ public class MyShoucangDO implements Serializable {
 
 	public void setImg(String img) {
 		this.img = img;
+	}
+
+	public String getHeaderUrl() {
+		return headerUrl;
+	}
+
+	public void setHeaderUrl(String headerUrl) {
+		this.headerUrl = headerUrl;
 	}
 }

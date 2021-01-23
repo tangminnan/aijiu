@@ -7,6 +7,12 @@
 		select `id`,`heard_url`,jianjie,`name`,`phone`,`height`,`weight`,`email`,`sex`,`birthday`,`nickname`,`username`,`password`,`open_id`,`last_login_time`,`register_time`,`delete_flag`,`province_code`,`province_name`,`city_code`,`city_name`,`area_code`,`area_name` from t_user where id = #{value}
 	</select>
 
+	<select id="getUserDO" resultType="com.aijiu.information.domain.UserDO">
+		select `id`,`heard_url`,jianjie,`name`,`phone`,`height`,`weight`,`email`,`sex`,`birthday`,`nickname`,
+		`username`,`password`,`open_id`,`last_login_time`,`register_time`,`delete_flag`,
+		`province_code`,`province_name`,`city_code`,`city_name`,`area_code`,`area_name` from t_user where open_id = #{openId}
+	</select>
+
 	<select id="list" resultType="com.aijiu.information.domain.UserDO">
 		select `id`,`heard_url`,jianjie,`name`,`phone`,`height`,`weight`,`email`,`sex`,`birthday`,`nickname`,`username`,`password`,`open_id`,`last_login_time`,`register_time`,`delete_flag`,`province_code`,`province_name`,`city_code`,`city_name`,`area_code`,`area_name` from t_user
        	<where>
@@ -36,7 +42,10 @@
 		order by id desc
 
 	</select>
-	
+
+	<select id="listByShouCangLeaveId" resultType="com.aijiu.information.domain.UserDO">
+		select user_id id,user_name name ,header_url from t_my_shoucang where leave_id=#{leaveId}
+	</select>
 
 	 
 	<insert id="save" parameterType="com.aijiu.information.domain.UserDO" useGeneratedKeys="true" keyProperty="id">

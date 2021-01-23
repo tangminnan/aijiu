@@ -30,6 +30,8 @@
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="heardUrl != null and heardUrl != ''"> and heard_url = #{heardUrl} </if>
 		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+			      <if test="attentionId != null and attentionId != ''"> and attention_id = #{attentionId} </if>
+			      <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
 		  		  <if test="attentionTime != null and attentionTime != ''"> and attention_time = #{attentionTime} </if>
 		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
 		  		</where>
