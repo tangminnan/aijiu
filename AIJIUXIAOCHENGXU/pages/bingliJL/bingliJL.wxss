@@ -1,0 +1,19 @@
+/* pages/bingliJL/bingliJL.wxss */
+.boxJL{margin: 30rpx;}
+.box{
+    border: 1rpx solid #efcba4;
+    border-radius: 10rpx;
+    background: #702123;
+    margin-bottom: 20rpx;
+    padding: 20rpx;
+  }
+.riqi{font-size: 26rpx;margin-bottom: 30rpx;}
+.jlxq text{text-indent: 60rpx;display: block;letter-spacing: 2rpx;}
+
+
+
+
+
+
+
+

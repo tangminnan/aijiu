@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/tieBa/tieBa",
+    "pages/xueweiXQ/xueweiXQ",
+    "pages/zhidaoXQ/zhidaoXQ",
+    "pages/yonghuList/yonghuList",
+    "pages/fatie/fatie",
+    "pages/fabuCG/fabuCG",
+    "pages/gerenXX/gerenXX",
+    "pages/fankui/fankui",
+    "pages/wodeBingzheng/wodeBingzheng",
+    "pages/tijiaoCG/tijiaoCG",
+    "pages/wodeJF/wodeJF",
+    "pages/aboutUS/aboutUS",
+    "pages/shebeiJS/shebeiJS",
+    "pages/wodeZuji/wodeZuji",
+    "pages/wodeshebei/wodeshebei",
+    "pages/sousuo/sousuo",
+    "pages/bingliJL/bingliJL",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/shebei/shebei",
+    "pages/zhidao/zhidao",
+    "pages/wodeSC/wodeSC",
+    "pages/tieziXQ/tieziXQ",
+    "pages/gerenZY/gerenZY",
+    "pages/goumaiYY/goumaiYY"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#712224",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#f0c3a9",
+    "selectedColor": "#fcd190",
+    "borderStyle": "white",
+    "backgroundColor": "#731b1e",
+    "list": [
+      {
+        "selectedIconPath": "img/icon-1on.png",
+        "iconPath": "img/icon-1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/icon-2on.png",
+        "iconPath": "img/icon-2.png",
+        "pagePath": "pages/zhidao/zhidao",
+        "text": "艾灸指导"
+      },
+      {
+        "selectedIconPath": "img/icon-3on.png",
+        "iconPath": "img/icon-3.png",
+        "pagePath": "pages/shebei/shebei",
+        "text": "硬件设备"
+      },
+      {
+        "selectedIconPath": "img/icon-4on.png",
+        "iconPath": "img/icon-4.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap8.json"
+}

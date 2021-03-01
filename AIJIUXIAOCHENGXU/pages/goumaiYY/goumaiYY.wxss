@@ -1,0 +1,34 @@
+/* pages/goumaiYY/goumaiYY.wxss */
+.buyYY{
+  position: absolute;
+  top:50rpx;
+  left: 30rpx;
+  width: 690rpx;
+  height: 80%;
+}
+.tijiao{
+  margin:100rpx 55rpx 0;
+}
+.tijiao textarea{
+  width: 100%;
+  height: 500rpx;
+  background: #591015;
+  padding:20rpx;
+  display: block;
+  border: 1rpx solid #f6c885;
+  margin-bottom: 100rpx;
+  box-sizing: border-box;
+}
+.tijiao button{
+  display: block;
+  margin-top:0 auto;
+  width: 90% !important;
+  background: #702123;
+  font-size: 36rpx;
+  color: #f4cb99;
+  font-weight: normal;
+  letter-spacing: 2rpx;
+  line-height: 100rpx;
+  border:1rpx solid #e1b37c;
+  box-shadow:0 0 10rpx #4c1312;
+}

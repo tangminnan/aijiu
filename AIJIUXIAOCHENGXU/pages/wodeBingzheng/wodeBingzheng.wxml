@@ -1,0 +1,15 @@
+<!--pages/wodeBingzheng/wodeBingzheng.wxml-->
+
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<view class="tijiao">
+      <view class="jilu">
+        <view class="jilu_btn">
+          <text class="heng"></text>
+            <text bindtap="getMyBL">病症记录</text>
+        </view>
+      </view>
+      <textarea bindinput="handleToInput" value="{{text}}"  placeholder-class="phcolor"   placeholder="请描述您的病症详情..." />
+      <button bindtap="saveMyBingzhengDO">提交</button>
+</view>
+
+

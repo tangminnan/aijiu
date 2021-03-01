@@ -1,0 +1,7 @@
+<!--pages/fankui/fankui.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<view class="tijiao">
+      <textarea  bindinput="handleToInput" value="{{text}}"   placeholder-class="phcolor" placeholder="请描述您的问题与意见感谢支持..." />
+      <button bindtap="saveMyHelp">提交</button>
+</view>
+

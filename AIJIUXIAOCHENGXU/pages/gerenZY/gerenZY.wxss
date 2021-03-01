@@ -1,0 +1,106 @@
+/* pages/gerenZY/gerenZY.wxss */
+.User{position: relative;}
+.User .topimg{width: 750rpx;height: 380rpx;display: block;}
+.User_txt{position:absolute;width: 100%;top:0;left:0;}
+.User_txt .toux{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius:50%;
+  overflow: hidden;
+  border:5rpx solid #fce1c4;
+}
+.Top_up{overflow: hidden;padding:60rpx 30rpx 50rpx;position: relative;}
+.User_txt .niC{font-size: 42rpx;color:#f6c997;margin-left:40rpx;} 
+.dengji{
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 50rpx;
+  background: #1e5a5d;
+  font-size: 24rpx;
+  border: 1rpx solid #fbd39f;
+  position: relative;
+  text-indent: 60rpx;
+  margin-top: 20rpx;
+}
+.dengji image{
+  width: 55rpx;
+  height: 55rpx;
+  position: absolute;
+  left:-20rpx;
+  top:-5rpx;
+}
+.guanzhu{
+  width: 160rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #fbd39f;
+  position: absolute;
+  text-align: center;
+  top:125rpx;
+  right: 30px;
+}
+.User_txt .liS{overflow: hidden;margin-top:30rpx;text-align:center;}
+.User_txt .liS .fans{float: left;width: 33.33%;}
+.User_txt .liS .fans text{color:#fff;padding-left: 10rpx;}
+.User_txt .liS .fans .num{font-size: 36rpx;color:#f8d3a9;}
+
+.Big_boxex{margin: 30rpx;}
+.tiezi_box{
+  background: #842b2e;
+  padding: 30rpx 15rpx;
+  border: 1rpx solid #c99473;
+  margin-bottom: 15rpx;
+  border-radius:15rpx;
+}
+.tiezi_box_top{
+  overflow: hidden;
+  margin-bottom: 30rpx;
+}
+.tiezi_box_top .fl image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  float: left;
+}
+.tiezi_box_top .fl .txt{float: left;margin-left: 20rpx;}
+.tiezi_box_top .fl .txt .tt2{
+  font-size: 24rpx;
+  display: block;
+  margin-top: 5rpx;
+}
+.tiezi_box_top .fr{
+  font-size: 28rpx;
+  width: 160rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #2b6162;
+  border-radius: 50rpx;
+  border: 1rpx solid #fbd39f;
+}
+.miaoshu text{
+  line-height: 42rpx;
+  letter-spacing: 2rpx;
+  margin-bottom: 30rpx;
+  display: block;
+}
+.tiezi_imgs{overflow: hidden;}
+.tiezi_imgs image{
+  box-sizing: border-box;
+    float: left;
+    width: 31.33%;
+    margin:0 1%;
+    height: 200rpx;
+    border: 1rpx solid #fbd39f;
+}
+.share_box{overflow: hidden;margin:40rpx 0 20rpx;}
+.share_box view{line-height: 50rpx;margin-left: 30rpx;}
+.share_box view image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 15rpx;
+}

@@ -1,0 +1,17 @@
+<!--pages/yonghuList/yonghuList.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<view class="yonghuList">
+      <view class="box" wx:for="{{userlist}}">
+            <navigator url="/pages/gerenZY/gerenZY?id={{item.id}}">
+                  <view class="fl">
+                        <image src="{{item.heardUrl}}" ></image>
+                        <text>{{item.name}}</text>
+                  </view>
+                  <view class="fr">
+                        <button size="mini" bindtap="handleToGuanzhu" data-id="{{item.id}}" wx:if="{{item.flag==1}}">关注</button>
+                        <button size="mini" class="yGZ" wx:if="{{item.flag==0}}">已关注</button>
+                  </view>
+            </navigator>
+      </view>
+
+</view>

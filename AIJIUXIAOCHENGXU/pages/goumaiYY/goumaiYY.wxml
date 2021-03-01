@@ -1,0 +1,7 @@
+<!--pages/goumaiYY/goumaiYY.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<image class="buyYY" src="/img/buyYY.png" ></image>
+<view class="tijiao">
+      <textarea bindinput="handleToInput" value="{{text}}" placeholder-class="phcolor" placeholder="请描述您选择购买产品的原因..." />
+      <button bindtap="saveGoumaiReasonDO">提交</button>
+</view>

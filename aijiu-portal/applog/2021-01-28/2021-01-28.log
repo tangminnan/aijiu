@@ -1,0 +1,251 @@
+2021-01-28 09:59:24 -Starting BootdoApplication on WINDOWS-C9LU1JA with PID 19136 (E:\AIJIU\aijiu-portal\target\classes started by EDZ in E:\AIJIU\aijiu-portal)
+2021-01-28 09:59:24 -The following profiles are active: dev
+2021-01-28 09:59:24 -HV000001: Hibernate Validator 5.3.6.Final
+2021-01-28 09:59:24 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d4f9aae: startup date [Thu Jan 28 09:59:24 CST 2021]; root of context hierarchy
+2021-01-28 09:59:27 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-28 09:59:28 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8f9cb3e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:28 -Bean 'shiroConfig' of type [com.aijiu.system.config.ShiroConfig$$EnhancerBySpringCGLIB$$2ecce2e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:29 -Bean 'userRealm' of type [com.aijiu.system.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:29 -Bean 'ehCacheManager' of type [org.apache.shiro.cache.ehcache.EhCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:29 -Cache with name 'com.aijiu.system.shiro.UserRealm.authorizationCache' does not yet exist.  Creating now.
+2021-01-28 09:59:29 -Added EhCache named [com.aijiu.system.shiro.UserRealm.authorizationCache]
+2021-01-28 09:59:29 -Bean 'sessionDAO' of type [org.apache.shiro.session.mgt.eis.MemorySessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:29 -Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:29 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:29 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-28 09:59:29 -Tomcat initialized with port(s): 8087 (http)
+2021-01-28 09:59:29 -Starting service [Tomcat]
+2021-01-28 09:59:29 -Starting Servlet Engine: Apache Tomcat/8.5.23
+2021-01-28 09:59:29 -Initializing Spring embedded WebApplicationContext
+2021-01-28 09:59:29 -Root WebApplicationContext: initialization completed in 5217 ms
+2021-01-28 09:59:30 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2021-01-28 09:59:30 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2021-01-28 09:59:30 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2021-01-28 09:59:30 -Mapping filter: 'requestContextFilter' to: [/*]
+2021-01-28 09:59:30 -Mapping filter: 'springSecurityFilterChain' to: [/*]
+2021-01-28 09:59:30 -Filter xssFilter was not registered (disabled)
+2021-01-28 09:59:30 -Mapping filter: 'webStatFilter' to urls: [/*]
+2021-01-28 09:59:30 -Mapping filter: 'com.aijiu.system.filter.CorsFilter' to: [/*]
+2021-01-28 09:59:30 -Mapping filter: 'remoteIpFilter' to: [/*]
+2021-01-28 09:59:30 -Mapping filter: 'shiroFilterFactoryBean' to: [/*]
+2021-01-28 09:59:30 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2021-01-28 09:59:30 -Mapping servlet: 'dispatcherServlet' to [/]
+2021-01-28 09:59:31 -{dataSource-1} inited
+2021-01-28 09:59:32 -Using default implementation for ThreadExecutor
+2021-01-28 09:59:32 -Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-28 09:59:32 -Quartz Scheduler v.2.2.1 created.
+2021-01-28 09:59:32 -RAMJobStore initialized.
+2021-01-28 09:59:32 -Scheduler meta-data: Quartz Scheduler (v2.2.1) 'schedulerFactoryBean' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-28 09:59:32 -Quartz scheduler 'schedulerFactoryBean' initialized from an externally provided properties instance.
+2021-01-28 09:59:32 -Quartz scheduler version: 2.2.1
+2021-01-28 09:59:32 -JobFactory set to: com.aijiu.common.quartz.factory.JobFactory@599f1b7
+2021-01-28 09:59:33 -Mapped "{[/common/dict/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.add()
+2021-01-28 09:59:33 -Mapped "{[/common/dict/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/common/dict/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.remove(java.lang.Long[])
+2021-01-28 09:59:33 -Mapped "{[/common/dict/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.update(com.aijiu.common.domain.DictDO)
+2021-01-28 09:59:33 -Mapped "{[/common/dict/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.DictController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2021-01-28 09:59:33 -Mapped "{[/common/dict/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.DictController.save(com.aijiu.common.domain.DictDO)
+2021-01-28 09:59:33 -Mapped "{[/common/dict/type],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listType()
+2021-01-28 09:59:33 -Mapped "{[/common/dict],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.dict()
+2021-01-28 09:59:33 -Mapped "{[/common/dict/add/{type}/{description}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.addD(org.springframework.ui.Model,java.lang.String,java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/common/dict/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.DictController.edit(java.lang.Long,org.springframework.ui.Model)
+2021-01-28 09:59:33 -Mapped "{[/common/dict/list/{type}],methods=[GET]}" onto public java.util.List<com.aijiu.common.domain.DictDO> com.aijiu.common.controller.DictController.listByType(java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.add()
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long,javax.servlet.http.HttpServletRequest)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.remove(java.lang.Long[])
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/update]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.update(com.aijiu.common.domain.FileDO)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.FileController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.save(com.aijiu.common.domain.FileDO)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.FileController.info(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/edit],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.edit(java.lang.Long,org.springframework.ui.Model)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.FileController.sysFile(org.springframework.ui.Model)
+2021-01-28 09:59:33 -Mapped "{[/common/sysFile/upload],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.FileController.upload(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)
+2021-01-28 09:59:33 -Mapped "{[/common/generator/update],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.GeneratorController.update(java.util.Map<java.lang.String, java.lang.Object>)
+2021-01-28 09:59:33 -Mapped "{[/common/generator/list],methods=[GET]}" onto java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.aijiu.common.controller.GeneratorController.list()
+2021-01-28 09:59:33 -Mapped "{[/common/generator/code/{tableName}]}" onto public void com.aijiu.common.controller.GeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2021-01-28 09:59:33 -Mapped "{[/common/generator],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.GeneratorController.generator()
+2021-01-28 09:59:33 -Mapped "{[/common/generator/edit],methods=[GET]}" onto public java.lang.String com.aijiu.common.controller.GeneratorController.edit(org.springframework.ui.Model)
+2021-01-28 09:59:33 -Mapped "{[/common/generator/batchCode]}" onto public void com.aijiu.common.controller.GeneratorController.batchCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+2021-01-28 09:59:33 -Mapped "{[/common/job/add],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.add()
+2021-01-28 09:59:33 -Mapped "{[/common/job/remove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/common/job/batchRemove],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.remove(java.lang.Long[])
+2021-01-28 09:59:33 -Mapped "{[/common/job/update],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.update(com.aijiu.common.domain.TaskDO)
+2021-01-28 09:59:33 -Mapped "{[/common/job/list],methods=[GET]}" onto public com.aijiu.common.utils.PageUtils com.aijiu.common.controller.JobController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2021-01-28 09:59:33 -Mapped "{[/common/job/save],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.save(com.aijiu.common.domain.TaskDO)
+2021-01-28 09:59:33 -Mapped "{[/common/job/info/{id}]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.info(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/common/job/edit/{id}],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.edit(java.lang.Long,org.springframework.ui.Model)
+2021-01-28 09:59:33 -Mapped "{[/common/job/changeJobStatus],methods=[POST]}" onto public com.aijiu.common.utils.R com.aijiu.common.controller.JobController.changeJobStatus(java.lang.Long,java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/common/job],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.JobController.taskScheduleJob()
+2021-01-28 09:59:33 -Mapped "{[/common/log/remove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.remove(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/common/log],methods=[GET]}" onto java.lang.String com.aijiu.common.controller.LogController.log()
+2021-01-28 09:59:33 -Mapped "{[/common/log/list],methods=[GET]}" onto com.aijiu.common.domain.PageDO<com.aijiu.common.domain.LogDO> com.aijiu.common.controller.LogController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2021-01-28 09:59:33 -Mapped "{[/common/log/batchRemove],methods=[POST]}" onto com.aijiu.common.utils.R com.aijiu.common.controller.LogController.batchRemove(java.lang.Long[])
+2021-01-28 09:59:33 -Mapped "{[/error]}" onto public com.aijiu.common.utils.R com.aijiu.common.exception.MainsiteErrorController.handleError(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-01-28 09:59:33 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView com.aijiu.common.exception.MainsiteErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveLeaveMessage],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveLeaveMessage(com.aijiu.information.domain.LeaveMessageDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/searchXB],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.searchXB(java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getUsers],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getUsers(java.lang.Integer)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveShouCang],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveShouCang(com.aijiu.information.domain.MyShoucangDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getMyDevice],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getMyDevice(java.lang.Integer)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getGuanzhu],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getGuanzhu(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getDeviceById],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getDeviceById(java.lang.Integer)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getMyScore],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getMyScore(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveMyScore],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveMyScore(com.aijiu.information.domain.ScoresDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getMy],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getMy(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveAttention],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveAttention(com.aijiu.information.domain.AttentionDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getXuewei],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getXuewei(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getUserDetail],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getUserDetail(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getAttentionMain],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getAttentionMain(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/updateUser],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.updateUser(com.aijiu.information.domain.UserDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveMyHelp],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveMyHelp(com.aijiu.information.domain.MyHelpDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getZjzdDO],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getZjzdDO(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getAllXuewei],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getAllXuewei(java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getAllZjzdDO],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getAllZjzdDO(java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/saveUser],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveUser(com.aijiu.information.domain.UserDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getDevices],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getDevices()
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getOpenId],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getOpenId(java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveGoumaiReasonDO],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveGoumaiReasonDO(com.aijiu.information.domain.GoumaiReasonDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveLeaveCommentDO],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveLeaveCommentDO(com.aijiu.information.domain.LeaveCommentDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getUsersByLeaveId],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getUsersByLeaveId(java.lang.Integer,java.lang.Integer)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getLeaveMessageDetail],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getLeaveMessageDetail(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getMyShoucangLeaveMessage],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getMyShoucangLeaveMessage(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveMyBingzhengDO],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveMyBingzhengDO(com.aijiu.information.domain.MyBingzhengDO)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/getMyBingZhengHistory],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getMyBingZhengHistory(java.lang.Long)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/my/saveLeaveMessageImg],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.saveLeaveMessageImg(org.springframework.web.multipart.MultipartFile)
+2021-01-28 09:59:33 -Mapped "{[/aijiu/v1/getLeaveMessagesGuanzhu],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.information.controller.AijiuController.getLeaveMessagesGuanzhu(java.lang.Long,java.lang.Integer)
+2021-01-28 09:59:33 -Mapped "{[/register],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.register(java.lang.String,java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/weyOpenid],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.weyOpenid(java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/logout],methods=[GET]}" onto java.util.Map<java.lang.String, java.lang.String> com.aijiu.owneruser.controller.LoginController.logout()
+2021-01-28 09:59:33 -Mapped "{[/getSms],methods=[GET]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.getSms(java.lang.String,java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/login],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.LoginController.login(java.lang.String,java.lang.String,java.lang.String)
+2021-01-28 09:59:33 -Mapped "{[/owner/userInfo],methods=[GET]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.OwnerUserController.user()
+2021-01-28 09:59:33 -Mapped "{[/owner/editHeadUrl],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.OwnerUserController.editHeadUrl(com.aijiu.owneruser.domain.OwnerUserDO)
+2021-01-28 09:59:33 -Mapped "{[/owner/editInfo],methods=[POST]}" onto java.util.Map<java.lang.String, java.lang.Object> com.aijiu.owneruser.controller.OwnerUserController.editInfo(com.aijiu.owneruser.domain.OwnerUserDO)
+2021-01-28 09:59:33 -Mapped "{[/sys/online/list]}" onto public java.util.List<com.aijiu.system.domain.UserOnline> com.aijiu.system.controller.SessionController.list()
+2021-01-28 09:59:33 -Mapped "{[/sys/online],methods=[GET]}" onto public java.lang.String com.aijiu.system.controller.SessionController.online()
+2021-01-28 09:59:33 -Mapped "{[/sys/online/sessionList]}" onto public java.util.Collection<org.apache.shiro.session.Session> com.aijiu.system.controller.SessionController.sessionList()
+2021-01-28 09:59:33 -Mapped "{[/sys/online/forceLogout/{sessionId}]}" onto public com.aijiu.common.utils.R com.aijiu.system.controller.SessionController.forceLogout(java.lang.String,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2021-01-28 09:59:33 -Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2021-01-28 09:59:33 -Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2021-01-28 09:59:33 -Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2021-01-28 09:59:33 -Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2021-01-28 09:59:33 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7d4f9aae: startup date [Thu Jan 28 09:59:24 CST 2021]; root of context hierarchy
+2021-01-28 09:59:33 -Mapped URL path [/files/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-01-28 09:59:33 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-01-28 09:59:33 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-01-28 09:59:33 -Detected @ExceptionHandler methods in BDExceptionHandler
+2021-01-28 09:59:33 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2021-01-28 09:59:34 -
+
+Using default security password: 202a3d3a-a7d3-4dd2-be34-232fff8cbdcb
+
+2021-01-28 09:59:34 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2021-01-28 09:59:34 -Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@11adab6d, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11bfd751, org.springframework.security.web.context.SecurityContextPersistenceFilter@40738846, org.springframework.security.web.header.HeaderWriterFilter@644947ee, org.springframework.security.web.csrf.CsrfFilter@3a709cc7, org.springframework.security.web.authentication.logout.LogoutFilter@389008d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3221588e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ca2be53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29519337, org.springframework.security.web.session.SessionManagementFilter@42e202d7, org.springframework.security.web.access.ExceptionTranslationFilter@4c41a177]
+2021-01-28 09:59:35 -Registering beans for JMX exposure on startup
+2021-01-28 09:59:35 -Bean with name 'dataSource' has been autodetected for JMX exposure
+2021-01-28 09:59:35 -Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2021-01-28 09:59:35 -Starting beans in phase 2147483647
+2021-01-28 09:59:35 -Context refreshed
+2021-01-28 09:59:35 -Found 1 custom documentation plugin(s)
+2021-01-28 09:59:35 -Scanning for api listing references
+2021-01-28 09:59:35 -Generating unique operation named: removeUsingPOST_1
+2021-01-28 09:59:35 -Generating unique operation named: addUsingGET_1
+2021-01-28 09:59:35 -Generating unique operation named: editUsingGET_1
+2021-01-28 09:59:35 -Generating unique operation named: listUsingGET_1
+2021-01-28 09:59:35 -Generating unique operation named: removeUsingPOST_2
+2021-01-28 09:59:35 -Generating unique operation named: removeUsingPOST_3
+2021-01-28 09:59:35 -Generating unique operation named: saveUsingPOST_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingGET_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingHEAD_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingPOST_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingPUT_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingPATCH_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingDELETE_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingOPTIONS_1
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingTRACE_1
+2021-01-28 09:59:35 -Generating unique operation named: editUsingGET_2
+2021-01-28 09:59:35 -Generating unique operation named: listUsingGET_2
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingPOST_2
+2021-01-28 09:59:35 -Generating unique operation named: addUsingGET_2
+2021-01-28 09:59:35 -Generating unique operation named: editUsingGET_3
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingGET_1
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingHEAD_1
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingPOST_1
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingPUT_1
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingPATCH_1
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingDELETE_1
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingOPTIONS_1
+2021-01-28 09:59:35 -Generating unique operation named: infoUsingTRACE_1
+2021-01-28 09:59:35 -Generating unique operation named: listUsingGET_3
+2021-01-28 09:59:35 -Generating unique operation named: removeUsingPOST_4
+2021-01-28 09:59:35 -Generating unique operation named: removeUsingPOST_5
+2021-01-28 09:59:35 -Generating unique operation named: saveUsingPOST_2
+2021-01-28 09:59:35 -Generating unique operation named: updateUsingPOST_3
+2021-01-28 09:59:35 -Generating unique operation named: listUsingGET_4
+2021-01-28 09:59:35 -Generating unique operation named: removeUsingPOST_6
+2021-01-28 09:59:36 -Generating unique operation named: listUsingGET_5
+2021-01-28 09:59:36 -Starting Quartz Scheduler now
+2021-01-28 09:59:36 -Scheduler schedulerFactoryBean_$_NON_CLUSTERED started.
+2021-01-28 09:59:36 -Initializing ProtocolHandler ["http-nio-8087"]
+2021-01-28 09:59:36 -Starting ProtocolHandler ["http-nio-8087"]
+2021-01-28 09:59:36 -Using a shared selector for servlet write/read
+2021-01-28 09:59:36 -Tomcat started on port(s): 8087 (http)
+2021-01-28 09:59:36 -Started BootdoApplication in 12.63 seconds (JVM running for 16.216)
+2021-01-28 09:59:39 -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2021-01-28 09:59:39 -FrameworkServlet 'dispatcherServlet': initialization started
+2021-01-28 09:59:39 -FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2021-01-28 09:59:39 -Enabling session validation scheduler...
+2021-01-28 09:59:39 -请求地址 : http://localhost:8087/aijiu/v1/my/getMyDevice
+2021-01-28 09:59:39 -HTTP METHOD : GET
+2021-01-28 09:59:39 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getMyDevice
+2021-01-28 09:59:39 -参数 : [7]
+2021-01-28 09:59:40 -耗时 : 64
+2021-01-28 09:59:42 -请求地址 : http://localhost:8087/aijiu/v1/getDeviceById
+2021-01-28 09:59:42 -HTTP METHOD : GET
+2021-01-28 09:59:42 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getDeviceById
+2021-01-28 09:59:42 -参数 : [3]
+2021-01-28 09:59:42 -耗时 : 47
+2021-01-28 09:59:45 -请求地址 : http://localhost:8087/aijiu/v1/my/getMyDevice
+2021-01-28 09:59:45 -HTTP METHOD : GET
+2021-01-28 09:59:45 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getMyDevice
+2021-01-28 09:59:45 -参数 : [7]
+2021-01-28 09:59:45 -耗时 : 26
+2021-01-28 09:59:48 -请求地址 : http://localhost:8087/aijiu/v1/my/getMyShoucangLeaveMessage
+2021-01-28 09:59:48 -HTTP METHOD : GET
+2021-01-28 09:59:48 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getMyShoucangLeaveMessage
+2021-01-28 09:59:48 -参数 : [7]
+2021-01-28 09:59:48 -耗时 : 31
+2021-01-28 09:59:49 -请求地址 : http://localhost:8087/aijiu/v1/getLeaveMessageDetail
+2021-01-28 09:59:49 -HTTP METHOD : GET
+2021-01-28 09:59:49 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getLeaveMessageDetail
+2021-01-28 09:59:49 -参数 : [50]
+2021-01-28 09:59:50 -耗时 : 552
+2021-01-28 09:59:55 -请求地址 : http://localhost:8087/aijiu/v1/my/getUsersByLeaveId
+2021-01-28 09:59:55 -HTTP METHOD : GET
+2021-01-28 09:59:55 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getUsersByLeaveId
+2021-01-28 09:59:55 -参数 : [7, 50]
+2021-01-28 09:59:55 -耗时 : 67
+2021-01-28 09:59:58 -请求地址 : http://localhost:8087/aijiu/v1/my/getGuanzhu
+2021-01-28 09:59:58 -HTTP METHOD : GET
+2021-01-28 09:59:58 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getGuanzhu
+2021-01-28 09:59:58 -参数 : [7]
+2021-01-28 09:59:58 -耗时 : 359
+2021-01-28 10:00:07 -请求地址 : http://localhost:8087/aijiu/v1/my/getMyBingZhengHistory
+2021-01-28 10:00:07 -HTTP METHOD : GET
+2021-01-28 10:00:07 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getMyBingZhengHistory
+2021-01-28 10:00:07 -参数 : [7]
+2021-01-28 10:00:07 -耗时 : 27
+2021-01-28 10:00:11 -请求地址 : http://localhost:8087/aijiu/v1/my/getMyBingZhengHistory
+2021-01-28 10:00:11 -HTTP METHOD : GET
+2021-01-28 10:00:11 -CLASS_METHOD : com.aijiu.information.controller.AijiuController.getMyBingZhengHistory
+2021-01-28 10:00:11 -参数 : [7]
+2021-01-28 10:00:11 -耗时 : 37
+2021-01-28 10:59:39 -Validating all active sessions...
+2021-01-28 10:59:39 -Finished session validation.  No sessions were stopped.

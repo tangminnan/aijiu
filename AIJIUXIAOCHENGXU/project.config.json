@@ -1,0 +1,238 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.4",
+  "appid": "wxf62bcc830d4b5bbb",
+  "projectname": "AJiu",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/xueweiXQ/xueweiXQ",
+          "pathName": "pages/xueweiXQ/xueweiXQ",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/zhidaoXQ/zhidaoXQ",
+          "pathName": "pages/zhidaoXQ/zhidaoXQ",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/yonghuList/yonghuList",
+          "pathName": "pages/yonghuList/yonghuList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fatie/fatie",
+          "pathName": "pages/fatie/fatie",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fabuCG/fabuCG",
+          "pathName": "pages/fabuCG/fabuCG",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "pages/gerenXX/gerenXX",
+          "pathName": "pages/gerenXX/gerenXX",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/fankui/fankui",
+          "pathName": "pages/fankui/fankui",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/wodeBingzheng/wodeBingzheng",
+          "pathName": "pages/wodeBingzheng/wodeBingzheng",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tijiaoCG/tijiaoCG",
+          "pathName": "pages/tijiaoCG/tijiaoCG",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/wodeJF/wodeJF",
+          "pathName": "pages/wodeJF/wodeJF",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/aboutUS/aboutUS",
+          "pathName": "pages/aboutUS/aboutUS",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shebeiJS/shebeiJS",
+          "pathName": "pages/shebeiJS/shebeiJS",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/wodeZuji/wodeZuji",
+          "pathName": "pages/wodeZuji/wodeZuji",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 13,
+          "name": "pages/wodeZuji/wodeZuji",
+          "pathName": "pages/wodeZuji/wodeZuji",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/wodeshebei/wodeshebei",
+          "pathName": "pages/wodeshebei/wodeshebei",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/sousuo/sousuo",
+          "pathName": "pages/sousuo/sousuo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/bingliJL/bingliJL",
+          "pathName": "pages/bingliJL/bingliJL",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/zhidao/zhidao",
+          "pathName": "pages/zhidao/zhidao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tieBa/tieBa",
+          "pathName": "pages/tieBa/tieBa",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/wodeSC/wodeSC",
+          "pathName": "pages/wodeSC/wodeSC",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/tieziXQ/tieziXQ",
+          "pathName": "pages/tieziXQ/tieziXQ",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/gerenZY/gerenZY",
+          "pathName": "pages/gerenZY/gerenZY",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goumaiYY/goumaiYY",
+          "pathName": "pages/goumaiYY/goumaiYY",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

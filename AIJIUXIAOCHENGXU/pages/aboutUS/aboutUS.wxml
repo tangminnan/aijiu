@@ -1,0 +1,12 @@
+<!--pages/aboutUS/aboutUS.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<image class="about_top" src="/img/about_top.png" ></image>
+<view class="aboutUS">
+    <text class="title">九头仙艾（北京）营销技术服务有限公司</text>
+    <text class="Zwen">九头仙艾（北京）营销技术服务有限公司，依托总部安阳九头仙艾业，凭借总部从四大名艾——九头仙艾原种艾草的种植、培育生长、收割入库、仓储、研发试验与生产、商业开发到社会应用，再拓展至人才培训与服务养生的整个艾草产业链资源，深度挖掘“九头仙艾”文化价值，宏扬中医药文化，立足北京，放眼世界，把九头仙艾高品质的艾草系列产品，输送到广阔的市场，服务人类健康，打造九头仙艾全球中医药领域知名品牌。</text>
+    <view class="tel">
+        <text>电话：400-6050-600</text>
+        <text>邮箱：ayjtxa@126.com</text>
+        <text>地址：北京经济技术开发区荣华南路10号院</text>
+    </view>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/wodeSC/wodeSC.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+
+<view class="SC_list">
+  
+<view class="SC_box" wx:for="{{shoucang}}">
+  <navigator url="/pages/tieziXQ/tieziXQ?id={{item.leaveId}}">
+    <image class="SC_box_img" src="{{imgPath}}{{item.img}}" ></image>
+    <view class="SC_TXT">
+      <text>{{item.text}}</text>
+      <view class="SC_yh">
+          <view class="fl">
+            <image src="{{item.headerUrl}}" ></image>
+            <text>{{item.userName}}</text>
+          </view>
+          <image class="fr SC_aixin" src="/img/shoucang.png" ></image>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+
+</view>
+
+
+
+
+
+
+

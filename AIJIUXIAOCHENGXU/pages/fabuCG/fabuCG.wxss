@@ -1,0 +1,6 @@
+/* pages/fabuCG/fabuCG.wxss */
+.success{
+  width: 750rpx;
+  height: 590rpx;
+
+}

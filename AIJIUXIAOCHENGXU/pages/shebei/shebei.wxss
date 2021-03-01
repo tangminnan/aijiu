@@ -1,0 +1,25 @@
+/* pages/shebei/shebei.wxss */
+.shebei_bg{width: 750rpx;height: 150rpx;position: fixed;z-index: 99;}
+.shebei_txt{background: linear-gradient(to right,#590f10,#832223,#590e10) !important;padding:18rpx 52rpx;box-sizing: border-box;overflow: hidden;}
+.shebei_box{position: relative;text-align: center;width: 272rpx;float: left;margin:15rpx 25rpx;}
+.shebei_box .shebei_box_bg{width: 272rpx;height: 382rpx;}
+.shebei_box .shebei_box_txt{position: absolute;width:272rpx;left: 0;top:0;}
+.shebei_box .shebei_box_txt image{width: 225rpx;height: 225rpx;margin:20rpx 0 40rpx;}
+.shebei_box .shebei_box_txt text{display: block;font-size: 28rpx;color:#f8d3a9;letter-spacing: 1px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

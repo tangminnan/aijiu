@@ -1,0 +1,23 @@
+<!--pages/wodeshebei/wodeshebei.wxml-->
+
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+
+<view class="zujiBox">
+    <view class="box" wx:for="{{device}}">
+        <navigator url="/pages/shebeiJS/shebeiJS?id={{item.id}}">
+        <view class="box_txt">
+            <image src="{{imgPath}}{{item.icon}}" ></image>
+            <view class="zujitxt">
+                <text class="tt1">{{item.deviceName}}</text>
+                <text class="tt2">型号：{{item.type}}</text>
+            </view>
+        </view>
+    </navigator>
+    </view>
+</view>
+
+
+
+
+
+

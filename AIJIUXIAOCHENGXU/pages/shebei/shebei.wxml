@@ -1,0 +1,47 @@
+<!--pages/shebei/shebei.wxml-->
+<view class="shebei">
+  <image class="shebei_bg" src="/img/shebeiBig.png"></image>
+  <view class="shebei_txt">
+
+      <view class="shebei_box">
+        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
+        <view class="shebei_box_txt">
+            <image src="/img/chanpin.jpg"></image>
+            <text>设备名称XXXXXX</text>
+        </view>
+      </view>
+
+      <view class="shebei_box">
+        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
+        <view class="shebei_box_txt">
+            <image src="/img/chanpin.jpg"></image>
+            <text>设备名称XXXXXX</text>
+        </view>
+      </view>
+
+      <view class="shebei_box">
+        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
+        <view class="shebei_box_txt">
+            <image src="/img/chanpin.jpg"></image>
+            <text>设备名称XXXXXX</text>
+        </view>
+      </view>
+
+      <view class="shebei_box">
+        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
+        <view class="shebei_box_txt">
+            <image src="/img/chanpin.jpg"></image>
+            <text>设备名称XXXXXX</text>
+        </view>
+      </view>
+
+      <view class="shebei_box">
+        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
+        <view class="shebei_box_txt">
+            <image src="/img/chanpin.jpg"></image>
+            <text>设备名称XXXXXX</text>
+        </view>
+      </view>
+
+  </view>
+</view>

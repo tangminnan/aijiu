@@ -1,0 +1,23 @@
+/**index.wxss**/
+.Yqm{position:relative;}
+.Yqm image{width: 750rpx;height: 350rpx;}
+.allJF{width:600rpx;position: absolute;left: 0;top:0;padding:0 75rpx;}
+.allJF .tt1{display: block;text-align: center;font-size: 68rpx;color:#fdcb6f;margin:85rpx 0 50rpx;}
+.allJF .dengji{overflow: hidden;font-size: 24rpx;margin-bottom: 10rpx;}
+.allJF .dengji .fr{font-size: 22rpx;color:#bdbcba;}
+
+.jilu{padding:30rpx;box-sizing: border-box;}
+.jilu .box{background: #671b1e;padding:30rpx;overflow: hidden;border: 1rpx solid #e5b870;margin-bottom: 10rpx;}
+.jilu .box .fl{width: 50%;}
+.jilu .box .fl text{display: block;}
+.t-time{font-size: 24rpx;color: #dfd7c7;margin-top:10rpx;}
+.jilu .box .fr{width: 50%;text-align: right;font-size: 36rpx;margin-top: 20rpx;} 
+ 
+.mingxi_tit{text-align: center;font-size: 30rpx;margin-bottom: 30rpx;}
+.mingxi_tit text{padding:0 30rpx;}
+.mingxi_tit image{width: 80rpx;height: 20rpx;}
+
+ progress{
+    border-radius:10rpx !important;
+    overflow: hidden;
+ }

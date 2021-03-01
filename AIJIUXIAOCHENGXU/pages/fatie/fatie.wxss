@@ -1,0 +1,65 @@
+/* pages/fatie/fatie.wxss */
+
+
+.topwuding{
+  width: 750rpx;
+  height: 170rpx;
+  position: absolute;
+}
+.faTie{
+  margin:30rpx;
+  border: 2rpx solid #efc494;
+  border-radius: 15rpx;
+  padding:130rpx 15rpx 0;
+  background: #70181e;
+}
+.faTie .bt-input, .faTie textarea{
+  background: #4e0d11;
+  padding:0 18rpx;
+  height: 100rpx;
+  border: 1px solid #f6c885;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+}
+.faTie textarea{
+    height: 360rpx;
+    display: block;
+    padding:18rpx;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 45rpx;
+}
+.uploader{margin:0 35rpx 100rpx;}
+.uploader_img{
+    width: 160rpx;
+    height: 160rpx;
+}
+.fabu button{
+  display: block;
+  width: 100% !important;
+  background: #2b6162;
+  font-size: 36rpx;
+  color: #f4cb99;
+  font-weight: normal;
+  letter-spacing: 2rpx;
+  border:1rpx solid #e1b37c;
+  margin-bottom: 50rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

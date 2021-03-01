@@ -1,0 +1,7 @@
+/**app.wxss**/
+page{background: #551618;color: #fbd39f;font-size: 30rpx;}
+.fl {float: left;} 
+.fr {float: right;} 
+.f30{font-size: 30rpx;}
+.topLine{width: 750rpx;height: 25rpx;display: block;}
+.phcolor{color:rgba(246,222,175,.5);}

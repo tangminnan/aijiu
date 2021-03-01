@@ -1,0 +1,49 @@
+/* pages/zhidaoXQ/zhidaoXQ.wxss */
+
+.m30{margin:0 30rpx;}
+.bdr15{border-radius: 15rpx;}
+.xueweiPic image{width: 750rpx;height: 380rpx;}
+.posi{position: absolute;top:350rpx;}
+.GJBma{
+  background: #842b2e;
+  border: 2rpx solid #eec9a1;
+  color:#f3bf8c;
+  padding:50rpx 35rpx;
+  width: 690rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.GJBma text{display: block;letter-spacing:3rpx;}
+.GJBma text.tt1{font-size: 36rpx;}
+.GJBma image{width: 690rpx;height: 100rpx;position: absolute;left:0;bottom:-85rpx;}
+
+.XWtxt{
+  background: #842b2e;
+  border: 2rpx solid #eec9a1;
+  color:#f3bf8c;
+  padding:50rpx 35rpx;
+  width: 690rpx;
+  box-sizing: border-box;
+  margin:24rpx 30rpx;
+  letter-spacing:3rpx;
+}
+.XWtxt .tit{font-size: 36rpx;text-align: center;margin-bottom: 30rpx;}
+.XWtxt .tit image{width: 80rpx;height: 20rpx;}
+.XWtxt .tit text{padding:0 25rpx;}
+.XWtxt .tit_txt text{font-size: 28rpx;text-indent: 56rpx;line-height: 50rpx;display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

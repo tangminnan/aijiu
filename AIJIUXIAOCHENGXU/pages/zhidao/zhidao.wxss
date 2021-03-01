@@ -1,0 +1,107 @@
+/* pages/zhidao/zhidao.wxss */
+page{background: #6d2122;}
+.top_nav{
+  background: #551618;
+  border-bottom: 1px solid #e6d9af;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+.top_nav image{width: 750rpx;height: 55rpx;position: absolute;bottom: -15rpx;left: 0;}
+.nav-name{
+  display: inline-block;
+  color: #ae7577;
+  border: 2rpx solid #ae7577;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  width: 35%;
+  margin:0 2%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-bottom: 20rpx;
+}
+.nav-hover{
+  color: #fbd39f;
+  font-size: 30rpx;
+  background:#356663;
+}
+
+/*总体主盒子*/
+
+.container {
+  display: flex;
+  direction: row;
+}
+
+/*左侧栏主盒子*/
+
+.nav_left {
+  /*设置行内块级元素（没使用定位）*/
+  position: absolute;
+  display: inline-block;
+  width: 28%;
+  height: 91%;
+  left: 0;
+  top:9%;
+  /*主盒子设置背景色为灰色*/
+  background: #591015;
+  text-align: center;
+  overflow: scroll;
+}
+
+/*左侧栏list的item*/
+
+.nav_left .nav_left_items {
+  /*每个高30px*/
+  height: 100rpx;
+  /*垂直居中*/
+  line-height: 100rpx;
+  /*只设下边线*/
+  border-bottom: 1rpx solid #6d2122;
+  /*文字14px*/
+  font-size: 30rpx;
+  color:#bb8284;
+}
+
+/*左侧栏list的item被选中时*/
+
+.nav_left .nav_left_items.active {
+  /*背景色变成白色*/
+  background:#6d2122;
+  color: #f9c47f;
+  border-left:8rpx solid #356663;
+}
+
+/*右侧栏主盒子*/
+
+.nav_right {
+  /*右侧盒子使用了绝对定位*/
+  position: absolute;
+  top:9%;
+  right: 0;
+  flex: 1;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 70%;
+  height: 91%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.nav_right .nav_right_items {
+}
+
+.nav_right .nav_right_items .box {
+  float: left;width: 50%;
+  position: relative;
+}
+.nav_right .nav_right_items .box .boxBG{width: 260rpx;height: 275rpx;}
+.nav_right .nav_right_items .box .boxCon{width: 100%;position: absolute;top:0;left: 0;text-align: center;}
+.nav_right .nav_right_items .box .boxCon image{width: 210rpx;height: 160rpx;margin-top: 25rpx;margin-left:8rpx;}
+.nav_right .nav_right_items .box .boxCon text{display: block;font-size: 30rpx;color:#f8dba3;}
+
+
+
+
+

@@ -1,0 +1,79 @@
+/* pages/mine/mine.wxss */
+.User{position: relative;}
+.User .topimg{width: 750rpx;height: 500rpx;display: block;}
+.User_txt{position:absolute;width: 100%;top:0;left:0;text-align:center;}
+.User_txt .toux{width: 140rpx;height: 140rpx;border-radius:50%;overflow: hidden;border:5rpx solid #fce1c4;margin:50rpx auto 20rpx;}
+.User_txt .niC{font-size: 42rpx;color:#f6c997;margin-bottom:10rpx;} 
+.User_txt .years{font-size: 24rpx;color:#f6c997;} 
+.User_txt .liS{overflow: hidden;margin-top:30rpx;}
+.User_txt .liS .fans{float: left;width: 33.33%;}
+.User_txt .liS .fans text{display: block;font-size: 28rpx;color:#fff;}
+.User_txt .liS .fans .num{font-size: 42rpx;color:#f8d3a9;}
+
+.jifen{position: relative;}
+.jifen .jifen_bg{width: 750rpx;height: 229rpx;display: block;}
+.jifen_box{position: absolute;width:594rpx;height:146rpx;left:77rpx;top:47rpx;padding:0 35rpx;box-sizing:border-box;}
+.jifen_box .lve{overflow: hidden;color:#fce587;font-size: 24rpx;margin-top: 20rpx;margin-bottom: 10rpx;}
+.jifen_box .lve .fl{margin-left:60rpx;}
+.jifen_box .lve .fl text{font-size: 56rpx;padding-right:10rpx;}
+.jifen_box .lve .fr{margin-top:30rpx;}
+.wx-progress-inner-bar {
+  border-radius: 8rpx !important;
+  background: linear-gradient(to right, #fce486, #ffb358) !important;  
+}
+
+.fotNav{position: relative;}
+.fotNav .fotNav_bg{width: 750rpx;height: 508rpx;display: block;}
+.fotNav_txt{position: absolute;width: 100%;left: 0;top:40rpx;}
+.fotNav_txt .nav{float: left;width: 25%;text-align: center;margin-bottom:30rpx;}
+.fotNav_txt .nav image{width: 90rpx;height: 130rpx;}
+.fotNav_txt .nav text{display: block;font-size: 28rpx;color:#f8d3a9;}
+
+
+/* 遮罩层 */
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.5;
+}
+  
+/* 弹出层 */
+.modalDlg{
+    width: 70%;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+/* 弹出层里面的图片 */
+.modalDlg image{
+  width: 550rpx;
+  height: 520rpx;
+}
+ 
+/* 弹出层里面的按钮 */
+.close{
+  width: 80rpx;
+  height: 80rpx;
+  background: #276869;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 80rpx;
+  border-radius: 50%;
+  border:1rpx solid #f6deaf;
+  position: absolute;
+  top:0;left:0;
+}
+
+

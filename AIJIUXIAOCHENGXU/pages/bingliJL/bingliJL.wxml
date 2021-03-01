@@ -1,0 +1,14 @@
+<!--pages/bingliJL/bingliJL.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+
+<view class="boxJL">
+    <view class="box" wx:for="{{mybingzheng}}">
+        <view class="riqi">
+            <text>提交日期：{{item.publishTime}}</text>
+        </view>
+        <view class="jlxq">
+            <text>{{item.text}}</text>
+        </view>
+    </view>
+
+</view>

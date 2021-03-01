@@ -1,0 +1,19 @@
+<!--pages/fatie/fatie.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<image class="topwuding" src="/img/wuding.png" ></image>
+<view class="faTie">
+      <input placeholder-class="phcolor" class="bt-input" bindinput="handleTitleInput" value="{{title}}" auto-focus placeholder="输入标题"/>
+      <textarea placeholder-class="phcolor" bindinput="handleTextInput" value="{{leaveText}}"  placeholder="请输入分享内容" />
+      <view class="uploader">
+          <image class="uploader_img" src="/img/scPic.png" bindtap="handleChooseImg"></image>
+          <image class="uploader_img"  wx:for="{{chooseImgs}}" src="{{item}}"
+          wx:key="*this"
+          bindtap="handleRemoveImg"
+          data-index="{{index}}"
+          
+          ></image>
+      </view>
+      <view class="fabu">
+          <button bindtap="handleFormSubmit">发布</button>
+      </view>
+</view>

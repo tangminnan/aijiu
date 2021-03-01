@@ -1,0 +1,77 @@
+<!--pages/tieziXQ/tieziXQ.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+
+<view class="Big_boxex">
+
+<!--用户名-->
+<view class="tiezi_box">
+    <view class="tiezi_box_top">
+          <view class="fl">
+              <image src="{{tixiXO.heardUrl}}" ></image>
+              <view class="txt">
+                  <text class="tt1">{{tixiXO.name}}</text>
+                  <text class="tt2">{{tixiXO.publishTime}}</text>
+              </view>
+          </view>
+          <view class="fr">关注</view>
+    </view>
+    <view class="miaoshu">
+        <text>{{tixiXO.leaveText}}</text>
+    </view>
+    <view class="tiezi_imgs">
+        <image wx:for="{{tixiXO.imgList}}" src="{{imgPath}}{{item}}" ></image>
+    </view>
+</view>
+
+<!--收藏-->
+<view class="SCs">
+  <view class="fl">
+      <image src="/img/sweet.png" ></image>
+      <text>收藏 {{tixiXO.shoucangcount}}</text>
+  </view>
+  <view class="fr">
+    <image wx:for="{{tixiXO.shoucnagHeaders}}" src="{{imgPath}}{{item}}" ></image>
+    <view class="arrow" bindtap="handleToShouCang"></view>
+  </view>
+</view>
+
+<!--评论-->
+<view class="Plun_box">
+    <view class="Plun_box_top">
+        <image src="/img/talk.png" ></image>
+        <text>评论 {{tixiXO.pingluncount}}</text>
+    </view>
+
+    <view class="Plun_box_con" wx:for="{{tixiXO.leaveCommentDOS}}">
+        <view class="Plun_box_con_top">
+            <view class="fl">
+              <image src="{{imgPath}}{{item.headerUrl}}" ></image>
+              <text>{{item.userName}}</text>
+            </view>
+            <view class="fr">{{item.addTime}}</view>
+        </view>
+        <view class="Plun_box_con_txt">{{item.pingjia}}</view>
+    </view>
+</view>
+
+<!--底部分享/收藏-->
+<view class="fot_share">
+    <view>
+        <image src="/img/share.png" ></image>
+        <text>分享</text>
+    </view>
+    <view>
+        <image src="/img/talk.png" ></image>
+        <text bindtap="handleToComment">评论</text>
+    </view>
+    <view>
+        <image src="/img/sweet.png" ></image>
+        <text>收藏</text>
+    </view>
+</view>
+
+</view>
+
+
+
+

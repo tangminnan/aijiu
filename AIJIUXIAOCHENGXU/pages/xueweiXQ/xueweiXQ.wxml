@@ -1,0 +1,65 @@
+<!--pages/xueweiXQ/xueweiXQ.wxml-->
+<view class="xueweiPic">
+    <image src="/img/XW_toppic.jpg" ></image>
+</view>
+
+<view class="posi">
+
+<view class="GJBma m30 bdr15">
+      <text class="tt1">百会穴</text>
+      <text class="tt2">bǎi huì </text>
+      <text class="tt3">国际编码：GV20</text>
+      <image src="/img/aicao_xuewei.png" ></image>
+</view>
+
+<view class="XWtxt bdr15">
+      <view class="tit">
+            <image src="/img/liusu_left.png" ></image>
+            <text>穴位</text>
+            <image src="/img/liusu_right.png" ></image>
+      </view>
+      <view class="tit_txt">
+            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
+      </view>
+      <view class="tit">
+            <image src="/img/liusu_left.png" ></image>
+            <text>取穴</text>
+            <image src="/img/liusu_right.png" ></image>
+      </view>
+      <view class="tit_txt">
+            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
+      </view>
+      <view class="tit">
+            <image src="/img/liusu_left.png" ></image>
+            <text>功效与作用</text>
+            <image src="/img/liusu_right.png" ></image>
+      </view>
+      <view class="tit_txt">
+            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
+      </view>
+</view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

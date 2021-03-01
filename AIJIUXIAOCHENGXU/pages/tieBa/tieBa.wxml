@@ -1,0 +1,202 @@
+<!--pages/tieBa/tieBa.wxml-->
+<view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+    <!--========关注========-->
+    <image class="aicaoBG" src="/img/aicaoBG.png" mode='aspectFit'></image>
+    <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot"> 
+        <view class="DDtxt">
+            <view class="txt">
+                <image src="/img/TX.png" mode='aspectFit'></image>
+                <view class="wenzi">
+                    <text class="tt1">用户名</text>
+                    <text class="tt2">08-02 10:30</text>
+                </view>
+            </view>
+            <view class="DDcon1">
+                <text>头痛患者中，女性i明显多于男性，约占所有头痛患者的70%.临床研究表明，这与女性特有的生理因素有关——63%的女性头痛与月经关系密切...</text>
+            </view>
+            <view class="DDcon2">
+                <image src="/img/TB_pic1.jpg" ></image>
+                <image src="/img/TB_pic2.jpg" ></image>
+                <image src="/img/TB_pic1.jpg" ></image>
+            </view>
+            <view class="DDcon3">
+                <view class="fl">
+                    <image src="/img/sweet.png" mode='aspectFit'></image>
+                    <text>12</text>
+                    <image src="/img/talk.png" mode='aspectFit'></image>
+                    <text>60</text>
+                </view>
+                <view class="fr">
+                    <image src="/img/share.png" mode='aspectFit'></image>
+                    <text>分享</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="DDtxt">
+            <view class="txt">
+                <image src="/img/TX.png" mode='aspectFit'></image>
+                <view class="wenzi">
+                    <text class="tt1">用户名</text>
+                    <text class="tt2">08-02 10:30</text>
+                </view>
+            </view>
+            <view class="DDcon1">
+                <text>头痛患者中，女性i明显多于男性，约占所有头痛患者的70%.临床研究表明，这与女性特有的生理因素有关——63%的女性头痛与月经关系密切...</text>
+            </view>
+            <view class="DDcon2">
+                <image src="/img/TB_pic1.jpg" ></image>
+                <image src="/img/TB_pic2.jpg" ></image>
+                <image src="/img/TB_pic1.jpg" ></image>
+            </view>
+            <view class="DDcon3">
+                <view class="fl">
+                    <image src="/img/sweet.png" mode='aspectFit'></image>
+                    <text>12</text>
+                    <image src="/img/talk.png" mode='aspectFit'></image>
+                    <text>60</text>
+                </view>
+                <view class="fr">
+                    <image src="/img/share.png" mode='aspectFit'></image>
+                    <text>分享</text>
+                </view>
+            </view>
+        </view>
+  
+    </scroll-view>
+    </swiper-item>
+
+    <!--========推荐========-->
+    <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot"> 
+        <image class="TB_huatiBTop" src="/img/TB_huatiBTop.png" mode='aspectFit'></image>
+        <!--话题榜-->
+        <view class="TJtxtTop">
+            <image class="huatiBbj" src="/img/TB_huatiB.jpg" mode='aspectFit'></image>
+            <view class="huati_box">
+                <view class="HT_txt">
+                    <image class="HT_txt_bg" src="/img/TB_huatiBlue.png" mode='aspectFit'></image>              
+                    <view class="wenzi">
+                        <image src="/img/TB_huatiB1.jpg" mode='aspectFit'></image>
+                        <text class="tt1">#艾灸基本知识</text>
+                        <text class="tt2">166条内容</text>
+                    </view>
+                </view>
+                <view class="HT_txt">
+                    <image class="HT_txt_bg" src="/img/TB_huatiBlue.png" mode='aspectFit'></image>              
+                    <view class="wenzi">
+                        <image src="/img/TB_huatiB2.jpg" mode='aspectFit'></image>
+                        <text class="tt1">#艾灸基本知识</text>
+                        <text class="tt2">166条内容</text>
+                    </view>
+                </view>
+                <view class="HT_txt">
+                    <image class="HT_txt_bg" src="/img/TB_huatiBlue.png" mode='aspectFit'></image>              
+                    <view class="wenzi">
+                        <image src="/img/TB_huatiB3.jpg" mode='aspectFit'></image>
+                        <text class="tt1">#艾灸基本知识</text>
+                        <text class="tt2">166条内容</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!--列表-->
+        <view class="newList">
+            <view class="list_box">
+                <image class="list_img" src="/img/TB_pic1.jpg" mode='aspectFit'></image>
+                <view class="list_box_txt">
+                    <text>人体各部分都分布着经络，经络内联脏腑等等穴位方向</text>
+                </view>
+                <view class="list_box_name">
+                    <image src="/img/TX.png" mode='aspectFit'></image>
+                    <text>用户名</text>
+                </view>
+            </view>
+
+            <view class="list_box">
+                <image class="list_img" src="/img/TB_pic2.jpg" mode='aspectFit'></image>
+                <view class="list_box_txt">
+                    <text>人体各部分都分布着经络，经络内联脏腑等等穴位方向</text>
+                </view>
+                <view class="list_box_name">
+                    <image src="/img/TX.png" mode='aspectFit'></image>
+                    <text>用户名</text>
+                </view>
+            </view>
+
+            <view class="list_box">
+                <image class="list_img" src="/img/TB_pic2.jpg" mode='aspectFit'></image>
+                <view class="list_box_txt">
+                    <text>人体各部分都分布着经络，经络内联脏腑等等穴位方向</text>
+                </view>
+                <view class="list_box_name">
+                    <image src="/img/TX.png" mode='aspectFit'></image>
+                    <text>用户名</text>
+                </view>
+            </view>
+
+        </view>
+
+    </scroll-view>
+    </swiper-item>
+    
+    <!--========最新========-->
+    <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot"> 
+        <image class="aicaoBG" src="/img/aicaoBG.png" mode='aspectFit'></image>
+        <!--列表-->
+        <view class="newList">
+            <view class="list_box">
+                <image class="list_img" src="/img/TB_pic1.jpg" mode='aspectFit'></image>
+                <view class="list_box_txt">
+                    <text>人体各部分都分布着经络，经络内联脏腑等等穴位方向</text>
+                </view>
+                <view class="list_box_name">
+                    <image src="/img/TX.png" mode='aspectFit'></image>
+                    <text>用户名</text>
+                </view>
+            </view>
+
+            <view class="list_box">
+                <image class="list_img" src="/img/TB_pic2.jpg" mode='aspectFit'></image>
+                <view class="list_box_txt">
+                    <text>人体各部分都分布着经络，经络内联脏腑等等穴位方向</text>
+                </view>
+                <view class="list_box_name">
+                    <image src="/img/TX.png" mode='aspectFit'></image>
+                    <text>用户名</text>
+                </view>
+            </view>
+
+            <view class="list_box">
+                <image class="list_img" src="/img/TB_pic2.jpg" mode='aspectFit'></image>
+                <view class="list_box_txt">
+                    <text>人体各部分都分布着经络，经络内联脏腑等等穴位方向</text>
+                </view>
+                <view class="list_box_name">
+                    <image src="/img/TX.png" mode='aspectFit'></image>
+                    <text>用户名</text>
+                </view>
+            </view>
+
+        </view>
+
+    </scroll-view>
+    </swiper-item>
+
+</swiper>
+
+
+
+
+
+
+
+    
+
+

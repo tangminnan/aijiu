@@ -1,0 +1,356 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210125.163026.12584.0.001.json",
+    "dumpEventTime": "2021-01-25T16:30:26Z",
+    "dumpEventTimeStamp": "1611563426687",
+    "processId": 12584,
+    "cwd": "e:\\AIJIUXIAOCHENGXU",
+    "commandLine": [
+      "D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\node.exe",
+      "d:\\Program Files (x86)\\Tencent\\微信web开发者工具\\code\\package.nw\\js\\libs\\vseditor\\extensions\\wxml-language-features\\server\\dist\\htmlServerMain",
+      "--node-ipc",
+      "--clientProcessId=3108"
+    ],
+    "nodejsVersion": "v12.6.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.6.0",
+      "v8": "7.5.288.22-node.14",
+      "uv": "1.30.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1c",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.6.0/node-v12.6.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.6.0/node-v12.6.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.6.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Home China",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 1598984,
+        "nice": 0,
+        "sys": 3006734,
+        "idle": 22012890,
+        "irq": 96500
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 1598984,
+        "nice": 0,
+        "sys": 3006734,
+        "idle": 22012890,
+        "irq": 96500
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 1598984,
+        "nice": 0,
+        "sys": 3006734,
+        "idle": 22012890,
+        "irq": 96500
+      },
+      {
+        "model": "Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz",
+        "speed": 3600,
+        "user": 1598984,
+        "nice": 0,
+        "sys": 3006734,
+        "idle": 22012890,
+        "irq": 96500
+      }
+    ],
+    "host": "WINDOWS-C9LU1JA"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff64f706db9",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64f70a72c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64f7096d8",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64f7f300b",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64ffd8a1e",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64ffc0d6a",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64fe5256c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64fe5a49f",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64fe50733",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64fe4efc4",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64fe6daa5",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff64fc23e0d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff65008170d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff650083584",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6500589aa",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff6500692cc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x000000acdd5cc3e0",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 35160064,
+    "totalCommittedMemory": 35160064,
+    "usedMemory": 33581496,
+    "availableMemory": 2164704152,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261832,
+        "used": 31960,
+        "available": 229872
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047328,
+        "used": 1047320,
+        "available": 8
+      },
+      "old_space": {
+        "memorySize": 11415552,
+        "committedMemory": 11415552,
+        "capacity": 11178272,
+        "used": 10862184,
+        "available": 316088
+      },
+      "code_space": {
+        "memorySize": 688128,
+        "committedMemory": 688128,
+        "capacity": 409664,
+        "used": 397472,
+        "available": 12192
+      },
+      "map_space": {
+        "memorySize": 1052672,
+        "committedMemory": 1052672,
+        "capacity": 1050952,
+        "used": 607520,
+        "available": 443432
+      },
+      "large_object_space": {
+        "memorySize": 20643840,
+        "committedMemory": 20643840,
+        "capacity": 20631584,
+        "used": 20631584,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3456,
+        "used": 3456,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047328,
+        "used": 0,
+        "available": 1047328
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 0.859,
+    "kernelCpuSeconds": 0.093,
+    "cpuConsumptionPercent": 0.161356,
+    "maxRss": 72171520,
+    "pageFaults": {
+      "IORequired": 56595,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 1340,
+      "writes": 509
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "AMD_ENTRYPOINT": "D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\code\\package.nw\\js\\libs\\vseditor\\bundled\\ext.bundled",
+    "APPDATA": "C:\\Users\\EDZ\\AppData\\Roaming",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_1708_HZSKWFINWFCMKZTO",
+    "CHROME_RESTART": "NW.js|哎呀！NW.js 崩溃了。要立即重新启动吗？|LEFT_TO_RIGHT",
+    "CLASSPATH": ".;D:\\Program Files\\java\\jdk1.8.0_181\\lib\\dt.jar;D:\\Program Files\\java\\jdk1.8.0_181\\lib\\tools.jar",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPOSE_CONVERT_WINDOWS_PATHS": "true",
+    "COMPUTERNAME": "WINDOWS-C9LU1JA",
+    "ComSpec": "C:\\Windows\\system32\\cmd.exe",
+    "DOCKER_CERT_PATH": "C:\\Users\\EDZ\\.docker\\machine\\machines\\default",
+    "DOCKER_HOST": "tcp://192.168.99.100:2376",
+    "DOCKER_MACHINE_NAME": "default",
+    "DOCKER_TLS_VERIFY": "1",
+    "DOCKER_TOOLBOX_INSTALL_PATH": "D:\\Program Files\\docker\\Docker Toolbox",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "ELECTRON_NO_ASAR": "1",
+    "ELECTRON_RUN_AS_NODE": "1",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOME": "C:\\Users\\EDZ",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\EDZ",
+    "JAVA_HOME": "D:\\Program Files\\java\\jdk1.8.0_181",
+    "LOCALAPPDATA": "C:\\Users\\EDZ\\AppData\\Local",
+    "LOGONSERVER": "\\\\WINDOWS-C9LU1JA",
+    "NO_PROXY": "192.168.99.100",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\EDZ\\OneDrive",
+    "OS": "Windows_NT",
+    "Path": "C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\Program Files\\java\\jdk1.8.0_181\\bin;D:\\Program Files\\java\\jdk1.8.0_181\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;C:\\Users\\EDZ\\AppData\\Local\\Programs\\Git\\cmd;C:\\Users\\EDZ\\AppData\\Local\\Microsoft\\WindowsApps;D:\\Program Files\\docker\\Docker Toolbox",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PIPE_LOGGING": "true",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 11, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e0b",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\Windows",
+    "TEMP": "C:\\Users\\EDZ\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\EDZ\\AppData\\Local\\Temp",
+    "USERDOMAIN": "WINDOWS-C9LU1JA",
+    "USERDOMAIN_ROAMINGPROFILE": "WINDOWS-C9LU1JA",
+    "USERNAME": "EDZ",
+    "USERPROFILE": "C:\\Users\\EDZ",
+    "VBOX_MSI_INSTALL_PATH": "C:\\Program Files\\Oracle\\VirtualBox\\",
+    "VERBOSE_LOGGING": "true",
+    "VSCODE_HANDLES_UNCAUGHT_ERRORS": "true",
+    "VSCODE_IPC_HOOK_EXTHOST": "\\\\.\\pipe\\vscode-ipc-99547baa-5fce-44a9-a7aa-ac05199849c1-sock",
+    "VSCODE_LOGS": "C:\\Users\\EDZ\\AppData\\Local\\微信开发者工具\\User Data\\f13f1c30f325514de496c9db6e27b110\\Default\\Editor\\editor_logs\\20210125T162024",
+    "VSCODE_LOG_STACK": "true",
+    "VSEDITORCONFIG": "{\"appRootPath\":\"D:\\\\Program Files (x86)\\\\Tencent\\\\微信web开发者工具\\\\code\\\\package.nw\",\"editorRootPath\":\"D:\\\\Program Files (x86)\\\\Tencent\\\\微信web开发者工具\\\\code\\\\package.nw\\\\js\\\\libs\\\\vseditor\",\"appActualRoot\":\"D:\\\\Program Files (x86)\\\\Tencent\\\\微信web开发者工具\\\\code\\\\package.nw\",\"isStandaloneEditorApp\":false,\"language\":\"zh-CN\",\"projectPath\":\"E:\\\\AIJIUXIAOCHENGXU\",\"editorRootRelativeToBundleJSPath\":\"..\",\"isDev\":false,\"styleSheetRelativeHref\":\"../js/libs/vseditor/static/style.css\",\"bundledStyleSheetRelativeHref\":\"../js/libs/vseditor/static/style.bundled.css\",\"useBundledCss\":true,\"isSimplifiedEditorApp\":false,\"proxyPort\":20032,\"httpServerPathPrefix\":\"__vseditorapp__/IkgI6jL6K1ud\",\"webviewResourceBaseRoot\":\"D:\\\\Program Files (x86)\\\\Tencent\\\\微信web开发者工具\\\\code\\\\package.nw\\\\js\\\\libs\\\\vseditor\\\\webview-resource\",\"resolvedPathConfigs\":{\"onigWasm\":\"D:\\\\Program Files (x86)\\\\Tencent\\\\微信web开发者工具\\\\code\\\\package.nw\\\\node_modules\\\\vscode-oniguruma\\\\release\\\\onig.wasm\"},\"launchOptions\":{\"installExternalFonts\":false,\"installDevtoolsInspectorPanel\":true},\"extensionHostInspectBrk\":false}",
+    "windir": "C:\\Windows"
+  },
+  "sharedObjects": [
+    "D:\\Program Files (x86)\\Tencent\\微信web开发者工具\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\System32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\System32\\UMPDC.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\wshbth.dll"
+  ]
+}

@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="Yqm">
+    <image src="/img/jifen.png" ></image>
+    <view class="allJF">
+        <text class="tt1">1369</text>
+        <view class="dengji">
+            <text class="fl">已达到10等级</text>
+            <text class="fr">下一级需2000积分</text>
+        </view>
+        <progress percent="40" stroke-width="8" activeColor="#fdcb6e" backgroundColor="#052828" />
+    </view>
+</view>
+
+<view class="jilu">
+    <view class="mingxi_tit">
+        <image src="/img/liusu_left.png" ></image>
+        <text>积分明细</text>
+        <image src="/img/liusu_right.png" ></image>
+    </view>
+    <view class="box">
+        <view class="fl">
+            <text>发帖得分</text>
+            <text class="t-time">2020.06.20 13:20</text>
+        </view>
+        <view class="fr">+10</view>
+    </view>
+    <view class="box">
+        <view class="fl">
+            <text>发帖得分</text>
+            <text class="t-time">2020.06.20 08:10</text>
+        </view>
+        <view class="fr">+10</view>
+    </view>
+    <view class="box">
+        <view class="fl">
+            <text>发帖得分</text>
+            <text class="t-time">2020.06.20 10:11</text>
+        </view>
+        <view class="fr">+10</view>
+    </view>
+    <view class="box">
+        <view class="fl">
+            <text>发帖得分</text>
+            <text class="t-time">2020.06.20 12:30</text>
+        </view>
+        <view class="fr">+10</view>
+    </view>
+
+   
+</view>

@@ -1,0 +1,24 @@
+<!--pages/shebeiJS/shebeiJS.wxml-->
+<image class="shebeiPic" src="{{imgPath}}{{device.detailImg}}" ></image>
+
+<view class="posi">
+
+<view class="GJBma m30 bdr15">
+      <text class="tt1">{{device.name}}</text>
+      <text class="tt2">产品型号：{{device.type}} </text>
+      <image src="/img/jieshao.png" ></image>
+</view>
+
+<view class="XWtxt bdr15">
+      <view class="tit">
+            <image src="/img/liusu_left.png" ></image>
+            <text>产品介绍</text>
+            <image src="/img/liusu_right.png" ></image>
+      </view>
+      <view class="tit_txt">
+            <text>{{device.instruction}}</text>
+            
+      </view>
+</view>
+
+</view>

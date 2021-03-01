@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+        <!-- 最初始时的搜索框 -->
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="18"></icon>
+            <input placeholder-class="phcolor" type="text" class="weui-search-bar__input" placeholder="搜索"/>
+        </view>
+        <!-- 可编辑时的搜索框 -->
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="18"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+        </label>
+    </view>
+    <!-- 取消搜索 -->
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+
+<view class="SYS">
+  <image src="/img/sy-picSys.jpg"></image>
+  <view class="SYSbtn">
+    <text class="mini-btn">扫一扫</text>
+    <text bindtap="handleToFaTie" class="mini-btn">发帖</text>
+  </view>
+</view>
+
+<view class="Ysheng">
+  <image src="/img/sy-YS.jpg"></image>
+  <view class="Yshengbtn">
+    <navigator url="/pages/tieBa/tieBa"><text class="txtT1">养\n生\n贴\n吧</text></navigator>
+   <text bindtap="handleToZhiDao" class="txtT2">艾\n灸\n指\n导</text>
+   <text bindtap="handleToHardDevice" class="txtT3">硬\n件\n设\n备</text>
+    <navigator><text class="txtT4">在\n线\n商\n城</text></navigator>
+  </view>
+</view>
+
+<!--热门推荐-->
+<view class="TJhot">
+  <image class="topimg" src="/img/sy-TJhot.jpg"></image>
+  <view class="box" wx:for="{{tuijianTieList}}" wx:for-item="tuijian">
+    <navigator url="/pages/tieziXQ/tieziXQ?id={{tuijian.id}}">
+    <image class="boxBG" src="/img/bg.png"></image>
+    <view class="boxBG_con">
+        <image class="boxBG_con_img" src="{{imgPath}}{{tuijian.imgList[0]}}"></image>
+        <view class="boxBG_con_txt">
+          <view class="txt">{{tuijian.leaveText}}</view>
+          <view class="nameL">
+              <view class="fl"><image src="{{tuijian.heardUrl}}"></image>{{tuijian.name}}</view>
+              <view class="fr"><image src="/img/sweet.png"></image>{{tuijian.shoucangcount}}</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+   </view>
+
+  
+  <view class="more">
+    <image src="/img/sy-hotbot.jpg"></image>
+    <text bindtap="handleMore" data-in="0">更多 >></text>
+  </view>
+
+</view>
+
+<!--最新动态-->
+<view class="Newmsg">
+  <image class="topimg" src="/img/sy-newMsg.jpg"></image>
+  
+  <view class="box" wx:for="{{dongtaiTieList}}" wx:for-item="dongtai">
+    <navigator url="/pages/tieziXQ/tieziXQ?id={{dongtai.id}}">
+    <image class="boxBG" src="/img/bg.png"></image>
+    <view class="boxBG_con">
+        <image class="boxBG_con_img" src="{{imgPath}}{{dongtai.imgList[0]}}"></image>
+        <view class="boxBG_con_txt">
+          <view class="txt">{{dongtai.leaveText}}</view>
+          <view class="nameL">
+              <view class="fl"><image src="{{dongtai.heardUrl}}"></image>{{dongtai.name}}</view>
+              <view class="fr"><image src="/img/sweet.png"></image>{{dongtai.shoucangcount}}</view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="more">
+    <image src="/img/sy-newbot.jpg"></image>
+    <text bindtap="handleMore" data-in="1">更多 >></text>
+  </view>
+
+</view>
+
+

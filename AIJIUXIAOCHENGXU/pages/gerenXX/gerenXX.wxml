@@ -1,0 +1,86 @@
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<!--列表-->
+<view class="wodelist">
+
+  <view class="Hlist TXhei">
+    <text>更换头像</text>
+    <view class="right">
+        <image src="/img/TX.png"></image>
+        <view class="arrow"></view>
+    </view>
+  </view>
+
+  <view class="Hlist">
+    <text>昵称</text>
+    <view class="right">
+        <input placeholder-class="phcolor" class="input" name="userName" placeholder="输入你喜欢的昵称" 
+    bindinput="userNameInput"/>
+    </view>
+  </view>
+
+  <view class="Hlist">
+    <text>性别</text>
+    <view class="right">
+      <radio-group bindchange="radiochange">
+        <p><radio value='Mr'></radio>男</p>
+        <p><radio value='Mis'></radio>女</p>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class="Hlist">
+      <text>生日</text>
+      <view class="right">
+          <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange">  
+            <view class="picker">{{dates}}</view>  
+          </picker> 
+          <view class="arrow"></view>
+      </view>
+   </view>
+
+   <view class="Hlist">
+      <text>身高</text>
+      <view class="right">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class='choseQuestion' >
+                {{choseQuestionBank}}
+            </view>
+          </picker>
+          <view class="arrow"></view>
+      </view>
+   </view>
+
+   <view class="Hlist">
+      <text>体重</text>
+      <view class="right">
+          <picker bindchange="bindPickerChange2" value="{{objectIndex}}" range="{{objectArray}}" range-key="name">
+            <view class="picker">
+              {{objectArray[objectIndex].name}}
+            </view>
+          </picker>
+          <view class="arrow"></view>
+      </view>
+   </view>
+
+   <view class="Hlist">
+      <text>所在城市</text>
+      <view class="right">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+              {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+          </picker>
+          <view class="arrow"></view>
+      </view>
+   </view>
+
+</view> 
+
+<view class="tijiao">
+    <button>保存并返回</button>
+</view>
+
+
+
+
+

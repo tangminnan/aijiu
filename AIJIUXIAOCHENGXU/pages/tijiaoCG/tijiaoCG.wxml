@@ -1,0 +1,3 @@
+<!--pages/tijiaoCG/tijiaoCG.wxml-->
+<image class="topLine" src="/img/dingbuLine.png" ></image>
+<image class="success" src="/img/success_tijiao.jpg" ></image>

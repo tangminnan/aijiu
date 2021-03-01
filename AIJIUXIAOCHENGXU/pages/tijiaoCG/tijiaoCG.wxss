@@ -1,0 +1,5 @@
+/* pages/tijiaoCG/tijiaoCG.wxss */
+.success{
+  width: 750rpx;
+  height: 600rpx;
+}

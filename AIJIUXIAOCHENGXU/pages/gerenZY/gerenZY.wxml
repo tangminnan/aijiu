@@ -1,0 +1,105 @@
+<!--pages/gerenZY/gerenZY.wxml-->
+<view class="User">
+  <image class="topimg" src="/img/my-top.jpg"></image>
+  <view class="User_txt">
+      <view class="Top_up">
+          <view class="toux fl">
+              <open-data type="userAvatarUrl"></open-data>
+          </view>
+          <view class="niC fl">
+              <open-data type="userNickName"></open-data>
+              <view class="dengji">
+                  <image src="/img/star.png"></image>
+                  <text>等级：25级</text>
+              </view>
+          </view>
+          <view class="guanzhu">√ 关注</view>
+      </view>
+      <view class="liS">
+          <view class="fans">
+              <text class="num">10</text>
+              <text>关注</text>
+          </view>
+          <view class="fans">
+              <text class="num">78</text>
+              <text>粉丝</text>
+          </view>
+          <view class="fans">
+              <text class="num">19</text>
+              <text>动态</text>
+          </view>
+      </view>
+  </view>
+</view>
+
+<view class="Big_boxex">
+
+<view class="tiezi_box">
+    <view class="tiezi_box_top">
+          <view class="fl">
+              <image src="/img/TX.png" ></image>
+              <view class="txt">
+                  <text class="tt1">用户名</text>
+                  <text class="tt2">08-02 10:30</text>
+              </view>
+          </view>
+    </view>
+    <view class="miaoshu">
+        <text>头痛患者中，女性明显多于男性，约占所有头痛患者的70%.临床研究表明，这与女性特有的生理因素有关——63%的女性头痛与月经关系密切...</text>
+    </view>
+    <view class="tiezi_imgs">
+        <image src="/img/TB_huatiB1.jpg" ></image>
+        <image src="/img/TB_huatiB2.jpg" ></image>
+        <image src="/img/TB_huatiB3.jpg" ></image>
+    </view>
+    <view class="share_box">
+      <view class="fl">
+          <image src="/img/sweet.png" ></image>
+          <text>12</text>
+      </view>
+      <view class="fl">
+          <image src="/img/talk.png" ></image>
+          <text>86</text>
+      </view>
+      <view class="fr">
+          <image src="/img/share.png" ></image>
+          <text>分享</text>
+      </view>
+    </view>
+</view>
+
+<view class="tiezi_box">
+    <view class="tiezi_box_top">
+          <view class="fl">
+              <image src="/img/TX.png" ></image>
+              <view class="txt">
+                  <text class="tt1">用户名</text>
+                  <text class="tt2">08-02 10:30</text>
+              </view>
+          </view>
+    </view>
+    <view class="miaoshu">
+        <text>头痛患者中，女性明显多于男性，约占所有头痛患者的70%.临床研究表明，这与女性特有的生理因素有关——63%的女性头痛与月经关系密切...</text>
+    </view>
+    <view class="tiezi_imgs">
+        <image src="/img/TB_huatiB1.jpg" ></image>
+        <image src="/img/TB_huatiB2.jpg" ></image>
+        <image src="/img/TB_huatiB3.jpg" ></image>
+    </view>
+    <view class="share_box">
+      <view class="fl">
+          <image src="/img/sweet.png" ></image>
+          <text>12</text>
+      </view>
+      <view class="fl">
+          <image src="/img/talk.png" ></image>
+          <text>86</text>
+      </view>
+      <view class="fr">
+          <image src="/img/share.png" ></image>
+          <text>分享</text>
+      </view>
+    </view>
+</view>
+
+</view>

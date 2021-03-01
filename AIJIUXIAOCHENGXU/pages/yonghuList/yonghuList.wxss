@@ -1,0 +1,40 @@
+/* pages/yonghuList/yonghuList.wxss */
+
+
+.topLine{width: 750rpx;height: 25rpx;display: block;}
+.yonghuList{margin:30rpx;}
+.yonghuList .box{
+    background: #842b2e;
+    border-radius: 15rpx;
+    border:1rpx solid #e5b870;
+    overflow: hidden;
+    margin-bottom: 15rpx;
+    padding: 20rpx;
+}
+.yonghuList .box .fl image{width: 94rpx;height: 94rpx;border-radius: 50%;vertical-align: middle;}
+.yonghuList .box .fl text{color:#fbd39f;line-height: 94rpx;padding-left: 30rpx;}
+.yonghuList .box .fr{margin-top: 16rpx;}
+.yonghuList .box .fr button{
+  width: 160rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  color: #fbd39f;
+  background: #2b6162;
+  border-radius:30rpx;
+  border: 1px solid #fbd39f;
+  font-weight: normal;
+}
+.yonghuList .box .fr button.yGZ{background: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
