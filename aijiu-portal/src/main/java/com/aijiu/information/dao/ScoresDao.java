@@ -29,5 +29,5 @@ public interface ScoresDao {
 	
 	int batchRemove(Long[] ids);
 
-    int total(Long userId);
+    Integer total(Long userId);
 }

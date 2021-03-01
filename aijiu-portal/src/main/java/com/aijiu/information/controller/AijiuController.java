@@ -3,28 +3,19 @@ package com.aijiu.information.controller;
 import com.aijiu.common.config.BootdoConfig;
 import com.aijiu.common.utils.FileUtil;
 import com.aijiu.common.utils.HttpUtils;
-import com.aijiu.common.utils.R;
 import com.aijiu.common.utils.StringUtils;
 import com.aijiu.information.domain.*;
 import com.aijiu.information.service.*;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.oracle.webservices.internal.api.message.PropertySet;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import javax.mail.Multipart;
-import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/aijiu")
+@RequestMapping("/aijiu/v1")
 public class AijiuController {
 
     @Autowired
@@ -58,11 +49,12 @@ public class AijiuController {
 
     private static final String APP_ID="";
     private static final String APP_SECRET="";
+    private static final String PRE_IMGPATH="http://localhost:8087";
 
     /**
      * 微信小程序获取openid
      */
-    @PostMapping("/getOpenId")
+    @GetMapping("/getOpenId")
     public Map<String,Object> getOpenId(String code){
         Map<String,Object> resultMap = new HashMap<String,Object>();
         if(StringUtils.isBlank(code)){
@@ -73,22 +65,45 @@ public class AijiuController {
         //获取openid
         String url= "https://api.weixin.qq.com/sns/jscode2session?appid="+APP_ID+"&secret="+APP_SECRET+"&js_code="+code+"&grant_type=authorization_code";
         Map<String, Object> map = HttpUtils.doGet(url);
-        if((int)map.get("errcode ")==0){
+
+        if((Double)map.get("errcode")==0){
             String openId=(String) map.get("openid");
-            UserDO userDO = userDOService.getUserDO(openId);
-            if(userDO==null){
-                userDO = new UserDO();
-                userDO.setOpenId(openId);
-                userDOService.save(userDO);
-            }
+//            UserDO userDO = userDOService.getUserDO(openId);
+//            if(userDO==null){
+//                userDO = new UserDO();
+//                userDO.setOpenId(openId);
+//                userDOService.save(userDO);
+//            }
             resultMap.put("code",0);
-            resultMap.put("data",userDO);
+            resultMap.put("data",openId);
             return resultMap;
         }else{
             resultMap.put("code",-1);
-            resultMap.put("data","openid获取失败");
+            resultMap.put("data","wx121o2pop12o12o1-");
             return resultMap;
         }
+    }
+
+
+    /**
+     * 用户登陆
+     */
+    @PostMapping("/saveUser")
+    public Map<String,Object> saveUser(@RequestBody UserDO userDO){
+
+        UserDO userDO2 = userDOService.getUserDO(userDO.getOpenId());
+        if(userDO2==null){
+            userDOService.save(userDO);
+        }else{
+            userDO.setId(userDO2.getId());
+            userDOService.update(userDO);
+        }
+        userDO.setUserId(userDO.getId());
+        if(userDO.getName()==null) userDO.setName("用户名");
+       Map<String,Object> resultMap = new HashMap<String,Object>();
+        resultMap.put("code",0);
+        resultMap.put("data",userDO);
+        return resultMap;
     }
 
     /**
@@ -217,7 +232,7 @@ public class AijiuController {
      * 添加、取消关注
      */
     @PostMapping("/my/saveAttention")
-    public Map<String,Object> saveAttention(AttentionDO attentionDO){
+    public Map<String,Object> saveAttention(@RequestBody AttentionDO attentionDO){
         Map<String,Object> paramsMap = new HashMap<String,Object>();
         paramsMap.put("userId",attentionDO.getUserId());
         paramsMap.put("attentionId",attentionDO.getAttentionId());
@@ -292,12 +307,12 @@ public class AijiuController {
     /**
      * 帖子详情
      */
-    @GetMapping("/my/getLeaveMessageDetail")
+    @GetMapping("/getLeaveMessageDetail")
     public Map<String,Object>  getLeaveMessageDetail(Long id){
         Map<String,Object> resultMap = new HashMap<String,Object>();
         LeaveMessageDO leaveMessageDO = leaveMessageService.get(id);
         if(leaveMessageDO!=null) {
-            operateLeaveMessage(Arrays.asList(leaveMessageDO));
+            operateLeaveMessage(Arrays.asList(leaveMessageDO),1);
             Map<String, Object> paramsMap = new HashMap<>();
             paramsMap.put("leaveId", id);
             List<LeaveCommentDO> leaveCommentDOS = leaveCommentService.list(paramsMap);//评论
@@ -320,8 +335,8 @@ public class AijiuController {
      * flag=2 获取推荐数据
      * flag=3 获取最新数据
      */
-    @GetMapping("/my/getLeaveMessagesGuanzhu")
-    public Map<String,Object> getLeaveMessagesGuanzhu(Long userId,Integer flag){
+    @GetMapping("/getLeaveMessagesGuanzhu")
+    public Map<String,Object> getLeaveMessagesGuanzhu(@RequestParam(required = false,value = "userId") Long userId, Integer flag){
         Map<String,Object> resultMap = new HashMap<String,Object>();
         Map<String, Object> paramsMap = new HashMap<>();
         if(flag==0 || flag==1) {
@@ -331,7 +346,7 @@ public class AijiuController {
             for (AttentionDO a : attentionDOS) {
                 paramsMap.put("userId", a.getAttentionId());
                 List<LeaveMessageDO> leaveMessageDOS = leaveMessageService.list(paramsMap);//关注人发的贴
-                operateLeaveMessage(leaveMessageDOS);
+                operateLeaveMessage(leaveMessageDOS,0);
                 guanzhu.addAll(leaveMessageDOS);
             }
             resultMap.put("guanzhu",guanzhu);
@@ -340,12 +355,12 @@ public class AijiuController {
             paramsMap = new HashMap<>();
             paramsMap.put("tuijianFlag",1);
             List<LeaveMessageDO> tuijian = leaveMessageService.list(paramsMap);
-            operateLeaveMessage(tuijian);
+            operateLeaveMessage(tuijian,0);
             resultMap.put("tuijian",tuijian);
         }
         if(flag==0 || flag==3){//最新
             List<LeaveMessageDO> zuixin = leaveMessageService.list(new HashMap<String,Object>());
-            operateLeaveMessage(zuixin);
+            operateLeaveMessage(zuixin,0);
             resultMap.put("zuixin",zuixin);
         }
         return resultMap;
@@ -404,7 +419,7 @@ public class AijiuController {
             paramsMap.put("userId", attentionId);
             int dongtai = leaveMessageService.count(paramsMap);//动态数量(这一步可以不要，先留着)
             List<LeaveMessageDO> list = leaveMessageService.list(paramsMap);
-            operateLeaveMessage(list);
+            operateLeaveMessage(list,0);
             int guanzhu = attentionService.count(paramsMap);//关注数量
             paramsMap.remove("userId");
             paramsMap.put("attentionId", attentionId);
@@ -486,13 +501,13 @@ public class AijiuController {
             paramsMap.remove("userId");
             paramsMap.put("attentionId", userId);
             int fans = attentionService.count(paramsMap);//粉丝数量
-            int total = scoresService.total(userId);//积分
+            Integer total = scoresService.total(userId);//积分
             resultMap.put("id", userDO.getId());
             resultMap.put("heardUrl", userDO.getHeardUrl());
             resultMap.put("guanzhu", guanzhu);
             resultMap.put("fans", fans);
             resultMap.put("dongtai", dongtai);
-            resultMap.put("total",total);
+            resultMap.put("total",total==null?0:total);
            resultMap.put("age",getAge(userDO.getBirthday()));
         }else{
             resultMap.put("code",-1);
@@ -505,7 +520,7 @@ public class AijiuController {
      */
 
     @PostMapping("/my/saveMyHelp")
-    public Map<String,Object> saveMyHelp(MyHelpDO myHelpDO){
+    public Map<String,Object> saveMyHelp(@RequestBody  MyHelpDO myHelpDO){
         myHelpDO.setPublishTime(new Date());
         int result = myHelpService.save(myHelpDO);
         Map<String,Object> resultMap = new HashMap<String,Object>();
@@ -523,7 +538,7 @@ public class AijiuController {
      */
 
     @PostMapping("/my/saveGoumaiReasonDO")
-    public Map<String,Object> saveGoumaiReasonDO(GoumaiReasonDO goumaiReasonDO){
+    public Map<String,Object> saveGoumaiReasonDO(@RequestBody GoumaiReasonDO goumaiReasonDO){
         goumaiReasonDO.setPublishTime(new Date());
         int result = goumaiReasonService.save(goumaiReasonDO);
         Map<String,Object> resultMap = new HashMap<String,Object>();
@@ -560,7 +575,7 @@ public class AijiuController {
      */
 
     @PostMapping("/my/saveMyBingzhengDO")
-    public Map<String,Object> saveMyBingzhengDO(MyBingzhengDO myBingzhengDO){
+    public Map<String,Object> saveMyBingzhengDO(@RequestBody MyBingzhengDO myBingzhengDO){
         myBingzhengDO.setPublishTime(new Date());
         int result = myBingzhengService.save(myBingzhengDO);
         Map<String,Object> resultMap = new HashMap<String,Object>();
@@ -676,10 +691,7 @@ public class AijiuController {
      * 发帖
      */
     @PostMapping("/my/saveLeaveMessage")
-    public Map<String,Object> saveLeaveMessage(LeaveMessageDO leaveMessageDO){
-        leaveMessageDO.setUserId(111L);
-        leaveMessageDO.setName("匿名");
-        leaveMessageDO.setHeardUrl("...");
+    public Map<String,Object> saveLeaveMessage(@RequestBody LeaveMessageDO leaveMessageDO){
         leaveMessageDO.setPublishTime(new Date());
         leaveMessageDO.setAuditStatus(1);//默认待审核
         leaveMessageDO.setDeleteFlag(0);
@@ -688,7 +700,7 @@ public class AijiuController {
         leaveMessageDO.setAddDigest(0);//默认不加精
         leaveMessageDO.setTopTheme(0);//默认不置顶
         List<String> str = leaveMessageDO.getImgList().stream().filter(i->!"".equals(i)).collect(Collectors.toList());
-        leaveMessageDO.setImg(str.toString());
+        leaveMessageDO.setImg(JSONArray.toJSONString(str));
 
 
         Map<String,Object> resultMap = new HashMap<String,Object>();
@@ -704,10 +716,10 @@ public class AijiuController {
     public String getStr(String str){
         if(StringUtils.isBlank(str))
             return "";
-        if(str.length()<200){
+        if(str.length()<35){
             return str;
         }else{
-            return str.substring(0,200)+"...";
+            return str.substring(0,35)+"...";
         }
     }
 
@@ -761,11 +773,12 @@ public class AijiuController {
     }
 
 
-    public  void operateLeaveMessage(List<LeaveMessageDO> leaveMessageDOS){
+    public  void operateLeaveMessage(List<LeaveMessageDO> leaveMessageDOS,int flag){
         for(LeaveMessageDO leaveMessageDO :leaveMessageDOS){
             if (StringUtils.isNotBlank(leaveMessageDO.getImg())) {
                 String str = leaveMessageDO.getImg();
-                List<String> strings = JSONObject.parseArray(str, String.class);
+                List<String> strings = JSONObject.parseArray(str,String.class);
+
                 leaveMessageDO.setImgList(strings);
             }
             //获取收藏数和评论数
@@ -775,7 +788,8 @@ public class AijiuController {
             long shoucang = myShoucangService.count(paramsMap);
             leaveMessageDO.setShoucangcount(shoucang);
             leaveMessageDO.setPingluncount(pinglun);
-            leaveMessageDO.setLeaveText(getStr(leaveMessageDO.getLeaveText()));
+            if(flag==0)
+                leaveMessageDO.setLeaveText(getStr(leaveMessageDO.getLeaveText()));
         }
     }
 

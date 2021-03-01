@@ -18,6 +18,7 @@ public class UserDO implements Serializable {
 	
 	//id
 	private Long id;
+	private Long userId;
 	//头像
 	private String heardUrl;
 	//真实姓名
@@ -352,5 +353,13 @@ public class UserDO implements Serializable {
 
 	public void setFlag(Integer flag) {
 		this.flag = flag;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 }

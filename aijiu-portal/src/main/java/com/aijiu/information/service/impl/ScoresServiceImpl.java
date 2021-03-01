@@ -51,7 +51,7 @@ public class ScoresServiceImpl implements ScoresService {
 	}
 
 	@Override
-	public int total(Long userId) {
+	public Integer total(Long userId) {
 		return scoresDao.total(userId);
 	}
 

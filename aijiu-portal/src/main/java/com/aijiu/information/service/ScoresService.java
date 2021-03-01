@@ -28,5 +28,5 @@ public interface ScoresService {
 	
 	int batchRemove(Long[] ids);
 
-    int total(Long userId);
+    Integer total(Long userId);
 }

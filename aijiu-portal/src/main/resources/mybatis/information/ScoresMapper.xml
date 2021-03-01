@@ -54,7 +54,7 @@
 	</insert>
 
 	<select id="total" resultType="int">
-		select sum(scores) from t_scores where user_id=#{userId}
+		select sum(ifnull(scores,0)) from t_scores where user_id=#{userId}
 	</select>
 	 
 	<update id="update" parameterType="com.aijiu.information.domain.ScoresDO">
