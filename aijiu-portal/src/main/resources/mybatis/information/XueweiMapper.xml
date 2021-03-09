@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aijiu.information.dao.XueweiDao">
+
+	<select id="get" resultType="com.aijiu.information.domain.XueweiDO">
+		select `id`,`xuewei_name`,video,`xuewei_py`,xuewei_buwei,`gg_code`,`xuewei_dingwei`,`xuewei_quxue`,`xuewei_gx`,`xuewei_url`,`add_time`,`delete_flag` from t_xuewei where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.aijiu.information.domain.XueweiDO">
+		select `id`,`xuewei_name`,video,`xuewei_py`,xuewei_buwei,`gg_code`,`xuewei_dingwei`,`xuewei_quxue`,`xuewei_gx`,`xuewei_url`,`add_time`,`delete_flag` from t_xuewei
+        where delete_flag=0
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="xueweiName != null and xueweiName != ''"> and xuewei_name = #{xueweiName} </if>
+		  		  <if test="xueweiPy != null and xueweiPy != ''"> and xuewei_py = #{xueweiPy} </if>
+		  		  <if test="ggCode != null and ggCode != ''"> and gg_code = #{ggCode} </if>
+		  		  <if test="xueweiDingwei != null and xueweiDingwei != ''"> and xuewei_dingwei = #{xueweiDingwei} </if>
+		  		  <if test="xueweiQuxue != null and xueweiQuxue != ''"> and xuewei_quxue = #{xueweiQuxue} </if>
+		  		  <if test="xueweiGx != null and xueweiGx != ''"> and xuewei_gx = #{xueweiGx} </if>
+		  		  <if test="xueweiUrl != null and xueweiUrl != ''"> and xuewei_url = #{xueweiUrl} </if>
+		  		  <if test="addTime != null and addTime != ''"> and add_time = #{addTime} </if>
+		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
+
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+	<select id="getXueweiByBuWei" resultType="com.aijiu.information.domain.XueweiDO">
+		select id,xuewei_name,xuewei_url from t_xuewei where xuewei_buwei=#{xueweiBuwei}
+	</select>
+
+	<select id="getXueweiByKey" resultType="com.aijiu.information.controller.AijiuController$KeySearch">
+		select id id, xuewei_name name,xuewei_url picture,"XUEWEI" type from t_xuewei where xuewei_name like concat('%',#{xueweiBuwei},'%')
+		union ALL
+		select id id, zj_name name,xuewei_url picture,"ZJZD" type from t_zjzd where zj_name like concat('%',#{zjBuwei},'%');
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from t_xuewei
+		 where  delete_flag=0
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="xueweiName != null and xueweiName != ''"> and xuewei_name = #{xueweiName} </if>
+		  		  <if test="xueweiPy != null and xueweiPy != ''"> and xuewei_py = #{xueweiPy} </if>
+		  		  <if test="ggCode != null and ggCode != ''"> and gg_code = #{ggCode} </if>
+		  		  <if test="xueweiDingwei != null and xueweiDingwei != ''"> and xuewei_dingwei = #{xueweiDingwei} </if>
+		  		  <if test="xueweiQuxue != null and xueweiQuxue != ''"> and xuewei_quxue = #{xueweiQuxue} </if>
+		  		  <if test="xueweiGx != null and xueweiGx != ''"> and xuewei_gx = #{xueweiGx} </if>
+		  		  <if test="xueweiUrl != null and xueweiUrl != ''"> and xuewei_url = #{xueweiUrl} </if>
+		  		  <if test="addTime != null and addTime != ''"> and add_time = #{addTime} </if>
+		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
+
+	</select>
+	 
+	<insert id="save" parameterType="com.aijiu.information.domain.XueweiDO" useGeneratedKeys="true" keyProperty="id">
+		insert into t_xuewei
+		(
+			`xuewei_name`, 
+			`xuewei_py`, 
+			`gg_code`, 
+			`xuewei_dingwei`, 
+			`xuewei_quxue`, 
+			`xuewei_gx`, 
+			`xuewei_url`, 
+			`add_time`, 
+			`delete_flag`,
+			xuewei_buwei,
+			video
+		)
+		values
+		(
+			#{xueweiName}, 
+			#{xueweiPy}, 
+			#{ggCode}, 
+			#{xueweiDingwei}, 
+			#{xueweiQuxue}, 
+			#{xueweiGx}, 
+			#{xueweiUrl}, 
+			#{addTime}, 
+			#{deleteFlag},
+			#{xueweiBuwei},
+			#{video}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.aijiu.information.domain.XueweiDO">
+		update t_xuewei 
+		<set>
+			<if test="xueweiName != null">`xuewei_name` = #{xueweiName}, </if>
+			<if test="xueweiPy != null">`xuewei_py` = #{xueweiPy}, </if>
+			<if test="ggCode != null">`gg_code` = #{ggCode}, </if>
+			<if test="xueweiDingwei != null">`xuewei_dingwei` = #{xueweiDingwei}, </if>
+			<if test="xueweiQuxue != null">`xuewei_quxue` = #{xueweiQuxue}, </if>
+			<if test="xueweiGx != null">`xuewei_gx` = #{xueweiGx}, </if>
+			<if test="xueweiUrl != null">`xuewei_url` = #{xueweiUrl}, </if>
+			<if test="addTime != null">`add_time` = #{addTime}, </if>
+			<if test="deleteFlag != null">`delete_flag` = #{deleteFlag},</if>
+			<if test="video != null">`video` = #{video},</if>
+			<if test="xueweiBuwei != null">`xuewei_buwei` = #{xueweiBuwei}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from t_xuewei where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from t_xuewei where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

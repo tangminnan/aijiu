@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aijiu.information.dao.GoumaiReasonDao">
+
+
+	 
+	<insert id="save" parameterType="com.aijiu.information.domain.GoumaiReasonDO" useGeneratedKeys="true" keyProperty="id">
+		insert into t_goumai_reason
+		(
+			`user_id`, 
+			`user_name`, 
+			`publish_time`, 
+			`text`
+		)
+		values
+		(
+			#{userId}, 
+			#{userName}, 
+			#{publishTime}, 
+			#{text}
+		)
+	</insert>
+
+</mapper>

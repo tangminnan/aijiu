@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.aijiu.information.dao.MyDeviceDao">
+
+	<select id="get" resultType="com.aijiu.information.domain.MyDeviceDO">
+		select `id`,`user_id`,`user_name`,`device_id`,`device_name`,`icon`,`type`,`delete_flag` from t_my_device where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.aijiu.information.domain.MyDeviceDO">
+		select `id`,`user_id`,`user_name`,`device_id`,`device_name`,`icon`,`type`,`delete_flag` from t_my_device
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="userName != null and userName != ''"> and user_name = #{userName} </if>
+		  		  <if test="deviceId != null and deviceId != ''"> and device_id = #{deviceId} </if>
+		  		  <if test="deviceName != null and deviceName != ''"> and device_name = #{deviceName} </if>
+		  		  <if test="icon != null and icon != ''"> and icon = #{icon} </if>
+		  		  <if test="type != null and type != ''"> and type = #{type} </if>
+		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from t_my_device
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="userName != null and userName != ''"> and user_name = #{userName} </if>
+		  		  <if test="deviceId != null and deviceId != ''"> and device_id = #{deviceId} </if>
+		  		  <if test="deviceName != null and deviceName != ''"> and device_name = #{deviceName} </if>
+		  		  <if test="icon != null and icon != ''"> and icon = #{icon} </if>
+		  		  <if test="type != null and type != ''"> and type = #{type} </if>
+		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.aijiu.information.domain.MyDeviceDO" useGeneratedKeys="true" keyProperty="id">
+		insert into t_my_device
+		(
+			`user_id`, 
+			`user_name`, 
+			`device_id`, 
+			`device_name`, 
+			`icon`, 
+			`type`, 
+			`delete_flag`
+		)
+		values
+		(
+			#{userId}, 
+			#{userName}, 
+			#{deviceId}, 
+			#{deviceName}, 
+			#{icon}, 
+			#{type}, 
+			#{deleteFlag}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.aijiu.information.domain.MyDeviceDO">
+		update t_my_device 
+		<set>
+			<if test="userId != null">`user_id` = #{userId}, </if>
+			<if test="userName != null">`user_name` = #{userName}, </if>
+			<if test="deviceId != null">`device_id` = #{deviceId}, </if>
+			<if test="deviceName != null">`device_name` = #{deviceName}, </if>
+			<if test="icon != null">`icon` = #{icon}, </if>
+			<if test="type != null">`type` = #{type}, </if>
+			<if test="deleteFlag != null">`delete_flag` = #{deleteFlag}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from t_my_device where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from t_my_device where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>
