@@ -66,7 +66,7 @@
     </view>
     <view>
         <image src="/img/sweet.png" ></image>
-        <text>收藏</text>
+        <text bindtap="addShouCang">收藏</text>
     </view>
 </view>
 

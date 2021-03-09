@@ -9,13 +9,14 @@ Page({
    */
   data: {
     imgPath:app.globalData.imgPath,
+    device:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     this.
+    this.getDevices();
   },
 
   /**
@@ -23,6 +24,14 @@ Page({
    */
   onReady: function () {
 
+  },
+
+  async getDevices(){
+    const res=await request({url:"/getDevices"});
+    console.info(res);
+    this.setData({
+      device:[...res.data]
+    });
   },
 
   /**

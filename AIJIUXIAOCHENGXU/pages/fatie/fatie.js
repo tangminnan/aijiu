@@ -94,7 +94,7 @@ handleFormSubmit() {
           if (i === chooseImgs.length - 1) {
             let imgList=this.imgList
             let userinfo = wx.getStorageSync('userinfo');
-            let params={title,leaveText,imgList,...userinfo}  ;
+            let params={title,leaveText,imgList,...userinfo};
             request({ url: "/my/saveLeaveMessage",method:'POST',data:params})
             .then(result => {
               this.setData({

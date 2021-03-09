@@ -1,8 +1,9 @@
 package com.aijiu.information.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.List;
 
 
 /**
@@ -49,6 +50,8 @@ public class LeaveMessageDO implements Serializable {
 	private String shenheResult;
 	//收藏人ids id之间以::拼接
 	private String shoucangids;
+	private List<String> imgList = new ArrayList<>();
+
 	/**
 	 * 设置：id
 	 */
@@ -250,5 +253,13 @@ public class LeaveMessageDO implements Serializable {
 
 	public void setShoucangids(String shoucangids) {
 		this.shoucangids = shoucangids;
+	}
+
+	public List<String> getImgList() {
+		return imgList;
+	}
+
+	public void setImgList(List<String> imgList) {
+		this.imgList = imgList;
 	}
 }

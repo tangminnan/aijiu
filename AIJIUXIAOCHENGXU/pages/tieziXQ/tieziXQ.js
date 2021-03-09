@@ -42,6 +42,35 @@ Page({
       })
     }
   },
+  //帖子的收藏
+  addShouCang(){
+    let userinfo = wx.getStorageSync('userinfo');
+    if(userinfo){
+     let userId = userinfo.userId;
+     let userName = userinfo.name;
+     let headerUrl = userinfo.headerUrl;
+     let leaveId=this.data.tixiXO.id;
+     let text=this.data.tixiXO.leaveText;
+     let img = this.data.tixiXO.imgList[0];
+     if(img==undefined) img=null;
+     let params={userId,userName,headerUrl,leaveId,text,img};
+     request({ url: "/my/saveShouCang",method:'POST',data:params})
+     .then(result => {
+      wx.showToast({
+        title: result.data,
+        icon: 'success',
+        duration: 2000
+      })
+      
+      
+      });
+    }else{
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
+    
+  },
 
   //收藏人信息
   handleToShouCang(){

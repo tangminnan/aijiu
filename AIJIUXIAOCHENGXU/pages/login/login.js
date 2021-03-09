@@ -23,7 +23,7 @@ Page({
   },
   bindGetUserInfo: function (e) {
     
-    //console.info(e.detail.userInfo);
+    console.info(e.detail.userInfo);
     if (e.detail.userInfo) {
       console.info("允许授权");
       //插入登录的用户的相关信息到数据库

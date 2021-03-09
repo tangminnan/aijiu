@@ -38,6 +38,11 @@ Page({
     let params={userId,userName,text};
     const res=await request({url:"/my/saveMyBingzhengDO",method:"POST", data:params});
     if(res.code==0){
+      wx.showToast({
+        title: res.data,
+        icon: 'success',
+        duration: 2000
+      });
       this.setData({
         text:''
       })

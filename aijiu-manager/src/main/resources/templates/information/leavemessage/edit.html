@@ -53,6 +53,7 @@
 
 							<div class="form-group">
 								<label class="col-sm-3 control-label">帖子附图：</label>
+								<label style="margin-right: 10px;" th:each="url:${message.imgList}"><img width="100" height="100" th:src="${url}"></label>
 								<div class="col-sm-8" id="futu">
 								</div>
 							</div>
@@ -66,17 +67,5 @@
 	</div>
 	<div th:include="include::footer"></div>
 	<script type="text/javascript" src="/js/appjs/information/leavemessage/edit.js"></script>
-	<script th:inline="javascript">
-        var iurl=[[${message.img}]];
-        var url=iurl.split("::");
-        console.info(url);
-        var inla="";
-        for(var i=0;i<url.length;i++){
-            if(url[i]!="") {
-                inla += '<label style="margin-right: 10px;"><img width="100" height="100" src="' + url[i] + '"></label>';
-            }
-        }
-        $("#futu").prepend(inla);
-	</script>
 </body>
 </html>

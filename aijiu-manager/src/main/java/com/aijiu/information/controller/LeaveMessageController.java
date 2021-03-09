@@ -1,6 +1,7 @@
 package com.aijiu.information.controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -11,6 +12,7 @@ import com.aijiu.common.utils.R;
 import com.aijiu.common.utils.StringUtils;
 import com.aijiu.information.domain.UserDO;
 import com.aijiu.information.service.UserDOService;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -75,7 +77,12 @@ public class LeaveMessageController {
 	@GetMapping("/edit/{id}")
 	public String edit(@PathVariable("id") Long  id,Model model){
 		LeaveMessageDO leaveMessageDO = leaveMessageService.get(id);
-		model.addAttribute("message",leaveMessageDO);
+		if (StringUtils.isNotBlank(leaveMessageDO.getImg())) {
+			String str = leaveMessageDO.getImg();
+			List<String> strings = JSONObject.parseArray(str,String.class);
+
+			leaveMessageDO.setImgList(strings);
+		}		model.addAttribute("message",leaveMessageDO);
 		return "information/leaveMessage/edit";
 	}
 	/**

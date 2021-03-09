@@ -390,23 +390,26 @@ public class AijiuController {
      * 收藏、取消收藏接口
      */
     @PostMapping("/my/saveShouCang")
-    public Map<String,Object> saveShouCang(MyShoucangDO myShoucangDO){
+    public Map<String,Object> saveShouCang(@RequestBody MyShoucangDO myShoucangDO){
         String leaveId = myShoucangDO.getLeaveId();
         String userId = myShoucangDO.getUserId();
         Map<String,Object> paramsMap = new HashMap<>();
         paramsMap.put("leaveId",leaveId);
         paramsMap.put("userId",userId);
         List<MyShoucangDO> list = myShoucangService.list(paramsMap);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
         if(list.size()>0){//取消收藏
             Long id = list.get(0).getId();
             myShoucangService.remove(id);
+            resultMap.put("code",0);
+            resultMap.put("data","取消收藏");
         }else{//收藏
             myShoucangDO.setCreateTime(new Date());
+            myShoucangDO.setDeleteFlag(0);
             myShoucangService.save(myShoucangDO);
+            resultMap.put("code",0);
+            resultMap.put("data","收藏成功");
         }
-        Map<String,Object> resultMap = new HashMap<String,Object>();
-        resultMap.put("code",0);
-        resultMap.put("data","操作成功");
         return resultMap;
     }
 

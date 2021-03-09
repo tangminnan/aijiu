@@ -41,9 +41,16 @@ Page({
     let params={userId,userName,text};
     const res=await request({url:"/my/saveGoumaiReasonDO",method:"POST", data:params});
     if(res.code==0){
-      this.setData({
-        text:''
-      })
+      wx.showToast({
+        title: res.data,
+        icon: 'success',
+        duration: 2000,
+        success: function(){
+          wx.switchTab({
+            url: '/pages/mine/mine'
+          })
+        }
+      });
     }
    
     },

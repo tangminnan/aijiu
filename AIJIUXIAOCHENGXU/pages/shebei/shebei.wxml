@@ -2,46 +2,14 @@
 <view class="shebei">
   <image class="shebei_bg" src="/img/shebeiBig.png"></image>
   <view class="shebei_txt">
-
-      <view class="shebei_box">
+      <view class="shebei_box" wx:for="{{device}}">
+        <navigator url="/pages/shebeiJS/shebeiJS?id={{item.id}}">
         <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
         <view class="shebei_box_txt">
-            <image src="/img/chanpin.jpg"></image>
-            <text>设备名称XXXXXX</text>
+            <image src="{{imgPath}}{{item.icon}}"></image>
+            <text>设备名称{{item.name}}</text>
         </view>
+      </navigator>
       </view>
-
-      <view class="shebei_box">
-        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
-        <view class="shebei_box_txt">
-            <image src="/img/chanpin.jpg"></image>
-            <text>设备名称XXXXXX</text>
-        </view>
-      </view>
-
-      <view class="shebei_box">
-        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
-        <view class="shebei_box_txt">
-            <image src="/img/chanpin.jpg"></image>
-            <text>设备名称XXXXXX</text>
-        </view>
-      </view>
-
-      <view class="shebei_box">
-        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
-        <view class="shebei_box_txt">
-            <image src="/img/chanpin.jpg"></image>
-            <text>设备名称XXXXXX</text>
-        </view>
-      </view>
-
-      <view class="shebei_box">
-        <image class="shebei_box_bg" src="/img/shebeiBG.png"></image>
-        <view class="shebei_box_txt">
-            <image src="/img/chanpin.jpg"></image>
-            <text>设备名称XXXXXX</text>
-        </view>
-      </view>
-
   </view>
 </view>
