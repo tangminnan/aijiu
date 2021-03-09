@@ -1,1 +1,9 @@
 /target/
+/.idea/
+/.settings/
+/applog/
+/target/
+.classpath
+.project
+.springBeans
+aijiu-manager.iml
