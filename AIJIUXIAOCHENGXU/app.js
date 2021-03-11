@@ -6,6 +6,7 @@ App({
     var that=this;
     wx.login({
       success: async function (res) {
+          console.info(res);
           let {code}=res;
           const data = await request({url:"/getOpenId",data:{code}});
           that.globalData.openId=data.data;

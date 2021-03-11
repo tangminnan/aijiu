@@ -1,14 +1,14 @@
 <!--pages/xueweiXQ/xueweiXQ.wxml-->
 <view class="xueweiPic">
-    <image src="/img/XW_toppic.jpg" ></image>
+    <image src="{{imgPath}}{{xueweiXQ.video}}" ></image>
 </view>
 
 <view class="posi">
 
 <view class="GJBma m30 bdr15">
-      <text class="tt1">百会穴</text>
-      <text class="tt2">bǎi huì </text>
-      <text class="tt3">国际编码：GV20</text>
+      <text class="tt1">{{xueweiXQ.xueweiName}}</text>
+      <text class="tt2">{{xueweiXQ.xueweiPy}} </text>
+      <text class="tt3">国际编码：{{xueweiXQ.ggCode}}</text>
       <image src="/img/aicao_xuewei.png" ></image>
 </view>
 
@@ -19,7 +19,7 @@
             <image src="/img/liusu_right.png" ></image>
       </view>
       <view class="tit_txt">
-            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
+            <text>{{xueweiXQ.xueweiDingwei}}</text>
       </view>
       <view class="tit">
             <image src="/img/liusu_left.png" ></image>
@@ -27,7 +27,7 @@
             <image src="/img/liusu_right.png" ></image>
       </view>
       <view class="tit_txt">
-            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
+            <text>{{xueweiXQ.xueweiQuxue}}</text>
       </view>
       <view class="tit">
             <image src="/img/liusu_left.png" ></image>
@@ -35,7 +35,7 @@
             <image src="/img/liusu_right.png" ></image>
       </view>
       <view class="tit_txt">
-            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
+            <text>{{xueweiXQ.xueweiGx}}</text>
       </view>
 </view>
 

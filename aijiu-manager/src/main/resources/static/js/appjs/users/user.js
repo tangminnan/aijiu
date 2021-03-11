@@ -56,7 +56,7 @@ function load() {
 									title : '微信id' 
 								},
 																{
-									field : 'nickname', 
+									field : 'nickName',
 									title : '昵称' 
 								},
 																{

@@ -57,7 +57,7 @@ function load() {
 									title : '编号'
 								},
 																{
-                                field : 'name',
+                                field : 'nickName',
                                 title : '发帖人'
                             },
                            /* {

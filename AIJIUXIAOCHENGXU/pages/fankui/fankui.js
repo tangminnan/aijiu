@@ -25,7 +25,7 @@ Page({
   },
   async saveMyHelp(){
     let userinfo=wx.getStorageSync('userinfo');
-    let userName=userinfo.name;
+    let userName=userinfo.nickName;
     let userId=userinfo.id;
     let text=this.data.text;
     if(!text.trim()){

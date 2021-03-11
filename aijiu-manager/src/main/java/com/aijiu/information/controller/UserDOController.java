@@ -58,90 +58,90 @@ public class UserDOController {
 		return pageUtils;
 	}
 	
-	@GetMapping("/add")
-	@RequiresPermissions("information:user:add")
-	String add(){
-	    return "information/user/add";
-	}
-
-	@GetMapping("/edit/{id}")
-	@RequiresPermissions("information:user:edit")
-	String edit(@PathVariable("id") Long id,Model model){
-		UserDO user = userService.get(id);
-		model.addAttribute("user", user);
-	    return "information/user/edit";
-	}
+//	@GetMapping("/add")
+//	@RequiresPermissions("information:user:add")
+//	String add(){
+//	    return "information/user/add";
+//	}
+//
+//	@GetMapping("/edit/{id}")
+//	@RequiresPermissions("information:user:edit")
+//	String edit(@PathVariable("id") Long id,Model model){
+//		UserDO user = userService.get(id);
+//		model.addAttribute("user", user);
+//	    return "information/user/edit";
+//	}
 	
-	/**
-	 * 保存
-	 */
-	@ResponseBody
-	@PostMapping("/save")
-	@RequiresPermissions("information:user:add")
-	public R save( UserDO user){
-		try {
-			if(user.getImgFile()!=null && user.getImgFile().getSize()>0) {
-				String fileName = user.getImgFile().getOriginalFilename();
-				fileName = FileUtil.renameToUUID(fileName);
-				FileUtil.uploadFile(user.getImgFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
-				user.setHeardUrl("/files/" + fileName);
-			}
-		} catch (Exception e) {
-			return R.error();
-		}
-		user.setDeleteFlag(0);
-		user.setRegisterTime(new Date());
-		if(userService.save(user)>0){
-			return R.ok();
-		}
-		return R.error();
-	}
-	/**
-	 * 修改
-	 */
-	@ResponseBody
-	@RequestMapping("/update")
-	@RequiresPermissions("information:user:edit")
-	public R update( UserDO user){
-		try {
-			if(user.getImgFile()!=null && user.getImgFile().getSize()>0) {
-				String fileName = user.getImgFile().getOriginalFilename();
-				fileName = FileUtil.renameToUUID(fileName);
-				FileUtil.uploadFile(user.getImgFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
-				user.setHeardUrl("/files/" + fileName);
-			}
-		} catch (Exception e) {
-			return R.error();
-		}
-		userService.update(user);
-		return R.ok();
-	}
-	
-	/**
-	 * 删除
-	 */
-	@PostMapping( "/remove")
-	@ResponseBody
-	@RequiresPermissions("information:user:remove")
-	public R remove( Long id){
-		UserDO userDO = new UserDO();
-		userDO.setId(id);
-		userDO.setDeleteFlag(1);
-		if(userService.update(userDO)>0){
-		return R.ok();
-		}
-		return R.error();
-	}
-	
-	/**
-	 * 删除
-	 */
-	@PostMapping( "/batchRemove")
-	@ResponseBody
-	@RequiresPermissions("information:user:batchRemove")
-	public R remove(@RequestParam("ids[]") Long[] ids){
-		userService.batchRemove(ids);
-		return R.ok();
-	}
+//	/**
+//	 * 保存
+//	 */
+//	@ResponseBody
+//	@PostMapping("/save")
+//	@RequiresPermissions("information:user:add")
+//	public R save( UserDO user){
+//		try {
+//			if(user.getImgFile()!=null && user.getImgFile().getSize()>0) {
+//				String fileName = user.getImgFile().getOriginalFilename();
+//				fileName = FileUtil.renameToUUID(fileName);
+//				FileUtil.uploadFile(user.getImgFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+//				user.setHeardUrl("/files/" + fileName);
+//			}
+//		} catch (Exception e) {
+//			return R.error();
+//		}
+//		user.setDeleteFlag(0);
+//		user.setRegisterTime(new Date());
+//		if(userService.save(user)>0){
+//			return R.ok();
+//		}
+//		return R.error();
+//	}
+//	/**
+//	 * 修改
+//	 */
+//	@ResponseBody
+//	@RequestMapping("/update")
+//	@RequiresPermissions("information:user:edit")
+//	public R update( UserDO user){
+//		try {
+//			if(user.getImgFile()!=null && user.getImgFile().getSize()>0) {
+//				String fileName = user.getImgFile().getOriginalFilename();
+//				fileName = FileUtil.renameToUUID(fileName);
+//				FileUtil.uploadFile(user.getImgFile().getBytes(), bootdoConfig.getUploadPath(), fileName);
+//				user.setHeardUrl("/files/" + fileName);
+//			}
+//		} catch (Exception e) {
+//			return R.error();
+//		}
+//		userService.update(user);
+//		return R.ok();
+//	}
+//
+//	/**
+//	 * 删除
+//	 */
+//	@PostMapping( "/remove")
+//	@ResponseBody
+//	@RequiresPermissions("information:user:remove")
+//	public R remove( Long id){
+//		UserDO userDO = new UserDO();
+//		userDO.setId(id);
+//		userDO.setDeleteFlag(1);
+//		if(userService.update(userDO)>0){
+//		return R.ok();
+//		}
+//		return R.error();
+//	}
+//
+//	/**
+//	 * 删除
+//	 */
+//	@PostMapping( "/batchRemove")
+//	@ResponseBody
+//	@RequiresPermissions("information:user:batchRemove")
+//	public R remove(@RequestParam("ids[]") Long[] ids){
+//		userService.batchRemove(ids);
+//		return R.ok();
+//	}
 	
 }

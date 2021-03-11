@@ -24,14 +24,15 @@ public class MyShoucangDO implements Serializable {
 	private Date createTime;
 	//删除标志  0 未删除   1已删除
 	private Integer deleteFlag;
-	//用户姓名
-	private String userName;
+
 	//帖子的内容
 	private String text;
 	//图片
 	private String img;
-	//收藏人头像
-	private String headerUrl;
+
+	private String nickName;
+	private String avatarUrl;
+
 
 	/**
 	 * 设置：id
@@ -94,13 +95,6 @@ public class MyShoucangDO implements Serializable {
 		return deleteFlag;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
 
 	public String getText() {
 		return text;
@@ -118,11 +112,19 @@ public class MyShoucangDO implements Serializable {
 		this.img = img;
 	}
 
-	public String getHeaderUrl() {
-		return headerUrl;
+	public String getNickName() {
+		return nickName;
 	}
 
-	public void setHeaderUrl(String headerUrl) {
-		this.headerUrl = headerUrl;
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public String getAvatarUrl() {
+		return avatarUrl;
+	}
+
+	public void setAvatarUrl(String avatarUrl) {
+		this.avatarUrl = avatarUrl;
 	}
 }

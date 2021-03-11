@@ -47,13 +47,14 @@ Page({
     let userinfo = wx.getStorageSync('userinfo');
     if(userinfo){
      let userId = userinfo.userId;
-     let userName = userinfo.name;
-     let headerUrl = userinfo.headerUrl;
+     let nickName = userinfo.nickName;
+     let avatarUrl = userinfo.avatarUrl;
      let leaveId=this.data.tixiXO.id;
      let text=this.data.tixiXO.leaveText;
      let img = this.data.tixiXO.imgList[0];
      if(img==undefined) img=null;
-     let params={userId,userName,headerUrl,leaveId,text,img};
+     let params={userId,nickName,avatarUrl,leaveId,text,img};
+     console.info(params);
      request({ url: "/my/saveShouCang",method:'POST',data:params})
      .then(result => {
       wx.showToast({

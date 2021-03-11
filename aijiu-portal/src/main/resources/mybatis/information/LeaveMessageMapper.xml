@@ -4,11 +4,11 @@
 <mapper namespace="com.aijiu.information.dao.LeaveMessageDao">
 
 	<select id="get" resultType="com.aijiu.information.domain.LeaveMessageDO">
-		select `id`,`user_id`,`name`,shoucangids,`publish_time`,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message where id = #{value}
+		select `id`,`user_id`,`nick_name`,shoucangids,`publish_time`,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,avatar_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message where id = #{value}
 	</select>
 
 	<select id="list" resultType="com.aijiu.information.domain.LeaveMessageDO">
-		select `id`,`user_id`,`name`,`publish_time`,shoucangids,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,heard_url,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message
+		select `id`,`user_id`,`nick_name`,avatar_url,`publish_time`,shoucangids,`leave_text`,`audit_status`,`img`,`shoucangcount`,pingluncount,shenhe_result,`delete_flag`,`tuijian_flag`,`showhide`,`add_digest`,`top_theme` from leave_message
         where delete_flag=0 and showhide=0
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
@@ -36,7 +36,7 @@
 		 where delete_flag=0
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
-		  		  <if test="name != null and name != ''"> and name = #{name} </if>
+		  		  <if test="nickName != null and nickName != ''"> and nick_name = #{nickName} </if>
 		  		  <if test="publishTime != null and publishTime != ''"> and publish_time = #{publishTime} </if>
 		  		  <if test="leaveText != null and leaveText != ''"> and leave_text = #{leaveText} </if>
 		  		  <if test="auditStatus != null and auditStatus != ''"> and audit_status = #{auditStatus} </if>
@@ -56,13 +56,14 @@
 		(
 			`user_id`,
 			title,
-			`name`, 
+			`nick_name`,
+
 			`publish_time`, 
 			`leave_text`, 
 			`audit_status`, 
 			`img`, 
 			`shoucangcount`,
-			heard_url,
+			avatar_url,
 			pingluncount,
 			`delete_flag`, 
 			`tuijian_flag`, 
@@ -74,13 +75,13 @@
 		(
 			#{userId},
 			#{title},
-			#{name}, 
+			#{nickName},
 			#{publishTime}, 
 			#{leaveText}, 
 			#{auditStatus}, 
 			#{img}, 
 			#{shoucangcount},
-			#{heardUrl},
+			#{avatarUrl},
 			#{pingluncount},
 			#{deleteFlag}, 
 			#{tuijianFlag}, 
@@ -94,7 +95,7 @@
 		update leave_message 
 		<set>
 			<if test="userId != null">`user_id` = #{userId}, </if>
-			<if test="name != null">`name` = #{name}, </if>
+			<if test="nickName != null">`nick_name` = #{nickName}, </if>
 			<if test="publishTime != null">`publish_time` = #{publishTime}, </if>
 			<if test="leaveText != null">`leave_text` = #{leaveText}, </if>
 			<if test="auditStatus != null">`audit_status` = #{auditStatus}, </if>
@@ -105,7 +106,7 @@
 			<if test="tuijianFlag != null">`tuijian_flag` = #{tuijianFlag}, </if>
 			<if test="showhide != null">`showhide` = #{showhide}, </if>
 			<if test="addDigest != null">`add_digest` = #{addDigest}, </if>
-			<if test="heardUrl != null">`heard_url` = #{heardUrl}, </if>
+			<if test="avatarUrl != null">`avatar_url` = #{avatarUrl}, </if>
 			<if test="shenheResult != null">`shenhe_result` = #{shenheResult}, </if>
 			<if test="topTheme != null">`top_theme` = #{topTheme}</if>
 		</set>

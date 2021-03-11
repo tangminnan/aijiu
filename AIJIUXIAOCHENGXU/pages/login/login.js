@@ -24,14 +24,14 @@ Page({
   bindGetUserInfo: function (e) {
     
     console.info(e.detail.userInfo);
+    console.info("+++++++++++++++++++++++++");
+    console.info(e.detail.userInfo);
+    console.info("+++++++++++++++++++++++++");
+
     if (e.detail.userInfo) {
       console.info("允许授权");
       //插入登录的用户的相关信息到数据库
-      let params={
-      heardUrl:e.detail.userInfo.avatarUrl,
-        cityName:e.detail.userInfo.city,
-        sex: e.detail.userInfo.gender,
-        nickname:e.detail.userInfo.nickName,
+      let params={...e.detail.userInfo,
         openId:app.globalData.openId
      }
       request({ url: "/saveUser",method:'POST',data:params})

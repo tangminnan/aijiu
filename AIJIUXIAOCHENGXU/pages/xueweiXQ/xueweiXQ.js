@@ -1,18 +1,30 @@
 // pages/xueweiXQ/xueweiXQ.js
+import { request } from "../../request/index.js";
+import regeneratorRuntime from '../../lib/runtime/runtime';
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imgPath:app.globalData.imgPath,
+     xueweiXQ:{} 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const id= options.id;
+    this.getXuewei(id);
+  },
+  async getXuewei(id){
+    const result= await request({url:"/getXuewei",data:{id}});
+    this.setData({
+      xueweiXQ:result.data
+    });
+    console.info(this.data.xueweiXQ);
   },
 
   /**

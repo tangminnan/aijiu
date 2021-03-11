@@ -31,4 +31,6 @@ public interface UserDOService {
     List<UserDO> listByShouCangLeaveId(Integer leaveId);
 
 	UserDO getUserDO(String openId);
+
+    UserDO getUserDOByOpenId(String openId);
 }

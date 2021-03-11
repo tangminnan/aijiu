@@ -7,7 +7,7 @@
 <view class="tiezi_box">
     <view class="tiezi_box_top">
           <view class="fl">
-              <image src="{{tixiXO.heardUrl}}" ></image>
+              <image src="{{tixiXO.avatarUrl}}" ></image>
               <view class="txt">
                   <text class="tt1">{{tixiXO.name}}</text>
                   <text class="tt2">{{tixiXO.publishTime}}</text>

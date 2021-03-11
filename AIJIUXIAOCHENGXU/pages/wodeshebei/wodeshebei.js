@@ -35,7 +35,7 @@ Page({
   async getMyDevice(){
     let {userId} = wx.getStorageSync('userinfo');
     const res=await request({url:"/my/getMyDevice",data:{userId}});
-    console.info(res);
+    res.data=res.data||[];
     this.setData({
       device:[...res.data]
     });

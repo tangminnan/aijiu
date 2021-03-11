@@ -45,7 +45,7 @@
         <view class="boxBG_con_txt">
           <view class="txt">{{tuijian.leaveText}}</view>
           <view class="nameL">
-              <view class="fl"><image src="{{tuijian.heardUrl}}"></image>{{tuijian.name}}</view>
+              <view class="fl"><image src="{{tuijian.avatarUrl}}"></image>{{tuijian.nickName}}</view>
               <view class="fr"><image src="/img/sweet.png"></image>{{tuijian.shoucangcount}}</view>
           </view>
         </view>
@@ -73,7 +73,7 @@
         <view class="boxBG_con_txt">
           <view class="txt">{{dongtai.leaveText}}</view>
           <view class="nameL">
-              <view class="fl"><image src="{{dongtai.heardUrl}}"></image>{{dongtai.name}}</view>
+              <view class="fl"><image src="{{dongtai.avatarUrl}}"></image>{{dongtai.nickName}}</view>
               <view class="fr"><image src="/img/sweet.png"></image>{{dongtai.shoucangcount}}</view>
           </view>
         </view>

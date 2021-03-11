@@ -1,6 +1,6 @@
 package com.aijiu.information.service.impl;
 
-import com.aijiu.information.dao.UserDODao;
+import com.aijiu.information.dao.UserDao;
 import com.aijiu.information.domain.UserDO;
 import com.aijiu.information.service.UserDOService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.Map;
 @Service
 public class UserDOServiceImpl implements UserDOService {
 	@Autowired
-	private UserDODao userDao;
+	private UserDao userDao;
 	
 	@Override
 	public UserDO get(Long id){
@@ -58,6 +58,11 @@ public class UserDOServiceImpl implements UserDOService {
 	@Override
 	public UserDO getUserDO(String openId) {
 		return userDao.getUserDO(openId);
+	}
+
+	@Override
+	public UserDO getUserDOByOpenId(String openId) {
+		return userDao.getUserDOByOpenId(openId);
 	}
 
 }

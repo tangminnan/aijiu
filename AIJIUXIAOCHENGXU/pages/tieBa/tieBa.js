@@ -1,4 +1,6 @@
 // pages/tansuo/tansuo.js
+import { request } from "../../request/index.js";
+import regeneratorRuntime from '../../lib/runtime/runtime';
 const app = getApp()
 Page({
   data: {
@@ -6,6 +8,7 @@ Page({
       winHeight: 0,
       currentTab: 0,
       navbar: ['关注', '推荐', '最新'],
+      imgPath:app.globalData.imgPath
   },
   //切换bar
   navbarTap: function (e) {
@@ -37,9 +40,24 @@ Page({
           clientHeight: res.windowHeight - 50
         });
       }
-    })
+    });
+    this.getLeaveMessagesGuanzhu();
   },
 
+  async getLeaveMessagesGuanzhu(){
+    let userinfo = wx.getStorageSync('userinfo');
+    if(!userinfo){
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    }
+    let params={};
+    params.userId=userinfo.userId;
+    params.flag=0;
+    console.info(params);
+    const res=await request({url:"/getLeaveMessagesGuanzhu",data:params});
+    console.info(res);
+  },
   bindChange: function( e ) {
 
       var that = this;

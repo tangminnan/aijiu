@@ -72,12 +72,6 @@ public class AijiuController {
 
         if((Double)map.get("errcode")==0){
             String openId=(String) map.get("openid");
-//            UserDO userDO = userDOService.getUserDO(openId);
-//            if(userDO==null){
-//                userDO = new UserDO();
-//                userDO.setOpenId(openId);
-//                userDOService.save(userDO);
-//            }
             resultMap.put("code",0);
             resultMap.put("data",openId);
             return resultMap;
@@ -94,8 +88,7 @@ public class AijiuController {
      */
     @PostMapping("/saveUser")
     public Map<String,Object> saveUser(@RequestBody UserDO userDO){
-
-        UserDO userDO2 = userDOService.getUserDO(userDO.getOpenId());
+        UserDO userDO2 = userDOService.getUserDOByOpenId(userDO.getOpenId());
         if(userDO2==null){
             userDOService.save(userDO);
         }else{
@@ -103,7 +96,6 @@ public class AijiuController {
             userDOService.update(userDO);
         }
         userDO.setUserId(userDO.getId());
-        if(userDO.getName()==null) userDO.setName("用户名");
        Map<String,Object> resultMap = new HashMap<String,Object>();
         resultMap.put("code",0);
         resultMap.put("data",userDO);
@@ -340,7 +332,7 @@ public class AijiuController {
      * flag=3 获取最新数据
      */
     @GetMapping("/getLeaveMessagesGuanzhu")
-    public Map<String,Object> getLeaveMessagesGuanzhu(@RequestParam(required = false,value = "userId") Long userId, Integer flag){
+    public Map<String,Object> getLeaveMessagesGuanzhu(Long userId, Integer flag){
         Map<String,Object> resultMap = new HashMap<String,Object>();
         Map<String, Object> paramsMap = new HashMap<>();
         if(flag==0 || flag==1) {
@@ -406,6 +398,8 @@ public class AijiuController {
         }else{//收藏
             myShoucangDO.setCreateTime(new Date());
             myShoucangDO.setDeleteFlag(0);
+            myShoucangDO.setText(getStr(myShoucangDO.getText()));
+
             myShoucangService.save(myShoucangDO);
             resultMap.put("code",0);
             resultMap.put("data","收藏成功");
@@ -432,7 +426,7 @@ public class AijiuController {
             paramsMap.put("attentionId", attentionId);
             int fans = attentionService.count(paramsMap);//粉丝数量
             resultMap.put("id", userDO.getId());
-            resultMap.put("heardUrl", userDO.getHeardUrl());
+            resultMap.put("heardUrl", userDO.getAvatarUrl());
             resultMap.put("guanzhu", guanzhu);
             resultMap.put("fans", fans);
             resultMap.put("dongtai", dongtai);
@@ -510,12 +504,12 @@ public class AijiuController {
             int fans = attentionService.count(paramsMap);//粉丝数量
             Integer total = scoresService.total(userId);//积分
             resultMap.put("id", userDO.getId());
-            resultMap.put("heardUrl", userDO.getHeardUrl());
+            resultMap.put("heardUrl", userDO.getAvatarUrl());
             resultMap.put("guanzhu", guanzhu);
             resultMap.put("fans", fans);
             resultMap.put("dongtai", dongtai);
             resultMap.put("total",total==null?0:total);
-           resultMap.put("age",getAge(userDO.getBirthday()));
+            resultMap.put("age",getAge(userDO.getBirthday()));
         }else{
             resultMap.put("code",-1);
         }

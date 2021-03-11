@@ -10,7 +10,7 @@
       <text>{{item.text}}</text>
       <view class="SC_yh">
           <view class="fl">
-            <image src="{{item.headerUrl}}" ></image>
+            <image src="{{item.avatarUrl}}" ></image>
             <text>{{item.userName}}</text>
           </view>
           <image class="fr SC_aixin" src="/img/shoucang.png" ></image>

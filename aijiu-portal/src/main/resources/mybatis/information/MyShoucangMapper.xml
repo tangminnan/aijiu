@@ -4,7 +4,7 @@
 <mapper namespace="com.aijiu.information.dao.MyShoucangDao">
 
 	<select id="list" resultType="com.aijiu.information.domain.MyShoucangDO">
-		select `id`,`leave_id`,user_name,text,`user_id`,`create_time`,`delete_flag` from t_my_shoucang
+		select `id`,`leave_id`,nick_name,text,`user_id`,`create_time`,`delete_flag`,img,avatar_url from t_my_shoucang
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="leaveId != null and leaveId != ''"> and leave_id = #{leaveId} </if>
@@ -44,9 +44,9 @@
 			`user_id`, 
 			`create_time`, 
 			`delete_flag`,
-			user_name,
+			nick_name,
 			text,
-			header_url,
+			avatar_url,
 			img
 		)
 		values
@@ -55,15 +55,15 @@
 			#{userId}, 
 			#{createTime}, 
 			#{deleteFlag},
-			#{userName},
+			#{nickName},
 			#{text},
-			#{headerUrl},
+			#{avatarUrl},
 			#{img}
 		)
 	</insert>
 
 	<select id="getShouCangLeaveMessage" resultType="com.aijiu.information.domain.MyShoucangDO">
-		select leave_id,img,user_id ,create_time,delete_flag,user_name,text from t_my_shoucang,leave_message
+		select leave_id,img,user_id ,create_time,delete_flag,nick_name,text from t_my_shoucang,leave_message
 		where t_my_shoucang.leave_id=leave_message.id and t_my_shoucang.user_id=#{id}
 	</select>
 	 
@@ -83,6 +83,6 @@
 	</delete>
 
 	<select id="countHeaders" resultType="string">
-		select header_url from t_my_shoucang where leave_id = #{id} limit 3
+		select avatar_url from t_my_shoucang where leave_id = #{id} limit 3
 	</select>
 </mapper>

@@ -21,7 +21,7 @@ public class LeaveMessageDO implements Serializable {
 	//发帖人id
 	private Long userId;
 	//发帖人姓名
-	private String name;
+	private String nickName;
 	//发帖时间
 	private Date publishTime;
 	//发帖内容
@@ -45,7 +45,7 @@ public class LeaveMessageDO implements Serializable {
 	//评论数
 	private Integer pingluncount;
 	//头像
-	private String heardUrl;
+	private String avatarUrl;
 	//帖子审核不通过原因
 	private String shenheResult;
 	//收藏人ids id之间以::拼接
@@ -76,18 +76,7 @@ public class LeaveMessageDO implements Serializable {
 	public Long getUserId() {
 		return userId;
 	}
-	/**
-	 * 设置：发帖人姓名
-	 */
-	public void  setName(String name) {
-		this.name = name;
-	}
-	/**
-	 * 获取：发帖人姓名
-	 */
-	public String getName() {
-		return name;
-	}
+
 	/**
 	 * 设置：发帖时间
 	 */
@@ -231,12 +220,21 @@ public class LeaveMessageDO implements Serializable {
 		this.pingluncount = pingluncount;
 	}
 
-	public String getHeardUrl() {
-		return heardUrl;
+
+	public String getNickName() {
+		return nickName;
 	}
 
-	public void setHeardUrl(String heardUrl) {
-		this.heardUrl = heardUrl;
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public String getAvatarUrl() {
+		return avatarUrl;
+	}
+
+	public void setAvatarUrl(String avatarUrl) {
+		this.avatarUrl = avatarUrl;
 	}
 
 	public String getShenheResult() {

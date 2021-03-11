@@ -34,7 +34,7 @@ function load() {
 								limit: params.limit,
 								offset:params.offset,
                                 exerciserFlag:$("#exerciserFlag").val(),
-								sex:$("#sex").val()
+								gender:$("#gender").val()
 					           // name:$('#searchName').val(),
 					           // username:$('#searchName').val()
 							};
@@ -50,19 +50,16 @@ function load() {
 									checkbox : true
 								},*/
 																{
-									field : 'heardUrl', 
-									title : '头像' ,
+									field : 'avatarUrl',
+									title : '微信头像',
                                                                     formatter : function(value, row, index) {
-                                                                        var e = '<div class="image"><img width="90" height="100" alt="image" class="img-responsive" src="' + value + '"></div>'
-                                                                        return e;
-                                                                    }
+																		return '<div class="image"><img width="90" height="100" alt="image" class="img-responsive" src="' + value + '"></div>';
+                                                                    },
+
 								},
+
 																{
-									field : 'username', 
-									title : '登录用户名' 
-								},
-																{
-									field : 'sex', 
+									field : 'gender',
 									title : '性别' ,
                                                                     formatter : function(value, row, index) {
 																		if(value==1) return "男";
@@ -75,7 +72,7 @@ function load() {
 									title : '出生年月' 
 								},
 																{
-									field : 'nickname', 
+									field : 'nickName',
 									title : '昵称' 
 								},
 																{
@@ -87,45 +84,45 @@ function load() {
 									title : '体重' 
 								},
 																{
-									field : 'phone', 
-									title : '手机号' 
-								},
-                            {
-                                field : 'email',
-                                title : '邮箱'
-                            },
-																{
 									field : 'name', 
 									title : '真实姓名' 
 								},
-																{
-									field : 'registerTime', 
-									title : '注册时间' 
-								},
+								// 								{
+								// 	field : 'registerTime',
+								// 	title : '注册时间'
+								// },
+                            {
+                                field : 'country',
+                                title : '国家'
+                            },
+                            {
+                                field : 'province',
+                                title : '省'
+                            },
 
 																{
-									field : 'cityname', 
-									title : '所在市' 
-								},
+									field : 'city',
+									title : '城市'
+								}
 
 
-																{
-									title : '操作',
-									field : 'id',
-									align : 'center',
-									formatter : function(value, row, index) {
-
-                                   var e=' <a class="btn btn-primary btn-xs" href="#" mce_href="#" onclick="edit(\''
-                                            + row.id
-                                            + '\')" style="text-decoration: none;">编辑</a>';
-                                   var d= ' <a class="btn btn-danger btn-xs" href="#" mce_href="#" onclick="remove(\''
-                                       + row.id
-                                       + '\')" style="text-decoration: none;">删除</a>';
-
-                                         return  e+d ;
-
-									}
-								} ]
+									// 							{
+									// title : '操作',
+									// field : 'id',
+									// align : 'center',
+									// formatter : function(value, row, index) {
+                                   //
+                                   // var e=' <a class="btn btn-primary btn-xs" href="#" mce_href="#" onclick="edit(\''
+                                   //          + row.id
+                                   //          + '\')" style="text-decoration: none;">编辑</a>';
+                                   // var d= ' <a class="btn btn-danger btn-xs" href="#" mce_href="#" onclick="remove(\''
+                                   //     + row.id
+                                   //     + '\')" style="text-decoration: none;">删除</a>';
+                                   //
+                                   //       return  e+d ;
+                                   //
+									// }
+								]
 					});
 }
 function reLoad() {

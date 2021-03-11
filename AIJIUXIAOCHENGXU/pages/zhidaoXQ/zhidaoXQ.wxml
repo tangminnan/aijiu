@@ -1,12 +1,12 @@
 <!--pages/zhidaoXQ/zhidaoXQ.wxml-->
 <view class="xueweiPic">
-    <image src="/img/XW_toppic.jpg" ></image>
+    <image src="{{imgPath}}{{zzzdXQ.video}}" ></image>
 </view>
 
 <view class="posi">
 
 <view class="GJBma m30 bdr15">
-      <text class="tt1">经常性头痛分析及艾灸指导经常性头痛注意事项</text>
+      <text class="tt1">{{zzzdXQ.xqTitle}}</text>
       <image src="/img/aicao_xuewei.png" ></image>
 </view>
 
@@ -17,9 +17,7 @@
             <image src="/img/liusu_right.png" ></image>
       </view>
       <view class="tit_txt">
-            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
-            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
-            <text>百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.百会穴位于头顶正中线与两耳尖连线的交叉处，穴居颠顶，联系脑部：可见，百会穴与脑密切联系，是调节大脑功能的要穴.</text>
+            <text>{{zzzdXQ.zjGx}}</text>
       </view>
 </view>
 

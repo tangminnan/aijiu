@@ -4,8 +4,8 @@
       <view class="box" wx:for="{{userlist}}">
             <navigator url="/pages/gerenZY/gerenZY?id={{item.id}}">
                   <view class="fl">
-                        <image src="{{item.heardUrl}}" ></image>
-                        <text>{{item.name}}</text>
+                        <image src="{{item.avatarUrl}}" ></image>
+                        <text>{{item.nickName}}</text>
                   </view>
                   <view class="fr">
                         <button size="mini" bindtap="handleToGuanzhu" data-id="{{item.id}}" wx:if="{{item.flag==1}}">关注</button>
