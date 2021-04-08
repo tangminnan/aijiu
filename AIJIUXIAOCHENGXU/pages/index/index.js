@@ -9,6 +9,7 @@ Page({
     inputShowed: false,  //初始文本框不显示内容
     tuijianTieList:[],//推荐贴
     dongtaiTieList:[]//动态贴
+    
   },
   tuijian:[],
   dongtai:[],
@@ -18,6 +19,26 @@ Page({
   onLoad: function (options) {
      this.gettuijianTieList();
      this.getdongtaiTieList();
+  },
+
+  /**
+   *  关键字搜索
+   */
+ inputChange(e){
+   let key = e.detail.value;
+   wx.navigateTo({
+     url: '/pages/sousuo/sousuo?key='+key
+   })
+   },
+/**
+ *  微信扫一扫
+ */
+saoyisao(){
+    wx.scanCode({
+      success: (res) => {
+        console.log(res)
+      }
+    });
   },
   //获取推荐贴
   gettuijianTieList(){

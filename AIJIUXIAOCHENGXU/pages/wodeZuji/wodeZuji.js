@@ -1,19 +1,49 @@
 // pages/wodeZuji/wodeZuji.js
+import { request } from "../../request/index.js";
+import regeneratorRuntime from '../../lib/runtime/runtime';
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imgPath:app.globalData.imgPath,
+    keySearches:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     let arry =  wx.getStorageSync('arry')||[];
+     this.setData({
+      keySearches:arry
+     })
   },
+
+  /**
+   *  详情页面查看
+   */
+  thiskeysearch(e){
+    console.info(e);
+    let keyid=e.currentTarget.dataset.pid;
+    if(keyid!=null && keyid.includes("--")){
+      let type = keyid.split("--")[0];
+      let id = keyid.split("--")[1];
+      if(type=="XUEWEI"){
+        wx.navigateTo({
+          url: '/pages/xueweiXQ/xueweiXQ?id='+id
+        })
+      }
+      else if(type=="ZJZD"){
+        wx.navigateTo({
+          url: '/pages/zhidaoXQ/zhidaoXQ?id='+id
+        })
+      }
+    }
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

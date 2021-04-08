@@ -4,11 +4,11 @@
         <!-- 最初始时的搜索框 -->
         <view class="weui-search-bar__box">
             <icon class="weui-icon-search_in-box" type="search" size="18"></icon>
-            <input placeholder-class="phcolor" type="text" class="weui-search-bar__input" placeholder="搜索"/>
+            <input bindinput="{{key}}" bindchange="inputChange" placeholder-class="phcolor" type="text" class="weui-search-bar__input" placeholder="搜索"/>
         </view>
         <!-- 可编辑时的搜索框 -->
         <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
-            <icon class="weui-icon-search" type="search" size="18"></icon>
+            <icon class="weui-icon-search" type="search"  size="18"></icon>
             <view class="weui-search-bar__text">搜索</view>
         </label>
     </view>
@@ -19,7 +19,7 @@
 <view class="SYS">
   <image src="/img/sy-picSys.jpg"></image>
   <view class="SYSbtn">
-    <text class="mini-btn">扫一扫</text>
+    <text class="mini-btn" bindtap="saoyisao">扫一扫</text>
     <text bindtap="handleToFaTie" class="mini-btn">发帖</text>
   </view>
 </view>

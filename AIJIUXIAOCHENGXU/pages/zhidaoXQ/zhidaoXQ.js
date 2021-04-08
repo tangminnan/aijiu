@@ -2,6 +2,8 @@
 
 import { request } from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
+import { formatTime } from "../../utils/util.js";
+
 var app = getApp();
 Page({
 
@@ -18,7 +20,13 @@ Page({
    */
   onLoad: function (options) {
     const id=options.id;
-    this.getZjzdDO(id);
+    const keyword=options.keyword;
+    if(keyword!=undefined){
+      this.getZjzdDOByKeyWord(keyword);
+    }
+    if(id!=undefined){
+      this.getZjzdDO(id);
+    }
   },
 
   async  getZjzdDO(id){
@@ -26,8 +34,29 @@ Page({
     this.setData({
       zzzdXQ:result.data
     });
-    console.info(this.data.zzzdXQ);
+    let zzzdXQ =  this.data.zzzdXQ;
+    this.saveZy(zzzdXQ);
   },
+
+  async  getZjzdDOByKeyWord(keyword){
+    const result= await request({url:"/getZjzdDOByKeyWord",data:{keyword}});
+    this.setData({
+      zzzdXQ:result.data
+    });
+    let zzzdXQ =  this.data.zzzdXQ;
+    this.saveZy(zzzdXQ);
+  },
+
+saveZy(zzzdXQ){
+   let url= zzzdXQ.xueweiUrl;
+    let name=zzzdXQ.zjName;
+    let id=zzzdXQ.id;
+    let type="ZJZD";
+    let time = formatTime(new Date());
+    let arry = wx.getStorageSync('arry')||[];
+    arry.push({url,name,time,id,type});
+    wx.setStorageSync('arry', arry);
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

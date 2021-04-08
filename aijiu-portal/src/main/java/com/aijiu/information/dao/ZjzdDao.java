@@ -32,4 +32,6 @@ public interface ZjzdDao {
     List<ZjzdDO> getZjzdDOByBuWei(String zjBuwei);
 
 	List<ZjzdDO> getZjzdByKey(String key);
+
+    List<ZjzdDO> getZjzdDOByKeyWord(String keyword);
 }

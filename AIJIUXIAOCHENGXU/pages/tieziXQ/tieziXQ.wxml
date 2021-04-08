@@ -57,16 +57,21 @@
 <!--底部分享/收藏-->
 <view class="fot_share">
     <view>
+        <button open-type="share" class="fx">
         <image src="/img/share.png" ></image>
-        <text>分享</text>
+      
+        <text >分享</text>
+    </button>
+    
     </view>
-    <view>
+
+    <view bindtap="handleToComment">
         <image src="/img/talk.png" ></image>
-        <text bindtap="handleToComment">评论</text>
+        <text >评论</text>
     </view>
-    <view>
+    <view bindtap="addShouCang">
         <image src="/img/sweet.png" ></image>
-        <text bindtap="addShouCang">收藏</text>
+        <text >收藏</text>
     </view>
 </view>
 

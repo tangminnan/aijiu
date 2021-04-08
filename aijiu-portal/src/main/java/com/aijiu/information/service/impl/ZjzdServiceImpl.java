@@ -60,4 +60,9 @@ public class ZjzdServiceImpl implements ZjzdService {
 		return zjzdDao.getZjzdByKey(key);
 	}
 
+	@Override
+	public List<ZjzdDO> getZjzdDOByKeyWord(String keyword) {
+		return zjzdDao.getZjzdDOByKeyWord(keyword);
+	}
+
 }

@@ -17,8 +17,8 @@
 		  		  <if test="leaveText != null and leaveText != ''"> and leave_text = #{leaveText} </if>
 		  		  <if test="auditStatus != null and auditStatus != ''"> and audit_status = #{auditStatus} </if>
 		  		  <if test="img != null and img != ''"> and img = #{img} </if>
-				<if test="addStaTime != null and addStaTime!=''">and `publish_time` &gt; #{addStaTime} </if>
-				<if test="addEndTime != null and addEndTime!=''">and `publish_time` &lt; #{addEndTime} </if>
+				  <if test="addStaTime != null and addStaTime!=''">and `publish_time` &gt; #{addStaTime} </if>
+				  <if test="addEndTime != null and addEndTime!=''">and `publish_time` &lt; #{addEndTime} </if>
 		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
 		  		  <if test="tuijianFlag != null and tuijianFlag != ''"> and tuijian_flag = #{tuijianFlag} </if>
 		  		  <if test="showhide != null and showhide != ''"> and showhide = #{showhide} </if>
@@ -41,8 +41,8 @@
 		  		  <if test="leaveText != null and leaveText != ''"> and leave_text = #{leaveText} </if>
 		  		  <if test="auditStatus != null and auditStatus != ''"> and audit_status = #{auditStatus} </if>
 		  		  <if test="img != null and img != ''"> and img = #{img} </if>
-		<if test="addStaTime != null and addStaTime!=''">and `publish_time` &gt; #{addStaTime} </if>
-		<if test="addEndTime != null and addEndTime!=''">and `publish_time` &lt; #{addEndTime} </if>
+				  <if test="addStaTime != null and addStaTime!=''">and `publish_time` &gt; #{addStaTime} </if>
+		          <if test="addEndTime != null and addEndTime!=''">and `publish_time` &lt; #{addEndTime} </if>
 		  		  <if test="deleteFlag != null and deleteFlag != ''"> and delete_flag = #{deleteFlag} </if>
 		  		  <if test="tuijianFlag != null and tuijianFlag != ''"> and tuijian_flag = #{tuijianFlag} </if>
 		  		  <if test="showhide != null and showhide != ''"> and showhide = #{showhide} </if>

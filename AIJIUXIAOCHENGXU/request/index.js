@@ -3,11 +3,12 @@
 export const request=(params)=>{
 
   // 显示加载中 效果
-  wx.showLoading({
-    title: "加载中",
-    mask: true
-  });
-    
+  if(params.flag){
+    wx.showLoading({
+      title: "加载中",
+      mask: true
+    });
+  }   
 
   // 定义公共的url
   const baseUrl="http://localhost:8087/aijiu/v1";

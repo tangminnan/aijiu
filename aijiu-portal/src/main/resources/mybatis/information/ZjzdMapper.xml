@@ -40,6 +40,10 @@
 		select id id, zj_name name,xuewei_url picture,"ZJZD" type from t_zjzd where zj_name like concat('%',#{zjBuwei},'%');
 	</select>
 	
+	<select id="getZjzdDOByKeyWord"  resultType="com.aijiu.information.domain.ZjzdDO">
+		select * from t_zjzd where zj_name like concat('%',#{keyword},'%');
+	</select>
+	
  	<select id="count" resultType="int">
 		select count(*) from t_zjzd
 		where delete_flag=0

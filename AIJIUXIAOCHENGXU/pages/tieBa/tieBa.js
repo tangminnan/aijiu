@@ -8,7 +8,9 @@ Page({
       winHeight: 0,
       currentTab: 0,
       navbar: ['关注', '推荐', '最新'],
-      imgPath:app.globalData.imgPath
+      imgPath:app.globalData.imgPath,
+      guanzhu:[],
+      zuixin:[]
   },
   //切换bar
   navbarTap: function (e) {
@@ -57,6 +59,13 @@ Page({
     console.info(params);
     const res=await request({url:"/getLeaveMessagesGuanzhu",data:params});
     console.info(res);
+    this.setData({
+      guanzhu:res.guanzhu,
+      zuixin:res.zuixin
+    });
+    console.info("==========================");
+    console.info(this.data.zuixin);
+    console.info("===========================");
   },
   bindChange: function( e ) {
 

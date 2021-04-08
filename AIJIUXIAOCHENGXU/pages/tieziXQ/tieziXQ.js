@@ -88,6 +88,14 @@ Page({
     })
   },
 
+  onShareAppMessage: function (res) {
+    return {
+     title: '艾灸小程序',
+    // desc: '分享页面的内容',
+     path: '/pages/index/index' // 路径，传递参数到指定页面。
+    }
+   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -130,10 +138,5 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  
 })

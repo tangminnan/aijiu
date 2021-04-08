@@ -620,6 +620,25 @@ public class AijiuController {
     /**
      * 适应症详情
      */
+    @GetMapping("/getZjzdDOByKeyWord")
+    public Map<String,Object>  getZjzdDOByKeyWord(String keyword){
+        List<ZjzdDO> zjzdDOs = zjzdService.getZjzdDOByKeyWord(keyword);
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if(zjzdDOs.size()>0){
+            resultMap.put("code",0);
+            resultMap.put("data",zjzdDOs.get(0));
+        }
+        else {
+            resultMap.put("code",-1);
+            resultMap.put("data",null);
+        }
+
+        return resultMap;
+    }
+
+    /**
+     * 适应症详情
+     */
     @GetMapping("/getZjzdDO")
     public Map<String,Object>  getZjzdDO(Long id){
         ZjzdDO zjzdDO = zjzdService.get(id);
@@ -662,7 +681,7 @@ public class AijiuController {
         List<KeySearch> keySearches = xueweiService.getXueweiByKey(key);
         Map<String,Object> resultMap = new HashMap<String,Object>();
         resultMap.put("code",0);
-        resultMap.put("data",keySearches);
+        resultMap.put("keySearches",keySearches);
         return  resultMap;
     }
 
@@ -752,6 +771,33 @@ public class AijiuController {
         }
 
         return null;
+    }
+
+    /**
+     *  微信小程序执行定时任务
+     *  定时查看redis
+     * @return
+     */
+    @GetMapping("/getFromRedis")
+    public Map<String,Object> getFromRedis(String openId){
+        System.out.println("=========="+openId);
+        UserDO userDO = userDOService.getUserDOByOpenId(openId);
+        Map<String,Object> map = new HashMap<String,Object>();
+        if(userDO==null){
+            map.put("code",-1);
+            map.put("msg","未找到用户");
+        }else{
+            String keyWords = redisTemplate.opsForValue().get(userDO.getId().toString());
+            if(null!=keyWords && !"".equals(keyWords)){
+                map.put("code",0);
+                map.put("msg",keyWords);
+                redisTemplate.delete(userDO.getId().toString());
+            }else{
+                map.put("code",1);
+                map.put("msg","硬件设备没有传来数据或数据可能依旧能够失效!");
+            }
+        }
+        return map;
     }
 
 

@@ -1,6 +1,8 @@
 // pages/xueweiXQ/xueweiXQ.js
 import { request } from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
+import { formatTime } from "../../utils/util.js";
+
 var app = getApp();
 Page({
 
@@ -25,7 +27,20 @@ Page({
       xueweiXQ:result.data
     });
     console.info(this.data.xueweiXQ);
+     let xueweiXQ = this.data.xueweiXQ;
+     let url= xueweiXQ.xueweiUrl;
+     let name=xueweiXQ.xueweiName;
+     let id1=xueweiXQ.id;
+     let type="XUEWEI";
+     let time = formatTime(new Date());
+     let arry = wx.getStorageSync('arry')||[];
+     arry.push({url,name,time,id:id1,type});
+     wx.setStorageSync('arry', arry);
   },
+
+  
+   
+ 
 
   /**
    * 生命周期函数--监听页面初次渲染完成

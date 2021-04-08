@@ -60,7 +60,18 @@ Page({
     });
     console.info(this.data.mydata);
   },
-   
+  
+  /**
+   *   微信小程序联系客服
+   */
+  lianxikefugn(){
+    this.setData({
+      showModal: false
+    });
+    wx.makePhoneCall({
+      phoneNumber: '13280812452',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

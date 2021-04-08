@@ -6,43 +6,20 @@
     <!-- 搜索框 -->
         <view class="weui-search-bar__box">
             <icon class="weui-icon-search_in-box" type="search"></icon>
-            <input type="text" placeholder-class="phcolor" class="weui-search-bar__input" placeholder="输入搜索病症或穴位"/>
+            <input type="text" bindinput="setKeyData" placeholder-class="phcolor" class="weui-search-bar__input" placeholder="输入搜索病症或穴位"/>
         </view>
     </view>
     <!-- 搜索按钮,调用搜索查询方法 -->
-    <view class="weui-search-bar__cancel-btn" bindtap='方法名a'>搜索</view>
+    <view class="weui-search-bar__cancel-btn" bindtap='keydatasearch'>搜索</view>
 </view>
 
 <view class="sousuo_List">
-    <view class="box">
-        <image class="box_bg" src="/img/ZD_sideConbg.png" ></image>
-        <view class="box_txt">
-            <image src="/img/ZD_ttong.jpg" ></image>
-            <text>百会穴</text>
-        </view>
-    </view>
 
-    <view class="box">
+    <view class="box" wx:for="{{keySearch}}">
         <image class="box_bg" src="/img/ZD_sideConbg.png" ></image>
-        <view class="box_txt">
-            <image src="/img/toutong.jpg" ></image>
-            <text>头疼</text>
-        </view>
-    </view>
-
-    <view class="box">
-        <image class="box_bg" src="/img/ZD_sideConbg.png" ></image>
-        <view class="box_txt">
-            <image src="/img/ZD_ttong.jpg" ></image>
-            <text>百会穴</text>
-        </view>
-    </view>
-
-    <view class="box">
-        <image class="box_bg" src="/img/ZD_sideConbg.png" ></image>
-        <view class="box_txt">
-            <image src="/img/toutong.jpg" ></image>
-            <text>头疼</text>
+        <view class="box_txt" data-pid="{{item.type}}--{{item.id}}" bindtap="thiskeysearch">
+            <image src="{{imgPath}}{{item.picture}}" ></image>
+            <text>{{item.name}}</text>
         </view>
     </view>
 </view>

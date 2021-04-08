@@ -3,36 +3,17 @@
 
 <view class="zujiBox">
 
-    <view class="box">
-        <view class="box_txt">
-            <image src="/img/baihuixue.jpg" ></image>
+    <view class="box" wx:for="{{keySearches}}">
+        <view class="box_txt" data-pid="{{item.type}}--{{item.id}}" bindtap="thiskeysearch">
+            <image src="{{imgPath}}{{item.url}}" ></image>
             <view class="zujitxt">
-                <text class="tt1">百会穴</text>
-                <text class="tt2">浏览时间：20200-08-12 10:20</text>
+                <text class="tt1">{{item.name}}</text>
+                <text class="tt2">浏览时间：{{item.time}}</text>
             </view>
         </view>
     </view>
 
-    <view class="box">
-        <view class="box_txt">
-            <image src="/img/baihuixue.jpg" ></image>
-            <view class="zujitxt">
-                <text class="tt1">百会穴</text>
-                <text class="tt2">浏览时间：20200-08-12 10:20</text>
-            </view>
-        </view>
-    </view>
-
-    <view class="box">
-        <view class="box_txt">
-            <image src="/img/baihuixue.jpg" ></image>
-            <view class="zujitxt">
-                <text class="tt1">百会穴</text>
-                <text class="tt2">浏览时间：20200-08-12 10:20</text>
-            </view>
-        </view>
-    </view>
-
+    
 </view>
 
 
